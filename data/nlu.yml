@@ -1,0 +1,2998 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - lets go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+
+- intent: Accommodation_Services
+  examples: |
+    - Need a Room
+    - Book a [Hotel]{"entity":"Accommodation_Service","value":"Hotel"}
+    - Reserve a Bed
+    - [Hotel]{"entity":"Accommodation_Service","value":"Hotel"} for the night
+    - [Hotel]{"entity":"Accommodation_Service","value":"Hotel"} reservation
+    - Find me a real estate agent
+    - [Accommodation Brokers]{"entity":"Accommodation_Service","value":"ashish"}
+    - [Apartment Promoters]{"entity":"Accommodation_Service","value":"ashish"}
+    - [Cottages]{"entity":"Accommodation_Service","value":"Cottages"}
+    - [Hotel]{"entity":"Accommodation_Service","value":"Hotel"}
+    - [Hotels]{"entity":"Accommodation_Service","value":"Hotels"}
+    - [Kids Hostels]{"entity":"Accommodation_Service","value":"[Kids Hostels"}
+    - [Lodging]{"entity":"Accommodation_Service","value":"Lodging"}
+    - [Mens Hostel]{"entity":"Accommodation_Service","value":"Mens Hostel"}
+    - [Paying Guests]{"entity":"Accommodation_Service","value":"Paying Guests"}
+    # - [Real Estate]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Real Estate Agents]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Real Estate Appraisers]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Real Estate Developers]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Real Estate Joint Ventures]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Rental Agencies]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Rentals]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Resort Booking Offices]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Resorts]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Womens Hostels]{"entity":"Accommodation_Service","value":"ashish"}
+    # - [Youth Hostels]{"entity":"Accommodation_Service","value":"ashish"}
+    - [Budget]{"entity":"Hoteltype","value":"Budget"}
+    - [Luxury]{"entity":"Hoteltype","value":"Luxury"}
+    - [Low cost hotel]{"entity":"Hoteltype","value":"Budget"}
+    - [5 star hotel]{"entity":"Hoteltype","value":"ashish"}
+    - [7 star hotel]{"entity":"Hoteltype","value":"ashish"}
+    - [cheap hotels]{"entity":"Hoteltype","value":"Budget"}
+    - [non AC hotel]{"entity":"Hoteltype","value":"Budget"}
+    # - [Hotel Reservations]{"entity":"Hoteltype","value":"ashish"}	
+    # - [3 Star Hotel Reservations]{"entity":"Hoteltype","value":"ashish"}
+    # - [Apartment Hotels	Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Motels	Hotels Outstation]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Couple Friendly Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [3 Star Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [2 Star Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Lodging Services]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Accommodation Services]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Pet Friendly Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Eco Friendly Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House Reservations]{"entity":"Hoteltype","value":"ashish"}	
+    # - [AC Lodging Services]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Couple Friendly Rooms On Hire]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Rooms On Hire]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Early Check In Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Eco Friendly Guest House]{"entity":"Hoteltype","value":"ashish"}
+    # - [Guest House Weekly Rental]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Apartment Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Outstation Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Bed and Breakfast]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Hotel Reservations]{"entity":"Hoteltype","value":"ashish"}	
+    # - [AC Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Home Stay]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Government Guest Houses]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Apartment Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Apartment Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House For Corporates]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Lodging Services]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Apartment Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Apartment Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Lodging Services]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Hotels]{"entity":"Hoteltype","value":"ashish"}	
+    # - [AC Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [AC Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [AC Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}	
+    # - [Guest House]{"entity":"Hoteltype","value":"ashish"}
+
+- intent: number 
+  examples: |
+    - [1]{"entity":"nos","value":"1"}
+    - [One]{"entity":"nos","value":"1"}
+    - [2]{"entity":"nos","value":"More than 1"}
+    - [3]{"entity":"nos","value":"More than 1"}
+    - [5]{"entity":"nos","value":"More than 1"}
+    - [8]{"entity":"nos","value":"More than 1"}
+
+- intent: days
+  examples: |
+    - [1 Day]{"entity":"day","value":"1 Day"}
+    - [2 Day]{"entity":"day","value":"More than 1 Day"}
+    - [1 week]{"entity":"day","value":"More than 1 Day"}
+    - [1 Month]{"entity":"day","value":"More than 1 Day"}
+    - [entire year]{"entity":"day","value":"More than 1 Day"}
+
+- intent: amenities
+  examples: |
+    - [AC]{"entity":"amenity","value":"AC"}
+    - [fridge]{"entity":"amenity","value":"fridge"}
+    - [Geyser]{"entity":"amenity","value":"Geyser"}
+
+- intent: location
+  examples: |
+    - [New Delhi]{"entity":"loc","value":"new delhi"}
+    - [Mumbai]{"entity":"loc","value":"mumbai"}
+    - [Kashmir]{"entity":"loc","value":"kashmir"}
+    - [patna]{"entity":"loc","value":"patna"}
+    - [bhopal]{"entity":"loc","value":"bhopal"}
+    - [Rewa]{"entity":"loc","value":"rewa"}
+    - [london]{"entity":"loc","value":"london"}
+    - [Adilabad]{"entity":"loc","value":"Adilabad"}
+    - [Agra]{"entity":"loc","value":"Agra"}
+    - [Ahmedabad]{"entity":"loc","value":"Ahmedabad"}
+    - [Ahmednagar]{"entity":"loc","value":"Ahmednagar"}
+    - [Aizawl]{"entity":"loc","value":"Aizawl"}
+    - [Mohali]{"entity":"loc","value":"Mohali"}
+    - [Ajitgarh]{"entity":"loc","value":"Ajitgarh"}
+    - [Ajmer]{"entity":"loc","value":"Ajmer"}
+    - [Akola]{"entity":"loc","value":"Akola"}
+    - [Alappuzha]{"entity":"loc","value":"Alappuzha"}
+    - [Aligarh]{"entity":"loc","value":"Aligarh"}
+    - [Alirajpur]{"entity":"loc","value":"Alirajpur"}
+    - [Allahabad]{"entity":"loc","value":"Allahabad"}
+    - [Almora]{"entity":"loc","value":"Almora"}
+    - [Alwar]{"entity":"loc","value":"Alwar"}
+    - [Ambala]{"entity":"loc","value":"Ambala"}
+    - [Ambedkar Nagar]{"entity":"loc","value":"Ambedkar Nagar"}
+    - [Amravati]{"entity":"loc","value":"Amravati"}
+    - [Amreli district]{"entity":"loc","value":"Amreli district"}
+    - [Amritsar]{"entity":"loc","value":"Amritsar"}
+    - [Anand]{"entity":"loc","value":"Anand"}
+    - [Anantapur]{"entity":"loc","value":"Anantapur"}
+    - [Anantnag]{"entity":"loc","value":"Anantnag"}
+    - [Angul]{"entity":"loc","value":"Angul"}
+    - [Anjaw]{"entity":"loc","value":"Anjaw"}
+    - [Anuppur]{"entity":"loc","value":"Anuppur"}
+    - [Araria]{"entity":"loc","value":"Araria"}
+    - [Ariyalur]{"entity":"loc","value":"Ariyalur"}
+    - [Arwal]{"entity":"loc","value":"Arwal"}
+    - [Ashok Nagar]{"entity":"loc","value":"Ashok Nagar"}
+    - [Auraiya]{"entity":"loc","value":"Auraiya"}
+    - [Aurangabad]{"entity":"loc","value":"Aurangabad"}
+    - [Aurangabad]{"entity":"loc","value":"Aurangabad"}
+    - [Azamgarh]{"entity":"loc","value":"Azamgarh"}
+    - [Badgam]{"entity":"loc","value":"Badgam"}
+    - [Bagalkot]{"entity":"loc","value":"Bagalkot"}
+    - [Bageshwar]{"entity":"loc","value":"Bageshwar"}
+    - [Bagpat]{"entity":"loc","value":"Bagpat"}
+    - [Bahraich]{"entity":"loc","value":"Bahraich"}
+    - [Baksa]{"entity":"loc","value":"Baksa"}
+    - [Balaghat]{"entity":"loc","value":"Balaghat"}
+    - [Balangir]{"entity":"loc","value":"Balangir"}
+    - [Balasore]{"entity":"loc","value":"Balasore"}
+    - [Ballia]{"entity":"loc","value":"Ballia"}
+    - [Balrampur]{"entity":"loc","value":"Balrampur"}
+    - [Banaskantha]{"entity":"loc","value":"Banaskantha"}
+    - [Banda]{"entity":"loc","value":"Banda"}
+    - [Bandipora]{"entity":"loc","value":"Bandipora"}
+    - [Bangalore Rural]{"entity":"loc","value":"Bangalore Rural"}
+    - [Bangalore Urban]{"entity":"loc","value":"Bangalore Urban"}
+    - [Banka]{"entity":"loc","value":"Banka"}
+    - [Bankura]{"entity":"loc","value":"Bankura"}
+    - [Banswara]{"entity":"loc","value":"Banswara"}
+    - [Barabanki]{"entity":"loc","value":"Barabanki"}
+    - [Baramulla]{"entity":"loc","value":"Baramulla"}
+    - [Baran]{"entity":"loc","value":"Baran"}
+    - [Bardhaman]{"entity":"loc","value":"Bardhaman"}
+    - [Bareilly]{"entity":"loc","value":"Bareilly"}
+    - [Baragarh]{"entity":"loc","value":"Baragarh"}
+    - [Bargarh]{"entity":"loc","value":"Bargarh"}
+    - [Barmer]{"entity":"loc","value":"Barmer"}
+    - [Barnala]{"entity":"loc","value":"Barnala"}
+    - [Barpeta]{"entity":"loc","value":"Barpeta"}
+    - [Barwani]{"entity":"loc","value":"Barwani"}
+    - [Bastar]{"entity":"loc","value":"Bastar"}
+    - [Basti]{"entity":"loc","value":"Basti"}
+    - [Bathinda]{"entity":"loc","value":"Bathinda"}
+    - [Beed]{"entity":"loc","value":"Beed"}
+    - [Begusarai]{"entity":"loc","value":"Begusarai"}
+    - [Belgaum]{"entity":"loc","value":"Belgaum"}
+    - [Bellary]{"entity":"loc","value":"Bellary"}
+    - [Betul]{"entity":"loc","value":"Betul"}
+    - [Bhadrak]{"entity":"loc","value":"Bhadrak"}
+    - [Bhagalpur]{"entity":"loc","value":"Bhagalpur"}
+    - [Bhandara]{"entity":"loc","value":"Bhandara"}
+    - [Bharatpur]{"entity":"loc","value":"Bharatpur"}
+    - [Bharuch]{"entity":"loc","value":"Bharuch"}
+    - [Bhavnagar]{"entity":"loc","value":"Bhavnagar"}
+    - [Bhilwara]{"entity":"loc","value":"Bhilwara"}
+    - [Bhind]{"entity":"loc","value":"Bhind"}
+    - [Bhiwani]{"entity":"loc","value":"Bhiwani"}
+    - [Bhojpur]{"entity":"loc","value":"Bhojpur"}
+    - [Bhopal]{"entity":"loc","value":"Bhopal"}
+    - [Bidar]{"entity":"loc","value":"Bidar"}
+    - [Bijapur]{"entity":"loc","value":"Bijapur"}
+    - [Bijapur]{"entity":"loc","value":"Bijapur"}
+    - [Bijnor]{"entity":"loc","value":"Bijnor"}
+    - [Bikaner]{"entity":"loc","value":"Bikaner"}
+    - [Bilaspur]{"entity":"loc","value":"Bilaspur"}
+    - [Bilaspur]{"entity":"loc","value":"Bilaspur"}
+    - [Birbhum]{"entity":"loc","value":"Birbhum"}
+    - [Bishnupur]{"entity":"loc","value":"Bishnupur"}
+    - [Bokaro]{"entity":"loc","value":"Bokaro"}
+    - [Bongaigaon]{"entity":"loc","value":"Bongaigaon"}
+    - [Budaun]{"entity":"loc","value":"Budaun"}
+    - [Bulandshahr]{"entity":"loc","value":"Bulandshahr"}
+    - [Buldhana]{"entity":"loc","value":"Buldhana"}
+    - [Bundi]{"entity":"loc","value":"Bundi"}
+    - [Burhanpur]{"entity":"loc","value":"Burhanpur"}
+    - [Buxar]{"entity":"loc","value":"Buxar"}
+    - [Cachar]{"entity":"loc","value":"Cachar"}
+    - [Central Delhi]{"entity":"loc","value":"Central Delhi"}
+    - [Chamarajnagar]{"entity":"loc","value":"Chamarajnagar"}
+    - [Chamba]{"entity":"loc","value":"Chamba"}
+    - [Chamoli]{"entity":"loc","value":"Chamoli"}
+    - [Champawat]{"entity":"loc","value":"Champawat"}
+    - [Champhai]{"entity":"loc","value":"Champhai"}
+    - [Chandauli]{"entity":"loc","value":"Chandauli"}
+    - [Chandel]{"entity":"loc","value":"Chandel"}
+    - [Chandigarh]{"entity":"loc","value":"Chandigarh"}
+    - [Chandrapur]{"entity":"loc","value":"Chandrapur"}
+    - [Changlang]{"entity":"loc","value":"Changlang"}
+    - [Chatra]{"entity":"loc","value":"Chatra"}
+    - [Chennai]{"entity":"loc","value":"Chennai"}
+    - [Chhatarpur]{"entity":"loc","value":"Chhatarpur"}
+    - [Chhatrapati Shahuji Maharaj Nagar]{"entity":"loc","value":"Chhatrapati Shahuji Maharaj Nagar"}
+    - [Chhindwara]{"entity":"loc","value":"Chhindwara"}
+    - [Chikkaballapur]{"entity":"loc","value":"Chikkaballapur"}
+    - [Chikkamagaluru]{"entity":"loc","value":"Chikkamagaluru"}
+    - [Chirang]{"entity":"loc","value":"Chirang"}
+    - [Chitradurga]{"entity":"loc","value":"Chitradurga"}
+    - [Chitrakoot]{"entity":"loc","value":"Chitrakoot"}
+    - [Chittoor]{"entity":"loc","value":"Chittoor"}
+    - [Chittorgarh]{"entity":"loc","value":"Chittorgarh"}
+    - [Churachandpur]{"entity":"loc","value":"Churachandpur"}
+    - [Churu]{"entity":"loc","value":"Churu"}
+    - [Coimbatore]{"entity":"loc","value":"Coimbatore"}
+    - [Cooch Behar]{"entity":"loc","value":"Cooch Behar"}
+    - [Cuddalore]{"entity":"loc","value":"Cuddalore"}
+    - [Cuttack]{"entity":"loc","value":"Cuttack"}
+    - [Dadra and Nagar Haveli]{"entity":"loc","value":"Dadra and Nagar Haveli"}
+    - [Dahod]{"entity":"loc","value":"Dahod"}
+    - [Dakshin Dinajpur]{"entity":"loc","value":"Dakshin Dinajpur"}
+    - [Dakshina Kannada]{"entity":"loc","value":"Dakshina Kannada"}
+    - [Daman]{"entity":"loc","value":"Daman"}
+    - [Damoh]{"entity":"loc","value":"Damoh"}
+    - [Dantewada]{"entity":"loc","value":"Dantewada"}
+    - [Darbhanga]{"entity":"loc","value":"Darbhanga"}
+    - [Darjeeling]{"entity":"loc","value":"Darjeeling"}
+    - [Darrang]{"entity":"loc","value":"Darrang"}
+    - [Datia]{"entity":"loc","value":"Datia"}
+    - [Dausa]{"entity":"loc","value":"Dausa"}
+    - [Davanagere]{"entity":"loc","value":"Davanagere"}
+    - [Dehradun]{"entity":"loc","value":"Dehradun"}
+    - [Deoghar]{"entity":"loc","value":"Deoghar"}
+    - [Deoria]{"entity":"loc","value":"Deoria"}
+    - [Dewas]{"entity":"loc","value":"Dewas"}
+    - [Dhalai]{"entity":"loc","value":"Dhalai"}
+    - [Dhamtari]{"entity":"loc","value":"Dhamtari"}
+    - [Dhanbad]{"entity":"loc","value":"Dhanbad"}
+    - [Dhar]{"entity":"loc","value":"Dhar"}
+    - [Dharmapuri]{"entity":"loc","value":"Dharmapuri"}
+    - [Dharwad]{"entity":"loc","value":"Dharwad"}
+    - [Dhemaji]{"entity":"loc","value":"Dhemaji"}
+    - [Dhenkanal]{"entity":"loc","value":"Dhenkanal"}
+    - [Dholpur]{"entity":"loc","value":"Dholpur"}
+    - [Dhubri]{"entity":"loc","value":"Dhubri"}
+    - [Dhule]{"entity":"loc","value":"Dhule"}
+    - [Dibang Valley]{"entity":"loc","value":"Dibang Valley"}
+    - [Dibrugarh]{"entity":"loc","value":"Dibrugarh"}
+    - [Dima Hasao]{"entity":"loc","value":"Dima Hasao"}
+    - [Dimapur]{"entity":"loc","value":"Dimapur"}
+    - [Dindigul]{"entity":"loc","value":"Dindigul"}
+    - [Dindori]{"entity":"loc","value":"Dindori"}
+    - [Diu]{"entity":"loc","value":"Diu"}
+    - [Doda]{"entity":"loc","value":"Doda"}
+    - [Dumka]{"entity":"loc","value":"Dumka"}
+    - [Dungapur]{"entity":"loc","value":"Dungapur"}
+    - [Durg]{"entity":"loc","value":"Durg"}
+    - [East Champaran]{"entity":"loc","value":"East Champaran"}
+    - [East Delhi]{"entity":"loc","value":"East Delhi"}
+    - [East Garo Hills]{"entity":"loc","value":"East Garo Hills"}
+    - [East Khasi Hills]{"entity":"loc","value":"East Khasi Hills"}
+    - [East Siang]{"entity":"loc","value":"East Siang"}
+    - [East Sikkim]{"entity":"loc","value":"East Sikkim"}
+    - [East Singhbhum]{"entity":"loc","value":"East Singhbhum"}
+    - [Eluru]{"entity":"loc","value":"Eluru"}
+    - [Ernakulam]{"entity":"loc","value":"Ernakulam"}
+    - [Erode]{"entity":"loc","value":"Erode"}
+    - [Etah]{"entity":"loc","value":"Etah"}
+    - [Etawah]{"entity":"loc","value":"Etawah"}
+    - [Faizabad]{"entity":"loc","value":"Faizabad"}
+    - [Faridabad]{"entity":"loc","value":"Faridabad"}
+    - [Faridkot]{"entity":"loc","value":"Faridkot"}
+    - [Farrukhabad]{"entity":"loc","value":"Farrukhabad"}
+    - [Fatehabad]{"entity":"loc","value":"Fatehabad"}
+    - [Fatehgarh Sahib]{"entity":"loc","value":"Fatehgarh Sahib"}
+    - [Fatehpur]{"entity":"loc","value":"Fatehpur"}
+    - [Fazilka]{"entity":"loc","value":"Fazilka"}
+    - [Firozabad]{"entity":"loc","value":"Firozabad"}
+    - [Firozpur]{"entity":"loc","value":"Firozpur"}
+    - [Gadag]{"entity":"loc","value":"Gadag"}
+    - [Gadchiroli]{"entity":"loc","value":"Gadchiroli"}
+    - [Gajapati]{"entity":"loc","value":"Gajapati"}
+    - [Ganderbal]{"entity":"loc","value":"Ganderbal"}
+    - [Gandhinagar]{"entity":"loc","value":"Gandhinagar"}
+    - [Ganganagar]{"entity":"loc","value":"Ganganagar"}
+    - [Ganjam]{"entity":"loc","value":"Ganjam"}
+    - [Garhwa]{"entity":"loc","value":"Garhwa"}
+    - [Gautam Buddh Nagar]{"entity":"loc","value":"Gautam Buddh Nagar"}
+    - [Gaya]{"entity":"loc","value":"Gaya"}
+    - [Ghaziabad]{"entity":"loc","value":"Ghaziabad"}
+    - [Ghazipur]{"entity":"loc","value":"Ghazipur"}
+    - [Giridih]{"entity":"loc","value":"Giridih"}
+    - [Goalpara]{"entity":"loc","value":"Goalpara"}
+    - [Godda]{"entity":"loc","value":"Godda"}
+    - [Golaghat]{"entity":"loc","value":"Golaghat"}
+    - [Gonda]{"entity":"loc","value":"Gonda"}
+    - [Gondia]{"entity":"loc","value":"Gondia"}
+    - [Gopalganj]{"entity":"loc","value":"Gopalganj"}
+    - [Gorakhpur]{"entity":"loc","value":"Gorakhpur"}
+    - [Gulbarga]{"entity":"loc","value":"Gulbarga"}
+    - [Gumla]{"entity":"loc","value":"Gumla"}
+    - [Guna]{"entity":"loc","value":"Guna"}
+    - [Guntur]{"entity":"loc","value":"Guntur"}
+    - [Gurdaspur]{"entity":"loc","value":"Gurdaspur"}
+    - [Gurgaon]{"entity":"loc","value":"Gurgaon"}
+    - [Gwalior]{"entity":"loc","value":"Gwalior"}
+    - [Hailakandi]{"entity":"loc","value":"Hailakandi"}
+    - [Hamirpur]{"entity":"loc","value":"Hamirpur"}
+    - [Hamirpur]{"entity":"loc","value":"Hamirpur"}
+    - [Hanumangarh]{"entity":"loc","value":"Hanumangarh"}
+    - [Harda]{"entity":"loc","value":"Harda"}
+    - [Hardoi]{"entity":"loc","value":"Hardoi"}
+    - [Haridwar]{"entity":"loc","value":"Haridwar"}
+    - [Hassan]{"entity":"loc","value":"Hassan"}
+    - [Haveri district]{"entity":"loc","value":"Haveri district"}
+    - [Hazaribag]{"entity":"loc","value":"Hazaribag"}
+    - [Hingoli]{"entity":"loc","value":"Hingoli"}
+    - [Hissar]{"entity":"loc","value":"Hissar"}
+    - [Hooghly]{"entity":"loc","value":"Hooghly"}
+    - [Hoshangabad]{"entity":"loc","value":"Hoshangabad"}
+    - [Hoshiarpur]{"entity":"loc","value":"Hoshiarpur"}
+    - [Howrah]{"entity":"loc","value":"Howrah"}
+    - [Hyderabad]{"entity":"loc","value":"Hyderabad"}
+    - [Hyderabad]{"entity":"loc","value":"Hyderabad"}
+    - [Idukki]{"entity":"loc","value":"Idukki"}
+    - [Imphal East]{"entity":"loc","value":"Imphal East"}
+    - [Imphal West]{"entity":"loc","value":"Imphal West"}
+    - [Indore]{"entity":"loc","value":"Indore"}
+    - [Jabalpur]{"entity":"loc","value":"Jabalpur"}
+    - [Jagatsinghpur]{"entity":"loc","value":"Jagatsinghpur"}
+    - [Jaintia Hills]{"entity":"loc","value":"Jaintia Hills"}
+    - [Jaipur]{"entity":"loc","value":"Jaipur"}
+    - [Jaisalmer]{"entity":"loc","value":"Jaisalmer"}
+    - [Jajpur]{"entity":"loc","value":"Jajpur"}
+    - [Jalandhar]{"entity":"loc","value":"Jalandhar"}
+    - [Jalaun]{"entity":"loc","value":"Jalaun"}
+    - [Jalgaon]{"entity":"loc","value":"Jalgaon"}
+    - [Jalna]{"entity":"loc","value":"Jalna"}
+    - [Jalore]{"entity":"loc","value":"Jalore"}
+    - [Jalpaiguri]{"entity":"loc","value":"Jalpaiguri"}
+    - [Jammu]{"entity":"loc","value":"Jammu"}
+    - [Jamnagar]{"entity":"loc","value":"Jamnagar"}
+    - [Jamtara]{"entity":"loc","value":"Jamtara"}
+    - [Jamui]{"entity":"loc","value":"Jamui"}
+    - [Janjgir-Champa]{"entity":"loc","value":"Janjgir-Champa"}
+    - [Jashpur]{"entity":"loc","value":"Jashpur"}
+    - [Jaunpur district]{"entity":"loc","value":"Jaunpur district"}
+    - [Jehanabad]{"entity":"loc","value":"Jehanabad"}
+    - [Jhabua]{"entity":"loc","value":"Jhabua"}
+    - [Jhajjar]{"entity":"loc","value":"Jhajjar"}
+    - [Jhalawar]{"entity":"loc","value":"Jhalawar"}
+    - [Jhansi]{"entity":"loc","value":"Jhansi"}
+    - [Jharsuguda]{"entity":"loc","value":"Jharsuguda"}
+    - [Jhunjhunu]{"entity":"loc","value":"Jhunjhunu"}
+    - [Jind]{"entity":"loc","value":"Jind"}
+    - [Jodhpur]{"entity":"loc","value":"Jodhpur"}
+    - [Jorhat]{"entity":"loc","value":"Jorhat"}
+    - [Junagadh]{"entity":"loc","value":"Junagadh"}
+    - [Jyotiba Phule Nagar]{"entity":"loc","value":"Jyotiba Phule Nagar"}
+    - [Kadapa]{"entity":"loc","value":"Kadapa"}
+    - [Kaimur]{"entity":"loc","value":"Kaimur"}
+    - [Kaithal]{"entity":"loc","value":"Kaithal"}
+    - [Kakinada]{"entity":"loc","value":"Kakinada"}
+    - [Kalahandi]{"entity":"loc","value":"Kalahandi"}
+    - [Kamrup]{"entity":"loc","value":"Kamrup"}
+    - [Kamrup Metropolitan]{"entity":"loc","value":"Kamrup Metropolitan"}
+    - [Kanchipuram]{"entity":"loc","value":"Kanchipuram"}
+    - [Kandhamal]{"entity":"loc","value":"Kandhamal"}
+    - [Kangra]{"entity":"loc","value":"Kangra"}
+    - [Kanker]{"entity":"loc","value":"Kanker"}
+    - [Kannauj]{"entity":"loc","value":"Kannauj"}
+    - [Kannur]{"entity":"loc","value":"Kannur"}
+    - [Kanpur]{"entity":"loc","value":"Kanpur"}
+    - [Kanshi Ram Nagar]{"entity":"loc","value":"Kanshi Ram Nagar"}
+    - [Kanyakumari]{"entity":"loc","value":"Kanyakumari"}
+    - [Kapurthala]{"entity":"loc","value":"Kapurthala"}
+    - [Karaikal]{"entity":"loc","value":"Karaikal"}
+    - [Karauli]{"entity":"loc","value":"Karauli"}
+    - [Karbi Anglong]{"entity":"loc","value":"Karbi Anglong"}
+    - [Kargil]{"entity":"loc","value":"Kargil"}
+    - [Karimganj]{"entity":"loc","value":"Karimganj"}
+    - [Karimnagar]{"entity":"loc","value":"Karimnagar"}
+    - [Karnal]{"entity":"loc","value":"Karnal"}
+    - [Karur]{"entity":"loc","value":"Karur"}
+    - [Kasaragod]{"entity":"loc","value":"Kasaragod"}
+    - [Kathua]{"entity":"loc","value":"Kathua"}
+    - [Katihar]{"entity":"loc","value":"Katihar"}
+    - [Katni]{"entity":"loc","value":"Katni"}
+    - [Kaushambi]{"entity":"loc","value":"Kaushambi"}
+    - [Kendrapara]{"entity":"loc","value":"Kendrapara"}
+    - [Khagaria]{"entity":"loc","value":"Khagaria"}
+    - [Khammam]{"entity":"loc","value":"Khammam"}
+    - [Khargone]{"entity":"loc","value":"Khargone"}
+    - [Kheda]{"entity":"loc","value":"Kheda"}
+    - [Khordha]{"entity":"loc","value":"Khordha"}
+    - [Khowai]{"entity":"loc","value":"Khowai"}
+    - [Khunti]{"entity":"loc","value":"Khunti"}
+    - [Kinnaur]{"entity":"loc","value":"Kinnaur"}
+    - [Kishanganj]{"entity":"loc","value":"Kishanganj"}
+    - [Kishtwar]{"entity":"loc","value":"Kishtwar"}
+    - [Kodagu]{"entity":"loc","value":"Kodagu"}
+    - [Koderma]{"entity":"loc","value":"Koderma"}
+    - [Kohima]{"entity":"loc","value":"Kohima"}
+    - [Kokrajhar]{"entity":"loc","value":"Kokrajhar"}
+    - [Kolar]{"entity":"loc","value":"Kolar"}
+    - [Kolasib]{"entity":"loc","value":"Kolasib"}
+    - [Kolhapur]{"entity":"loc","value":"Kolhapur"}
+    - [Kolkata]{"entity":"loc","value":"Kolkata"}
+    - [Kollam]{"entity":"loc","value":"Kollam"}
+    - [Koppal]{"entity":"loc","value":"Koppal"}
+    - [Koraput]{"entity":"loc","value":"Koraput"}
+    - [Korba]{"entity":"loc","value":"Korba"}
+    - [Koriya]{"entity":"loc","value":"Koriya"}
+    - [Kota]{"entity":"loc","value":"Kota"}
+    - [Kottayam]{"entity":"loc","value":"Kottayam"}
+    - [Kozhikode]{"entity":"loc","value":"Kozhikode"}
+    - [Krishna]{"entity":"loc","value":"Krishna"}
+    - [Kulgam]{"entity":"loc","value":"Kulgam"}
+    - [Kullu]{"entity":"loc","value":"Kullu"}
+    - [Kupwara]{"entity":"loc","value":"Kupwara"}
+    - [Kurnool]{"entity":"loc","value":"Kurnool"}
+    - [Kurukshetra]{"entity":"loc","value":"Kurukshetra"}
+    - [Kurung Kumey]{"entity":"loc","value":"Kurung Kumey"}
+    - [Kushinagar]{"entity":"loc","value":"Kushinagar"}
+    - [Kutch]{"entity":"loc","value":"Kutch"}
+    - [Lahaul and Spiti]{"entity":"loc","value":"Lahaul and Spiti"}
+    - [Lakhimpur]{"entity":"loc","value":"Lakhimpur"}
+    - [Lakhimpur Kheri]{"entity":"loc","value":"Lakhimpur Kheri"}
+    - [Lakhisarai]{"entity":"loc","value":"Lakhisarai"}
+    - [Lalitpur]{"entity":"loc","value":"Lalitpur"}
+    - [Latehar]{"entity":"loc","value":"Latehar"}
+    - [Latur]{"entity":"loc","value":"Latur"}
+    - [Lawngtlai]{"entity":"loc","value":"Lawngtlai"}
+    - [Leh]{"entity":"loc","value":"Leh"}
+    - [Lohardaga]{"entity":"loc","value":"Lohardaga"}
+    - [Lohit]{"entity":"loc","value":"Lohit"}
+    - [Lower Dibang Valley]{"entity":"loc","value":"Lower Dibang Valley"}
+    - [Lower Subansiri]{"entity":"loc","value":"Lower Subansiri"}
+    - [Lucknow]{"entity":"loc","value":"Lucknow"}
+    - [Ludhiana]{"entity":"loc","value":"Ludhiana"}
+    - [Lunglei]{"entity":"loc","value":"Lunglei"}
+    - [Madhepura]{"entity":"loc","value":"Madhepura"}
+    - [Madhubani]{"entity":"loc","value":"Madhubani"}
+    - [Madurai]{"entity":"loc","value":"Madurai"}
+    - [Mahamaya Nagar]{"entity":"loc","value":"Mahamaya Nagar"}
+    - [Maharajganj]{"entity":"loc","value":"Maharajganj"}
+    - [Mahasamund]{"entity":"loc","value":"Mahasamund"}
+    - [Mahbubnagar]{"entity":"loc","value":"Mahbubnagar"}
+    - [Mahe]{"entity":"loc","value":"Mahe"}
+    - [Mahendragarh]{"entity":"loc","value":"Mahendragarh"}
+    - [Mahoba]{"entity":"loc","value":"Mahoba"}
+    - [Mainpuri]{"entity":"loc","value":"Mainpuri"}
+    - [Malappuram]{"entity":"loc","value":"Malappuram"}
+    - [Maldah]{"entity":"loc","value":"Maldah"}
+    - [Malkangiri]{"entity":"loc","value":"Malkangiri"}
+    - [Mamit]{"entity":"loc","value":"Mamit"}
+    - [Mandi]{"entity":"loc","value":"Mandi"}
+    - [Mandla]{"entity":"loc","value":"Mandla"}
+    - [Mandsaur]{"entity":"loc","value":"Mandsaur"}
+    - [Mandya]{"entity":"loc","value":"Mandya"}
+    - [Mansa]{"entity":"loc","value":"Mansa"}
+    - [Marigaon]{"entity":"loc","value":"Marigaon"}
+    - [Mathura]{"entity":"loc","value":"Mathura"}
+    - [Mau]{"entity":"loc","value":"Mau"}
+    - [Mayurbhanj]{"entity":"loc","value":"Mayurbhanj"}
+    - [Medak]{"entity":"loc","value":"Medak"}
+    - [Meerut]{"entity":"loc","value":"Meerut"}
+    - [Mehsana]{"entity":"loc","value":"Mehsana"}
+    - [Mewat]{"entity":"loc","value":"Mewat"}
+    - [Mirzapur]{"entity":"loc","value":"Mirzapur"}
+    - [Moga]{"entity":"loc","value":"Moga"}
+    - [Mokokchung]{"entity":"loc","value":"Mokokchung"}
+    - [Mon]{"entity":"loc","value":"Mon"}
+    - [Moradabad]{"entity":"loc","value":"Moradabad"}
+    - [Morena]{"entity":"loc","value":"Morena"}
+    - [Mumbai City]{"entity":"loc","value":"Mumbai City"}
+    - [Mumbai suburban]{"entity":"loc","value":"Mumbai suburban"}
+    - [Munger]{"entity":"loc","value":"Munger"}
+    - [Murshidabad]{"entity":"loc","value":"Murshidabad"}
+    - [Muzaffarnagar]{"entity":"loc","value":"Muzaffarnagar"}
+    - [Muzaffarpur]{"entity":"loc","value":"Muzaffarpur"}
+    - [Mysore]{"entity":"loc","value":"Mysore"}
+    - [Nabarangpur]{"entity":"loc","value":"Nabarangpur"}
+    - [Nadia]{"entity":"loc","value":"Nadia"}
+    - [Nagaon]{"entity":"loc","value":"Nagaon"}
+    - [Nagapattinam]{"entity":"loc","value":"Nagapattinam"}
+    - [Nagaur]{"entity":"loc","value":"Nagaur"}
+    - [Nagpur]{"entity":"loc","value":"Nagpur"}
+    - [Nainital]{"entity":"loc","value":"Nainital"}
+    - [Nalanda]{"entity":"loc","value":"Nalanda"}
+    - [Nalbari]{"entity":"loc","value":"Nalbari"}
+    - [Nalgonda]{"entity":"loc","value":"Nalgonda"}
+    - [Namakkal]{"entity":"loc","value":"Namakkal"}
+    - [Nanded]{"entity":"loc","value":"Nanded"}
+    - [Nandurbar]{"entity":"loc","value":"Nandurbar"}
+    - [Narayanpur]{"entity":"loc","value":"Narayanpur"}
+    - [Narmada]{"entity":"loc","value":"Narmada"}
+    - [Narsinghpur]{"entity":"loc","value":"Narsinghpur"}
+    - [Nashik]{"entity":"loc","value":"Nashik"}
+    - [Navsari]{"entity":"loc","value":"Navsari"}
+    - [Nawada]{"entity":"loc","value":"Nawada"}
+    - [Nawanshahr]{"entity":"loc","value":"Nawanshahr"}
+    - [Nayagarh]{"entity":"loc","value":"Nayagarh"}
+    - [Neemuch]{"entity":"loc","value":"Neemuch"}
+    - [Nellore]{"entity":"loc","value":"Nellore"}
+    - [New Delhi]{"entity":"loc","value":"New Delhi"}
+    - [Nilgiris]{"entity":"loc","value":"Nilgiris"}
+    - [Nizamabad]{"entity":"loc","value":"Nizamabad"}
+    - [North 24 Parganas]{"entity":"loc","value":"North 24 Parganas"}
+    - [North Delhi]{"entity":"loc","value":"North Delhi"}
+    - [North East Delhi]{"entity":"loc","value":"North East Delhi"}
+    - [North Goa]{"entity":"loc","value":"North Goa"}
+    - [North Sikkim]{"entity":"loc","value":"North Sikkim"}
+    - [North Tripura]{"entity":"loc","value":"North Tripura"}
+    - [North West Delhi]{"entity":"loc","value":"North West Delhi"}
+    - [Nuapada]{"entity":"loc","value":"Nuapada"}
+    - [Ongole]{"entity":"loc","value":"Ongole"}
+    - [Osmanabad]{"entity":"loc","value":"Osmanabad"}
+    - [Pakur]{"entity":"loc","value":"Pakur"}
+    - [Palakkad]{"entity":"loc","value":"Palakkad"}
+    - [Palamu]{"entity":"loc","value":"Palamu"}
+    - [Pali]{"entity":"loc","value":"Pali"}
+    - [Palwal]{"entity":"loc","value":"Palwal"}
+    - [Panchkula]{"entity":"loc","value":"Panchkula"}
+    - [Panchmahal]{"entity":"loc","value":"Panchmahal"}
+    - [Panipat]{"entity":"loc","value":"Panipat"}
+    - [Panna]{"entity":"loc","value":"Panna"}
+    - [Papum Pare]{"entity":"loc","value":"Papum Pare"}
+    - [Parbhani]{"entity":"loc","value":"Parbhani"}
+    - [Paschim Medinipur]{"entity":"loc","value":"Paschim Medinipur"}
+    - [Patan]{"entity":"loc","value":"Patan"}
+    - [Pathanamthitta]{"entity":"loc","value":"Pathanamthitta"}
+    - [Pathankot]{"entity":"loc","value":"Pathankot"}
+    - [Patiala]{"entity":"loc","value":"Patiala"}
+    - [Patna]{"entity":"loc","value":"Patna"}
+    - [Pauri Garhwal]{"entity":"loc","value":"Pauri Garhwal"}
+    - [Perambalur]{"entity":"loc","value":"Perambalur"}
+    - [Phek]{"entity":"loc","value":"Phek"}
+    - [Pilibhit]{"entity":"loc","value":"Pilibhit"}
+    - [Pithoragarh]{"entity":"loc","value":"Pithoragarh"}
+    - [Pondicherry]{"entity":"loc","value":"Pondicherry"}
+    - [Poonch]{"entity":"loc","value":"Poonch"}
+    - [Porbandar]{"entity":"loc","value":"Porbandar"}
+    - [Pratapgarh]{"entity":"loc","value":"Pratapgarh"}
+    - [Pratapgarh]{"entity":"loc","value":"Pratapgarh"}
+    - [Pudukkottai]{"entity":"loc","value":"Pudukkottai"}
+    - [Pulwama]{"entity":"loc","value":"Pulwama"}
+    - [Pune]{"entity":"loc","value":"Pune"}
+    - [Purba Medinipur]{"entity":"loc","value":"Purba Medinipur"}
+    - [Puri]{"entity":"loc","value":"Puri"}
+    - [Purnia]{"entity":"loc","value":"Purnia"}
+    - [Purulia]{"entity":"loc","value":"Purulia"}
+    - [Raebareli]{"entity":"loc","value":"Raebareli"}
+    - [Raichur]{"entity":"loc","value":"Raichur"}
+    - [Raigad]{"entity":"loc","value":"Raigad"}
+    - [Raigarh]{"entity":"loc","value":"Raigarh"}
+    - [Raipur]{"entity":"loc","value":"Raipur"}
+    - [Raisen]{"entity":"loc","value":"Raisen"}
+    - [Rajauri]{"entity":"loc","value":"Rajauri"}
+    - [Rajgarh]{"entity":"loc","value":"Rajgarh"}
+    - [Rajkot]{"entity":"loc","value":"Rajkot"}
+    - [Rajnandgaon]{"entity":"loc","value":"Rajnandgaon"}
+    - [Rajsamand]{"entity":"loc","value":"Rajsamand"}
+    - [Ramanagara]{"entity":"loc","value":"Ramanagara"}
+    - [Ramanathapuram]{"entity":"loc","value":"Ramanathapuram"}
+    - [Ramban]{"entity":"loc","value":"Ramban"}
+    - [Ramgarh]{"entity":"loc","value":"Ramgarh"}
+    - [Rampur]{"entity":"loc","value":"Rampur"}
+    - [Ranchi]{"entity":"loc","value":"Ranchi"}
+    - [Ratlam]{"entity":"loc","value":"Ratlam"}
+    - [Ratnagiri]{"entity":"loc","value":"Ratnagiri"}
+    - [Rayagada]{"entity":"loc","value":"Rayagada"}
+    - [Reasi]{"entity":"loc","value":"Reasi"}
+    - [Rewa]{"entity":"loc","value":"Rewa"}
+    - [Rewari]{"entity":"loc","value":"Rewari"}
+    - [Ri Bhoi]{"entity":"loc","value":"Ri Bhoi"}
+    - [Rohtak]{"entity":"loc","value":"Rohtak"}
+    - [Rohtas]{"entity":"loc","value":"Rohtas"}
+    - [Rudraprayag]{"entity":"loc","value":"Rudraprayag"}
+    - [Rupnagar]{"entity":"loc","value":"Rupnagar"}
+    - [Sabarkantha]{"entity":"loc","value":"Sabarkantha"}
+    - [Sagar]{"entity":"loc","value":"Sagar"}
+    - [Saharanpur]{"entity":"loc","value":"Saharanpur"}
+    - [Saharsa]{"entity":"loc","value":"Saharsa"}
+    - [Sahibganj]{"entity":"loc","value":"Sahibganj"}
+    - [Saiha]{"entity":"loc","value":"Saiha"}
+    - [Salem]{"entity":"loc","value":"Salem"}
+    - [Samastipur]{"entity":"loc","value":"Samastipur"}
+    - [Samba]{"entity":"loc","value":"Samba"}
+    - [Sambalpur]{"entity":"loc","value":"Sambalpur"}
+    - [Sangli]{"entity":"loc","value":"Sangli"}
+    - [Sangrur]{"entity":"loc","value":"Sangrur"}
+    - [Sant Kabir Nagar]{"entity":"loc","value":"Sant Kabir Nagar"}
+    - [Sant Ravidas Nagar]{"entity":"loc","value":"Sant Ravidas Nagar"}
+    - [Saran]{"entity":"loc","value":"Saran"}
+    - [Satara]{"entity":"loc","value":"Satara"}
+    - [Satna]{"entity":"loc","value":"Satna"}
+    - [Sawai Madhopur]{"entity":"loc","value":"Sawai Madhopur"}
+    - [Sehore]{"entity":"loc","value":"Sehore"}
+    - [Senapati]{"entity":"loc","value":"Senapati"}
+    - [Seoni]{"entity":"loc","value":"Seoni"}
+    - [Seraikela Kharsawan]{"entity":"loc","value":"Seraikela Kharsawan"}
+    - [Serchhip]{"entity":"loc","value":"Serchhip"}
+    - [Shahdol]{"entity":"loc","value":"Shahdol"}
+    - [Shahjahanpur]{"entity":"loc","value":"Shahjahanpur"}
+    - [Shajapur]{"entity":"loc","value":"Shajapur"}
+    - [Shamli]{"entity":"loc","value":"Shamli"}
+    - [Sheikhpura]{"entity":"loc","value":"Sheikhpura"}
+    - [Sheohar]{"entity":"loc","value":"Sheohar"}
+    - [Sheopur]{"entity":"loc","value":"Sheopur"}
+    - [Shimla]{"entity":"loc","value":"Shimla"}
+    - [Shimoga]{"entity":"loc","value":"Shimoga"}
+    - [Shivpuri]{"entity":"loc","value":"Shivpuri"}
+    - [Shopian]{"entity":"loc","value":"Shopian"}
+    - [Shravasti]{"entity":"loc","value":"Shravasti"}
+    - [Sibsagar]{"entity":"loc","value":"Sibsagar"}
+    - [Siddharthnagar]{"entity":"loc","value":"Siddharthnagar"}
+    - [Sidhi]{"entity":"loc","value":"Sidhi"}
+    - [Sikar]{"entity":"loc","value":"Sikar"}
+    - [Simdega]{"entity":"loc","value":"Simdega"}
+    - [Sindhudurg]{"entity":"loc","value":"Sindhudurg"}
+    - [Singrauli]{"entity":"loc","value":"Singrauli"}
+    - [Sirmaur]{"entity":"loc","value":"Sirmaur"}
+    - [Sirohi]{"entity":"loc","value":"Sirohi"}
+    - [Sirsa]{"entity":"loc","value":"Sirsa"}
+    - [Sitamarhi]{"entity":"loc","value":"Sitamarhi"}
+    - [Sitapur]{"entity":"loc","value":"Sitapur"}
+    - [Sivaganga]{"entity":"loc","value":"Sivaganga"}
+    - [Siwan]{"entity":"loc","value":"Siwan"}
+    - [Solan]{"entity":"loc","value":"Solan"}
+    - [Solapur]{"entity":"loc","value":"Solapur"}
+    - [Sonbhadra]{"entity":"loc","value":"Sonbhadra"}
+    - [Sonipat]{"entity":"loc","value":"Sonipat"}
+    - [Sonitpur]{"entity":"loc","value":"Sonitpur"}
+    - [South 24 Parganas]{"entity":"loc","value":"South 24 Parganas"}
+    - [South Delhi]{"entity":"loc","value":"South Delhi"}
+    - [South Garo Hills]{"entity":"loc","value":"South Garo Hills"}
+    - [South Goa]{"entity":"loc","value":"South Goa"}
+    - [South Sikkim]{"entity":"loc","value":"South Sikkim"}
+    - [South Tripura]{"entity":"loc","value":"South Tripura"}
+    - [South West Delhi]{"entity":"loc","value":"South West Delhi"}
+    - [Sri Muktsar Sahib]{"entity":"loc","value":"Sri Muktsar Sahib"}
+    - [Srikakulam]{"entity":"loc","value":"Srikakulam"}
+    - [Srinagar]{"entity":"loc","value":"Srinagar"}
+    - [Sonepur]{"entity":"loc","value":"Sonepur"}
+    - [subarnapur]{"entity":"loc","value":"subarnapur"}
+    - [Sultanpur]{"entity":"loc","value":"Sultanpur"}
+    - [Sundergarh]{"entity":"loc","value":"Sundergarh"}
+    - [Supaul]{"entity":"loc","value":"Supaul"}
+    - [Surat]{"entity":"loc","value":"Surat"}
+    - [Surendranagar]{"entity":"loc","value":"Surendranagar"}
+    - [Surguja]{"entity":"loc","value":"Surguja"}
+    - [Tamenglong]{"entity":"loc","value":"Tamenglong"}
+    - [Tarn Taran]{"entity":"loc","value":"Tarn Taran"}
+    - [Tawang]{"entity":"loc","value":"Tawang"}
+    - [Tehri Garhwal]{"entity":"loc","value":"Tehri Garhwal"}
+    - [Thane]{"entity":"loc","value":"Thane"}
+    - [Thanjavur]{"entity":"loc","value":"Thanjavur"}
+    - [The Dangs]{"entity":"loc","value":"The Dangs"}
+    - [Theni]{"entity":"loc","value":"Theni"}
+    - [Thiruvananthapuram]{"entity":"loc","value":"Thiruvananthapuram"}
+    - [Thoothukudi]{"entity":"loc","value":"Thoothukudi"}
+    - [Thoubal]{"entity":"loc","value":"Thoubal"}
+    - [Thrissur]{"entity":"loc","value":"Thrissur"}
+    - [Tikamgarh]{"entity":"loc","value":"Tikamgarh"}
+    - [Tinsukia]{"entity":"loc","value":"Tinsukia"}
+    - [Tirap]{"entity":"loc","value":"Tirap"}
+    - [Tiruchirappalli]{"entity":"loc","value":"Tiruchirappalli"}
+    - [Tirunelveli]{"entity":"loc","value":"Tirunelveli"}
+    - [Tirupur]{"entity":"loc","value":"Tirupur"}
+    - [Tiruvallur]{"entity":"loc","value":"Tiruvallur"}
+    - [Tiruvannamalai]{"entity":"loc","value":"Tiruvannamalai"}
+    - [Tiruvarur]{"entity":"loc","value":"Tiruvarur"}
+    - [Tonk]{"entity":"loc","value":"Tonk"}
+    - [Tuensang]{"entity":"loc","value":"Tuensang"}
+    - [Tumkur]{"entity":"loc","value":"Tumkur"}
+    - [Udaipur]{"entity":"loc","value":"Udaipur"}
+    - [Udalguri]{"entity":"loc","value":"Udalguri"}
+    - [Udham Singh Nagar]{"entity":"loc","value":"Udham Singh Nagar"}
+    - [Udhampur]{"entity":"loc","value":"Udhampur"}
+    - [Udupi]{"entity":"loc","value":"Udupi"}
+    - [Ujjain]{"entity":"loc","value":"Ujjain"}
+    - [Ukhrul]{"entity":"loc","value":"Ukhrul"}
+    - [Umaria]{"entity":"loc","value":"Umaria"}
+    - [Una]{"entity":"loc","value":"Una"}
+    - [Unnao]{"entity":"loc","value":"Unnao"}
+    - [Upper Siang]{"entity":"loc","value":"Upper Siang"}
+    - [Upper Subansiri]{"entity":"loc","value":"Upper Subansiri"}
+    - [Uttar Dinajpur]{"entity":"loc","value":"Uttar Dinajpur"}
+    - [Uttara Kannada]{"entity":"loc","value":"Uttara Kannada"}
+    - [Uttarkashi]{"entity":"loc","value":"Uttarkashi"}
+    - [Vadodara]{"entity":"loc","value":"Vadodara"}
+    - [Vaishali]{"entity":"loc","value":"Vaishali"}
+    - [Valsad]{"entity":"loc","value":"Valsad"}
+    - [Varanasi]{"entity":"loc","value":"Varanasi"}
+    - [Vellore]{"entity":"loc","value":"Vellore"}
+    - [Vidisha]{"entity":"loc","value":"Vidisha"}
+    - [Viluppuram]{"entity":"loc","value":"Viluppuram"}
+    - [Virudhunagar]{"entity":"loc","value":"Virudhunagar"}
+    - [Visakhapatnam]{"entity":"loc","value":"Visakhapatnam"}
+    - [Vizianagaram]{"entity":"loc","value":"Vizianagaram"}
+    - [Vyara]{"entity":"loc","value":"Vyara"}
+    - [Warangal]{"entity":"loc","value":"Warangal"}
+    - [Wardha]{"entity":"loc","value":"Wardha"}
+    - [Washim]{"entity":"loc","value":"Washim"}
+    - [Wayanad]{"entity":"loc","value":"Wayanad"}
+    - [West Champaran]{"entity":"loc","value":"West Champaran"}
+    - [West Delhi]{"entity":"loc","value":"West Delhi"}
+    - [West Garo Hills]{"entity":"loc","value":"West Garo Hills"}
+    - [West Kameng]{"entity":"loc","value":"West Kameng"}
+    - [West Khasi Hills]{"entity":"loc","value":"West Khasi Hills"}
+    - [West Siang]{"entity":"loc","value":"West Siang"}
+    - [West Sikkim]{"entity":"loc","value":"West Sikkim"}
+    - [West Singhbhum]{"entity":"loc","value":"West Singhbhum"}
+    - [West Tripura]{"entity":"loc","value":"West Tripura"}
+    - [Wokha]{"entity":"loc","value":"Wokha"}
+    - [Yadgir]{"entity":"loc","value":"Yadgir"}
+    - [Yamuna Nagar]{"entity":"loc","value":"Yamuna Nagar"}
+    - [Yanam]{"entity":"loc","value":"Yanam"}
+    - [Yavatmal]{"entity":"loc","value":"Yavatmal"}
+    - [Zunheboto]{"entity":"loc","value":"Zunheboto"}
+    - [adilabad]{"entity":"loc", "value":"adilabad"}
+    - [agra]{"entity":"loc", "value":"agra"}
+    - [ahmedabad]{"entity":"loc", "value":"ahmedabad"}
+    - [ahmednagar]{"entity":"loc", "value":"ahmednagar"}
+    - [aizawl]{"entity":"loc", "value":"aizawl"}
+    - [mohali]{"entity":"loc", "value":"mohali"}
+    - [ajitgarh]{"entity":"loc", "value":"ajitgarh"}
+    - [ajmer]{"entity":"loc", "value":"ajmer"}
+    - [akola]{"entity":"loc", "value":"akola"}
+    - [alappuzha]{"entity":"loc", "value":"alappuzha"}
+    - [aligarh]{"entity":"loc", "value":"aligarh"}
+    - [alirajpur]{"entity":"loc", "value":"alirajpur"}
+    - [allahabad]{"entity":"loc", "value":"allahabad"}
+    - [almora]{"entity":"loc", "value":"almora"}
+    - [alwar]{"entity":"loc", "value":"alwar"}
+    - [ambala]{"entity":"loc", "value":"ambala"}
+    - [ambedkar nagar]{"entity":"loc", "value":"ambedkar nagar"}
+    - [amravati]{"entity":"loc", "value":"amravati"}
+    - [amreli district]{"entity":"loc", "value":"amreli district"}
+    - [amritsar]{"entity":"loc", "value":"amritsar"}
+    - [anand]{"entity":"loc", "value":"anand"}
+    - [anantapur]{"entity":"loc", "value":"anantapur"}
+    - [anantnag]{"entity":"loc", "value":"anantnag"}
+    - [angul]{"entity":"loc", "value":"angul"}
+    - [anjaw]{"entity":"loc", "value":"anjaw"}
+    - [anuppur]{"entity":"loc", "value":"anuppur"}
+    - [araria]{"entity":"loc", "value":"araria"}
+    - [ariyalur]{"entity":"loc", "value":"ariyalur"}
+    - [arwal]{"entity":"loc", "value":"arwal"}
+    - [ashok nagar]{"entity":"loc", "value":"ashok nagar"}
+    - [auraiya]{"entity":"loc", "value":"auraiya"}
+    - [aurangabad]{"entity":"loc", "value":"aurangabad"}
+    - [aurangabad]{"entity":"loc", "value":"aurangabad"}
+    - [azamgarh]{"entity":"loc", "value":"azamgarh"}
+    - [badgam]{"entity":"loc", "value":"badgam"}
+    - [bagalkot]{"entity":"loc", "value":"bagalkot"}
+    - [bageshwar]{"entity":"loc", "value":"bageshwar"}
+    - [bagpat]{"entity":"loc", "value":"bagpat"}
+    - [bahraich]{"entity":"loc", "value":"bahraich"}
+    - [baksa]{"entity":"loc", "value":"baksa"}
+    - [balaghat]{"entity":"loc", "value":"balaghat"}
+    - [balangir]{"entity":"loc", "value":"balangir"}
+    - [balasore]{"entity":"loc", "value":"balasore"}
+    - [ballia]{"entity":"loc", "value":"ballia"}
+    - [balrampur]{"entity":"loc", "value":"balrampur"}
+    - [banaskantha]{"entity":"loc", "value":"banaskantha"}
+    - [banda]{"entity":"loc", "value":"banda"}
+    - [bandipora]{"entity":"loc", "value":"bandipora"}
+    - [bangalore rural]{"entity":"loc", "value":"bangalore rural"}
+    - [bangalore urban]{"entity":"loc", "value":"bangalore urban"}
+    - [banka]{"entity":"loc", "value":"banka"}
+    - [bankura]{"entity":"loc", "value":"bankura"}
+    - [banswara]{"entity":"loc", "value":"banswara"}
+    - [barabanki]{"entity":"loc", "value":"barabanki"}
+    - [baramulla]{"entity":"loc", "value":"baramulla"}
+    - [baran]{"entity":"loc", "value":"baran"}
+    - [bardhaman]{"entity":"loc", "value":"bardhaman"}
+    - [bareilly]{"entity":"loc", "value":"bareilly"}
+    - [baragarh]{"entity":"loc", "value":"baragarh"}
+    - [Bargarh]{"entity":"loc", "value":"bargarh"}
+    - [barmer]{"entity":"loc", "value":"barmer"}
+    - [barnala]{"entity":"loc", "value":"barnala"}
+    - [barpeta]{"entity":"loc", "value":"barpeta"}
+    - [barwani]{"entity":"loc", "value":"barwani"}
+    - [bastar]{"entity":"loc", "value":"bastar"}
+    - [basti]{"entity":"loc", "value":"basti"}
+    - [bathinda]{"entity":"loc", "value":"bathinda"}
+    - [beed]{"entity":"loc", "value":"beed"}
+    - [begusarai]{"entity":"loc", "value":"begusarai"}
+    - [belgaum]{"entity":"loc", "value":"belgaum"}
+    - [bellary]{"entity":"loc", "value":"bellary"}
+    - [betul]{"entity":"loc", "value":"betul"}
+    - [bhadrak]{"entity":"loc", "value":"bhadrak"}
+    - [bhagalpur]{"entity":"loc", "value":"bhagalpur"}
+    - [bhandara]{"entity":"loc", "value":"bhandara"}
+    - [bharatpur]{"entity":"loc", "value":"bharatpur"}
+    - [bharuch]{"entity":"loc", "value":"bharuch"}
+    - [bhavnagar]{"entity":"loc", "value":"bhavnagar"}
+    - [bhilwara]{"entity":"loc", "value":"bhilwara"}
+    - [bhind]{"entity":"loc", "value":"bhind"}
+    - [bhiwani]{"entity":"loc", "value":"bhiwani"}
+    - [bhojpur]{"entity":"loc", "value":"bhojpur"}
+    - [bhopal]{"entity":"loc", "value":"bhopal"}
+    - [bidar]{"entity":"loc", "value":"bidar"}
+    - [bijapur]{"entity":"loc", "value":"bijapur"}
+    - [bijapur]{"entity":"loc", "value":"bijapur"}
+    - [bijnor]{"entity":"loc", "value":"bijnor"}
+    - [bikaner]{"entity":"loc", "value":"bikaner"}
+    - [bilaspur]{"entity":"loc", "value":"bilaspur"}
+    - [bilaspur]{"entity":"loc", "value":"bilaspur"}
+    - [birbhum]{"entity":"loc", "value":"birbhum"}
+    - [bishnupur]{"entity":"loc", "value":"bishnupur"}
+    - [bokaro]{"entity":"loc", "value":"bokaro"}
+    - [bongaigaon]{"entity":"loc", "value":"bongaigaon"}
+    - [budaun]{"entity":"loc", "value":"budaun"}
+    - [bulandshahr]{"entity":"loc", "value":"bulandshahr"}
+    - [buldhana]{"entity":"loc", "value":"buldhana"}
+    - [bundi]{"entity":"loc", "value":"bundi"}
+    - [burhanpur]{"entity":"loc", "value":"burhanpur"}
+    - [buxar]{"entity":"loc", "value":"buxar"}
+    - [cachar]{"entity":"loc", "value":"cachar"}
+    - [central delhi]{"entity":"loc", "value":"central delhi"}
+    - [chamarajnagar]{"entity":"loc", "value":"chamarajnagar"}
+    - [chamba]{"entity":"loc", "value":"chamba"}
+    - [chamoli]{"entity":"loc", "value":"chamoli"}
+    - [champawat]{"entity":"loc", "value":"champawat"}
+    - [champhai]{"entity":"loc", "value":"champhai"}
+    - [chandauli]{"entity":"loc", "value":"chandauli"}
+    - [chandel]{"entity":"loc", "value":"chandel"}
+    - [chandigarh]{"entity":"loc", "value":"chandigarh"}
+    - [chandrapur]{"entity":"loc", "value":"chandrapur"}
+    - [changlang]{"entity":"loc", "value":"changlang"}
+    - [chatra]{"entity":"loc", "value":"chatra"}
+    - [chennai]{"entity":"loc", "value":"chennai"}
+    - [chhatarpur]{"entity":"loc", "value":"chhatarpur"}
+    - [chhatrapati shahuji maharaj nagar]{"entity":"loc", "value":"chhatrapati shahuji maharaj nagar"}
+    - [chhindwara]{"entity":"loc", "value":"chhindwara"}
+    - [chikkaballapur]{"entity":"loc", "value":"chikkaballapur"}
+    - [chikkamagaluru]{"entity":"loc", "value":"chikkamagaluru"}
+    - [chirang]{"entity":"loc", "value":"chirang"}
+    - [chitradurga]{"entity":"loc", "value":"chitradurga"}
+    - [chitrakoot]{"entity":"loc", "value":"chitrakoot"}
+    - [chittoor]{"entity":"loc", "value":"chittoor"}
+    - [chittorgarh]{"entity":"loc", "value":"chittorgarh"}
+    - [churachandpur]{"entity":"loc", "value":"churachandpur"}
+    - [churu]{"entity":"loc", "value":"churu"}
+    - [coimbatore]{"entity":"loc", "value":"coimbatore"}
+    - [cooch behar]{"entity":"loc", "value":"cooch behar"}
+    - [cuddalore]{"entity":"loc", "value":"cuddalore"}
+    - [cuttack]{"entity":"loc", "value":"cuttack"}
+    - [dadra and nagar haveli]{"entity":"loc", "value":"dadra and nagar haveli"}
+    - [dahod]{"entity":"loc", "value":"dahod"}
+    - [dakshin dinajpur]{"entity":"loc", "value":"dakshin dinajpur"}
+    - [dakshina kannada]{"entity":"loc", "value":"dakshina kannada"}
+    - [daman]{"entity":"loc", "value":"daman"}
+    - [damoh]{"entity":"loc", "value":"damoh"}
+    - [dantewada]{"entity":"loc", "value":"dantewada"}
+    - [darbhanga]{"entity":"loc", "value":"darbhanga"}
+    - [darjeeling]{"entity":"loc", "value":"darjeeling"}
+    - [darrang]{"entity":"loc", "value":"darrang"}
+    - [datia]{"entity":"loc", "value":"datia"}
+    - [dausa]{"entity":"loc", "value":"dausa"}
+    - [davanagere]{"entity":"loc", "value":"davanagere"}
+    - [dehradun]{"entity":"loc", "value":"dehradun"}
+    - [deoghar]{"entity":"loc", "value":"deoghar"}
+    - [deoria]{"entity":"loc", "value":"deoria"}
+    - [dewas]{"entity":"loc", "value":"dewas"}
+    - [dhalai]{"entity":"loc", "value":"dhalai"}
+    - [dhamtari]{"entity":"loc", "value":"dhamtari"}
+    - [dhanbad]{"entity":"loc", "value":"dhanbad"}
+    - [dhar]{"entity":"loc", "value":"dhar"}
+    - [dharmapuri]{"entity":"loc", "value":"dharmapuri"}
+    - [dharwad]{"entity":"loc", "value":"dharwad"}
+    - [dhemaji]{"entity":"loc", "value":"dhemaji"}
+    - [dhenkanal]{"entity":"loc", "value":"dhenkanal"}
+    - [dholpur]{"entity":"loc", "value":"dholpur"}
+    - [dhubri]{"entity":"loc", "value":"dhubri"}
+    - [dhule]{"entity":"loc", "value":"dhule"}
+    - [dibang valley]{"entity":"loc", "value":"dibang valley"}
+    - [dibrugarh]{"entity":"loc", "value":"dibrugarh"}
+    - [dima hasao]{"entity":"loc", "value":"dima hasao"}
+    - [dimapur]{"entity":"loc", "value":"dimapur"}
+    - [dindigul]{"entity":"loc", "value":"dindigul"}
+    - [dindori]{"entity":"loc", "value":"dindori"}
+    - [diu]{"entity":"loc", "value":"diu"}
+    - [doda]{"entity":"loc", "value":"doda"}
+    - [dumka]{"entity":"loc", "value":"dumka"}
+    - [dungapur]{"entity":"loc", "value":"dungapur"}
+    - [durg]{"entity":"loc", "value":"durg"}
+    - [east champaran]{"entity":"loc", "value":"east champaran"}
+    - [east delhi]{"entity":"loc", "value":"east delhi"}
+    - [east garo hills]{"entity":"loc", "value":"east garo hills"}
+    - [east khasi hills]{"entity":"loc", "value":"east khasi hills"}
+    - [east siang]{"entity":"loc", "value":"east siang"}
+    - [east sikkim]{"entity":"loc", "value":"east sikkim"}
+    - [east singhbhum]{"entity":"loc", "value":"east singhbhum"}
+    - [eluru]{"entity":"loc", "value":"eluru"}
+    - [ernakulam]{"entity":"loc", "value":"ernakulam"}
+    - [erode]{"entity":"loc", "value":"erode"}
+    - [etah]{"entity":"loc", "value":"etah"}
+    - [etawah]{"entity":"loc", "value":"etawah"}
+    - [faizabad]{"entity":"loc", "value":"faizabad"}
+    - [faridabad]{"entity":"loc", "value":"faridabad"}
+    - [faridkot]{"entity":"loc", "value":"faridkot"}
+    - [farrukhabad]{"entity":"loc", "value":"farrukhabad"}
+    - [fatehabad]{"entity":"loc", "value":"fatehabad"}
+    - [fatehgarh sahib]{"entity":"loc", "value":"fatehgarh sahib"}
+    - [fatehpur]{"entity":"loc", "value":"fatehpur"}
+    - [fazilka]{"entity":"loc", "value":"fazilka"}
+    - [firozabad]{"entity":"loc", "value":"firozabad"}
+    - [firozpur]{"entity":"loc", "value":"firozpur"}
+    - [gadag]{"entity":"loc", "value":"gadag"}
+    - [gadchiroli]{"entity":"loc", "value":"gadchiroli"}
+    - [gajapati]{"entity":"loc", "value":"gajapati"}
+    - [ganderbal]{"entity":"loc", "value":"ganderbal"}
+    - [gandhinagar]{"entity":"loc", "value":"gandhinagar"}
+    - [ganganagar]{"entity":"loc", "value":"ganganagar"}
+    - [ganjam]{"entity":"loc", "value":"ganjam"}
+    - [garhwa]{"entity":"loc", "value":"garhwa"}
+    - [gautam buddh nagar]{"entity":"loc", "value":"gautam buddh nagar"}
+    - [gaya]{"entity":"loc", "value":"gaya"}
+    - [ghaziabad]{"entity":"loc", "value":"ghaziabad"}
+    - [ghazipur]{"entity":"loc", "value":"ghazipur"}
+    - [giridih]{"entity":"loc", "value":"giridih"}
+    - [goalpara]{"entity":"loc", "value":"goalpara"}
+    - [godda]{"entity":"loc", "value":"godda"}
+    - [golaghat]{"entity":"loc", "value":"golaghat"}
+    - [gonda]{"entity":"loc", "value":"gonda"}
+    - [gondia]{"entity":"loc", "value":"gondia"}
+    - [gopalganj]{"entity":"loc", "value":"gopalganj"}
+    - [gorakhpur]{"entity":"loc", "value":"gorakhpur"}
+    - [gulbarga]{"entity":"loc", "value":"gulbarga"}
+    - [gumla]{"entity":"loc", "value":"gumla"}
+    - [guna]{"entity":"loc", "value":"guna"}
+    - [guntur]{"entity":"loc", "value":"guntur"}
+    - [gurdaspur]{"entity":"loc", "value":"gurdaspur"}
+    - [gurgaon]{"entity":"loc", "value":"gurgaon"}
+    - [gwalior]{"entity":"loc", "value":"gwalior"}
+    - [hailakandi]{"entity":"loc", "value":"hailakandi"}
+    - [hamirpur]{"entity":"loc", "value":"hamirpur"}
+    - [hamirpur]{"entity":"loc", "value":"hamirpur"}
+    - [hanumangarh]{"entity":"loc", "value":"hanumangarh"}
+    - [harda]{"entity":"loc", "value":"harda"}
+    - [hardoi]{"entity":"loc", "value":"hardoi"}
+    - [haridwar]{"entity":"loc", "value":"haridwar"}
+    - [hassan]{"entity":"loc", "value":"hassan"}
+    - [haveri district]{"entity":"loc", "value":"haveri district"}
+    - [hazaribag]{"entity":"loc", "value":"hazaribag"}
+    - [hingoli]{"entity":"loc", "value":"hingoli"}
+    - [hissar]{"entity":"loc", "value":"hissar"}
+    - [hooghly]{"entity":"loc", "value":"hooghly"}
+    - [hoshangabad]{"entity":"loc", "value":"hoshangabad"}
+    - [hoshiarpur]{"entity":"loc", "value":"hoshiarpur"}
+    - [howrah]{"entity":"loc", "value":"howrah"}
+    - [hyderabad]{"entity":"loc", "value":"hyderabad"}
+    - [hyderabad]{"entity":"loc", "value":"hyderabad"}
+    - [idukki]{"entity":"loc", "value":"idukki"}
+    - [imphal east]{"entity":"loc", "value":"imphal east"}
+    - [imphal west]{"entity":"loc", "value":"imphal west"}
+    - [indore]{"entity":"loc", "value":"indore"}
+    - [jabalpur]{"entity":"loc", "value":"jabalpur"}
+    - [jagatsinghpur]{"entity":"loc", "value":"jagatsinghpur"}
+    - [jaintia hills]{"entity":"loc", "value":"jaintia hills"}
+    - [jaipur]{"entity":"loc", "value":"jaipur"}
+    - [jaisalmer]{"entity":"loc", "value":"jaisalmer"}
+    - [jajpur]{"entity":"loc", "value":"jajpur"}
+    - [jalandhar]{"entity":"loc", "value":"jalandhar"}
+    - [jalaun]{"entity":"loc", "value":"jalaun"}
+    - [jalgaon]{"entity":"loc", "value":"jalgaon"}
+    - [jalna]{"entity":"loc", "value":"jalna"}
+    - [jalore]{"entity":"loc", "value":"jalore"}
+    - [jalpaiguri]{"entity":"loc", "value":"jalpaiguri"}
+    - [jammu]{"entity":"loc", "value":"jammu"}
+    - [jamnagar]{"entity":"loc", "value":"jamnagar"}
+    - [jamtara]{"entity":"loc", "value":"jamtara"}
+    - [jamui]{"entity":"loc", "value":"jamui"}
+    - [janjgir-champa]{"entity":"loc", "value":"janjgir-champa"}
+    - [jashpur]{"entity":"loc", "value":"jashpur"}
+    - [jaunpur district]{"entity":"loc", "value":"jaunpur district"}
+    - [jehanabad]{"entity":"loc", "value":"jehanabad"}
+    - [jhabua]{"entity":"loc", "value":"jhabua"}
+    - [jhajjar]{"entity":"loc", "value":"jhajjar"}
+    - [jhalawar]{"entity":"loc", "value":"jhalawar"}
+    - [jhansi]{"entity":"loc", "value":"jhansi"}
+    - [jharsuguda]{"entity":"loc", "value":"jharsuguda"}
+    - [jhunjhunu]{"entity":"loc", "value":"jhunjhunu"}
+    - [jind]{"entity":"loc", "value":"jind"}
+    - [jodhpur]{"entity":"loc", "value":"jodhpur"}
+    - [jorhat]{"entity":"loc", "value":"jorhat"}
+    - [junagadh]{"entity":"loc", "value":"junagadh"}
+    - [jyotiba phule nagar]{"entity":"loc", "value":"jyotiba phule nagar"}
+    - [kadapa]{"entity":"loc", "value":"kadapa"}
+    - [kaimur]{"entity":"loc", "value":"kaimur"}
+    - [kaithal]{"entity":"loc", "value":"kaithal"}
+    - [kakinada]{"entity":"loc", "value":"kakinada"}
+    - [kalahandi]{"entity":"loc", "value":"kalahandi"}
+    - [kamrup]{"entity":"loc", "value":"kamrup"}
+    - [kamrup metropolitan]{"entity":"loc", "value":"kamrup metropolitan"}
+    - [kanchipuram]{"entity":"loc", "value":"kanchipuram"}
+    - [kandhamal]{"entity":"loc", "value":"kandhamal"}
+    - [kangra]{"entity":"loc", "value":"kangra"}
+    - [kanker]{"entity":"loc", "value":"kanker"}
+    - [kannauj]{"entity":"loc", "value":"kannauj"}
+    - [kannur]{"entity":"loc", "value":"kannur"}
+    - [kanpur]{"entity":"loc", "value":"kanpur"}
+    - [kanshi ram nagar]{"entity":"loc", "value":"kanshi ram nagar"}
+    - [kanyakumari]{"entity":"loc", "value":"kanyakumari"}
+    - [kapurthala]{"entity":"loc", "value":"kapurthala"}
+    - [karaikal]{"entity":"loc", "value":"karaikal"}
+    - [karauli]{"entity":"loc", "value":"karauli"}
+    - [karbi anglong]{"entity":"loc", "value":"karbi anglong"}
+    - [kargil]{"entity":"loc", "value":"kargil"}
+    - [karimganj]{"entity":"loc", "value":"karimganj"}
+    - [karimnagar]{"entity":"loc", "value":"karimnagar"}
+    - [karnal]{"entity":"loc", "value":"karnal"}
+    - [karur]{"entity":"loc", "value":"karur"}
+    - [kasaragod]{"entity":"loc", "value":"kasaragod"}
+    - [kathua]{"entity":"loc", "value":"kathua"}
+    - [katihar]{"entity":"loc", "value":"katihar"}
+    - [katni]{"entity":"loc", "value":"katni"}
+    - [kaushambi]{"entity":"loc", "value":"kaushambi"}
+    - [kendrapara]{"entity":"loc", "value":"kendrapara"}
+    - [khagaria]{"entity":"loc", "value":"khagaria"}
+    - [khammam]{"entity":"loc", "value":"khammam"}
+    - [khargone]{"entity":"loc", "value":"khargone"}
+    - [kheda]{"entity":"loc", "value":"kheda"}
+    - [khordha]{"entity":"loc", "value":"khordha"}
+    - [khowai]{"entity":"loc", "value":"khowai"}
+    - [khunti]{"entity":"loc", "value":"khunti"}
+    - [kinnaur]{"entity":"loc", "value":"kinnaur"}
+    - [kishanganj]{"entity":"loc", "value":"kishanganj"}
+    - [kishtwar]{"entity":"loc", "value":"kishtwar"}
+    - [kodagu]{"entity":"loc", "value":"kodagu"}
+    - [koderma]{"entity":"loc", "value":"koderma"}
+    - [kohima]{"entity":"loc", "value":"kohima"}
+    - [kokrajhar]{"entity":"loc", "value":"kokrajhar"}
+    - [kolar]{"entity":"loc", "value":"kolar"}
+    - [kolasib]{"entity":"loc", "value":"kolasib"}
+    - [kolhapur]{"entity":"loc", "value":"kolhapur"}
+    - [kolkata]{"entity":"loc", "value":"kolkata"}
+    - [kollam]{"entity":"loc", "value":"kollam"}
+    - [koppal]{"entity":"loc", "value":"koppal"}
+    - [koraput]{"entity":"loc", "value":"koraput"}
+    - [korba]{"entity":"loc", "value":"korba"}
+    - [koriya]{"entity":"loc", "value":"koriya"}
+    - [kota]{"entity":"loc", "value":"kota"}
+    - [kottayam]{"entity":"loc", "value":"kottayam"}
+    - [kozhikode]{"entity":"loc", "value":"kozhikode"}
+    - [krishna]{"entity":"loc", "value":"krishna"}
+    - [kulgam]{"entity":"loc", "value":"kulgam"}
+    - [kullu]{"entity":"loc", "value":"kullu"}
+    - [kupwara]{"entity":"loc", "value":"kupwara"}
+    - [kurnool]{"entity":"loc", "value":"kurnool"}
+    - [kurukshetra]{"entity":"loc", "value":"kurukshetra"}
+    - [kurung kumey]{"entity":"loc", "value":"kurung kumey"}
+    - [kushinagar]{"entity":"loc", "value":"kushinagar"}
+    - [kutch]{"entity":"loc", "value":"kutch"}
+    - [lahaul and spiti]{"entity":"loc", "value":"lahaul and spiti"}
+    - [lakhimpur]{"entity":"loc", "value":"lakhimpur"}
+    - [lakhimpur kheri]{"entity":"loc", "value":"lakhimpur kheri"}
+    - [lakhisarai]{"entity":"loc", "value":"lakhisarai"}
+    - [lalitpur]{"entity":"loc", "value":"lalitpur"}
+    - [latehar]{"entity":"loc", "value":"latehar"}
+    - [latur]{"entity":"loc", "value":"latur"}
+    - [lawngtlai]{"entity":"loc", "value":"lawngtlai"}
+    - [leh]{"entity":"loc", "value":"leh"}
+    - [lohardaga]{"entity":"loc", "value":"lohardaga"}
+    - [lohit]{"entity":"loc", "value":"lohit"}
+    - [lower dibang valley]{"entity":"loc", "value":"lower dibang valley"}
+    - [lower subansiri]{"entity":"loc", "value":"lower subansiri"}
+    - [lucknow]{"entity":"loc", "value":"lucknow"}
+    - [ludhiana]{"entity":"loc", "value":"ludhiana"}
+    - [lunglei]{"entity":"loc", "value":"lunglei"}
+    - [madhepura]{"entity":"loc", "value":"madhepura"}
+    - [madhubani]{"entity":"loc", "value":"madhubani"}
+    - [madurai]{"entity":"loc", "value":"madurai"}
+    - [mahamaya nagar]{"entity":"loc", "value":"mahamaya nagar"}
+    - [maharajganj]{"entity":"loc", "value":"maharajganj"}
+    - [mahasamund]{"entity":"loc", "value":"mahasamund"}
+    - [mahbubnagar]{"entity":"loc", "value":"mahbubnagar"}
+    - [mahe]{"entity":"loc", "value":"mahe"}
+    - [mahendragarh]{"entity":"loc", "value":"mahendragarh"}
+    - [mahoba]{"entity":"loc", "value":"mahoba"}
+    - [mainpuri]{"entity":"loc", "value":"mainpuri"}
+    - [malappuram]{"entity":"loc", "value":"malappuram"}
+    - [maldah]{"entity":"loc", "value":"maldah"}
+    - [malkangiri]{"entity":"loc", "value":"malkangiri"}
+    - [mamit]{"entity":"loc", "value":"mamit"}
+    - [mandi]{"entity":"loc", "value":"mandi"}
+    - [mandla]{"entity":"loc", "value":"mandla"}
+    - [mandsaur]{"entity":"loc", "value":"mandsaur"}
+    - [mandya]{"entity":"loc", "value":"mandya"}
+    - [mansa]{"entity":"loc", "value":"mansa"}
+    - [marigaon]{"entity":"loc", "value":"marigaon"}
+    - [mathura]{"entity":"loc", "value":"mathura"}
+    - [mau]{"entity":"loc", "value":"mau"}
+    - [mayurbhanj]{"entity":"loc", "value":"mayurbhanj"}
+    - [medak]{"entity":"loc", "value":"medak"}
+    - [meerut]{"entity":"loc", "value":"meerut"}
+    - [mehsana]{"entity":"loc", "value":"mehsana"}
+    - [mewat]{"entity":"loc", "value":"mewat"}
+    - [mirzapur]{"entity":"loc", "value":"mirzapur"}
+    - [moga]{"entity":"loc", "value":"moga"}
+    - [mokokchung]{"entity":"loc", "value":"mokokchung"}
+    - [mon]{"entity":"loc", "value":"mon"}
+    - [moradabad]{"entity":"loc", "value":"moradabad"}
+    - [morena]{"entity":"loc", "value":"morena"}
+    - [mumbai city]{"entity":"loc", "value":"mumbai city"}
+    - [mumbai suburban]{"entity":"loc", "value":"mumbai suburban"}
+    - [munger]{"entity":"loc", "value":"munger"}
+    - [murshidabad]{"entity":"loc", "value":"murshidabad"}
+    - [muzaffarnagar]{"entity":"loc", "value":"muzaffarnagar"}
+    - [muzaffarpur]{"entity":"loc", "value":"muzaffarpur"}
+    - [mysore]{"entity":"loc", "value":"mysore"}
+    - [nabarangpur]{"entity":"loc", "value":"nabarangpur"}
+    - [nadia]{"entity":"loc", "value":"nadia"}
+    - [nagaon]{"entity":"loc", "value":"nagaon"}
+    - [nagapattinam]{"entity":"loc", "value":"nagapattinam"}
+    - [nagaur]{"entity":"loc", "value":"nagaur"}
+    - [nagpur]{"entity":"loc", "value":"nagpur"}
+    - [nainital]{"entity":"loc", "value":"nainital"}
+    - [nalanda]{"entity":"loc", "value":"nalanda"}
+    - [nalbari]{"entity":"loc", "value":"nalbari"}
+    - [nalgonda]{"entity":"loc", "value":"nalgonda"}
+    - [namakkal]{"entity":"loc", "value":"namakkal"}
+    - [nanded]{"entity":"loc", "value":"nanded"}
+    - [nandurbar]{"entity":"loc", "value":"nandurbar"}
+    - [narayanpur]{"entity":"loc", "value":"narayanpur"}
+    - [narmada]{"entity":"loc", "value":"narmada"}
+    - [narsinghpur]{"entity":"loc", "value":"narsinghpur"}
+    - [nashik]{"entity":"loc", "value":"nashik"}
+    - [navsari]{"entity":"loc", "value":"navsari"}
+    - [nawada]{"entity":"loc", "value":"nawada"}
+    - [nawanshahr]{"entity":"loc", "value":"nawanshahr"}
+    - [nayagarh]{"entity":"loc", "value":"nayagarh"}
+    - [neemuch]{"entity":"loc", "value":"neemuch"}
+    - [nellore]{"entity":"loc", "value":"nellore"}
+    - [new delhi]{"entity":"loc", "value":"new delhi"}
+    - [nilgiris]{"entity":"loc", "value":"nilgiris"}
+    - [nizamabad]{"entity":"loc", "value":"nizamabad"}
+    - [north 24 parganas]{"entity":"loc", "value":"north 24 parganas"}
+    - [north delhi]{"entity":"loc", "value":"north delhi"}
+    - [north east delhi]{"entity":"loc", "value":"north east delhi"}
+    - [north goa]{"entity":"loc", "value":"north goa"}
+    - [north sikkim]{"entity":"loc", "value":"north sikkim"}
+    - [north tripura]{"entity":"loc", "value":"north tripura"}
+    - [north west delhi]{"entity":"loc", "value":"north west delhi"}
+    - [nuapada]{"entity":"loc", "value":"nuapada"}
+    - [ongole]{"entity":"loc", "value":"ongole"}
+    - [osmanabad]{"entity":"loc", "value":"osmanabad"}
+    - [pakur]{"entity":"loc", "value":"pakur"}
+    - [palakkad]{"entity":"loc", "value":"palakkad"}
+    - [palamu]{"entity":"loc", "value":"palamu"}
+    - [pali]{"entity":"loc", "value":"pali"}
+    - [palwal]{"entity":"loc", "value":"palwal"}
+    - [panchkula]{"entity":"loc", "value":"panchkula"}
+    - [panchmahal]{"entity":"loc", "value":"panchmahal"}
+    - [panipat]{"entity":"loc", "value":"panipat"}
+    - [panna]{"entity":"loc", "value":"panna"}
+    - [papum pare]{"entity":"loc", "value":"papum pare"}
+    - [parbhani]{"entity":"loc", "value":"parbhani"}
+    - [paschim medinipur]{"entity":"loc", "value":"paschim medinipur"}
+    - [patan]{"entity":"loc", "value":"patan"}
+    - [pathanamthitta]{"entity":"loc", "value":"pathanamthitta"}
+    - [pathankot]{"entity":"loc", "value":"pathankot"}
+    - [patiala]{"entity":"loc", "value":"patiala"}
+    - [patna]{"entity":"loc", "value":"patna"}
+    - [pauri garhwal]{"entity":"loc", "value":"pauri garhwal"}
+    - [perambalur]{"entity":"loc", "value":"perambalur"}
+    - [phek]{"entity":"loc", "value":"phek"}
+    - [pilibhit]{"entity":"loc", "value":"pilibhit"}
+    - [pithoragarh]{"entity":"loc", "value":"pithoragarh"}
+    - [pondicherry]{"entity":"loc", "value":"pondicherry"}
+    - [poonch]{"entity":"loc", "value":"poonch"}
+    - [porbandar]{"entity":"loc", "value":"porbandar"}
+    - [pratapgarh]{"entity":"loc", "value":"pratapgarh"}
+    - [pratapgarh]{"entity":"loc", "value":"pratapgarh"}
+    - [pudukkottai]{"entity":"loc", "value":"pudukkottai"}
+    - [pulwama]{"entity":"loc", "value":"pulwama"}
+    - [pune]{"entity":"loc", "value":"pune"}
+    - [purba medinipur]{"entity":"loc", "value":"purba medinipur"}
+    - [puri]{"entity":"loc", "value":"puri"}
+    - [purnia]{"entity":"loc", "value":"purnia"}
+    - [purulia]{"entity":"loc", "value":"purulia"}
+    - [raebareli]{"entity":"loc", "value":"raebareli"}
+    - [raichur]{"entity":"loc", "value":"raichur"}
+    - [raigad]{"entity":"loc", "value":"raigad"}
+    - [raigarh]{"entity":"loc", "value":"raigarh"}
+    - [raipur]{"entity":"loc", "value":"raipur"}
+    - [raisen]{"entity":"loc", "value":"raisen"}
+    - [rajauri]{"entity":"loc", "value":"rajauri"}
+    - [rajgarh]{"entity":"loc", "value":"rajgarh"}
+    - [rajkot]{"entity":"loc", "value":"rajkot"}
+    - [rajnandgaon]{"entity":"loc", "value":"rajnandgaon"}
+    - [rajsamand]{"entity":"loc", "value":"rajsamand"}
+    - [ramanagara]{"entity":"loc", "value":"ramanagara"}
+    - [ramanathapuram]{"entity":"loc", "value":"ramanathapuram"}
+    - [ramban]{"entity":"loc", "value":"ramban"}
+    - [ramgarh]{"entity":"loc", "value":"ramgarh"}
+    - [rampur]{"entity":"loc", "value":"rampur"}
+    - [ranchi]{"entity":"loc", "value":"ranchi"}
+    - [ratlam]{"entity":"loc", "value":"ratlam"}
+    - [ratnagiri]{"entity":"loc", "value":"ratnagiri"}
+    - [rayagada]{"entity":"loc", "value":"rayagada"}
+    - [reasi]{"entity":"loc", "value":"reasi"}
+    - [rewa]{"entity":"loc", "value":"rewa"}
+    - [rewari]{"entity":"loc", "value":"rewari"}
+    - [ri bhoi]{"entity":"loc", "value":"ri bhoi"}
+    - [rohtak]{"entity":"loc", "value":"rohtak"}
+    - [rohtas]{"entity":"loc", "value":"rohtas"}
+    - [rudraprayag]{"entity":"loc", "value":"rudraprayag"}
+    - [rupnagar]{"entity":"loc", "value":"rupnagar"}
+    - [sabarkantha]{"entity":"loc", "value":"sabarkantha"}
+    - [sagar]{"entity":"loc", "value":"sagar"}
+    - [saharanpur]{"entity":"loc", "value":"saharanpur"}
+    - [saharsa]{"entity":"loc", "value":"saharsa"}
+    - [sahibganj]{"entity":"loc", "value":"sahibganj"}
+    - [saiha]{"entity":"loc", "value":"saiha"}
+    - [salem]{"entity":"loc", "value":"salem"}
+    - [samastipur]{"entity":"loc", "value":"samastipur"}
+    - [samba]{"entity":"loc", "value":"samba"}
+    - [sambalpur]{"entity":"loc", "value":"sambalpur"}
+    - [sangli]{"entity":"loc", "value":"sangli"}
+    - [sangrur]{"entity":"loc", "value":"sangrur"}
+    - [sant kabir nagar]{"entity":"loc", "value":"sant kabir nagar"}
+    - [sant ravidas nagar]{"entity":"loc", "value":"sant ravidas nagar"}
+    - [saran]{"entity":"loc", "value":"saran"}
+    - [satara]{"entity":"loc", "value":"satara"}
+    - [satna]{"entity":"loc", "value":"satna"}
+    - [sawai madhopur]{"entity":"loc", "value":"sawai madhopur"}
+    - [sehore]{"entity":"loc", "value":"sehore"}
+    - [senapati]{"entity":"loc", "value":"senapati"}
+    - [seoni]{"entity":"loc", "value":"seoni"}
+    - [seraikela kharsawan]{"entity":"loc", "value":"seraikela kharsawan"}
+    - [serchhip]{"entity":"loc", "value":"serchhip"}
+    - [shahdol]{"entity":"loc", "value":"shahdol"}
+    - [shahjahanpur]{"entity":"loc", "value":"shahjahanpur"}
+    - [shajapur]{"entity":"loc", "value":"shajapur"}
+    - [shamli]{"entity":"loc", "value":"shamli"}
+    - [sheikhpura]{"entity":"loc", "value":"sheikhpura"}
+    - [sheohar]{"entity":"loc", "value":"sheohar"}
+    - [sheopur]{"entity":"loc", "value":"sheopur"}
+    - [shimla]{"entity":"loc", "value":"shimla"}
+    - [shimoga]{"entity":"loc", "value":"shimoga"}
+    - [shivpuri]{"entity":"loc", "value":"shivpuri"}
+    - [shopian]{"entity":"loc", "value":"shopian"}
+    - [shravasti]{"entity":"loc", "value":"shravasti"}
+    - [sibsagar]{"entity":"loc", "value":"sibsagar"}
+    - [siddharthnagar]{"entity":"loc", "value":"siddharthnagar"}
+    - [sidhi]{"entity":"loc", "value":"sidhi"}
+    - [sikar]{"entity":"loc", "value":"sikar"}
+    - [simdega]{"entity":"loc", "value":"simdega"}
+    - [sindhudurg]{"entity":"loc", "value":"sindhudurg"}
+    - [singrauli]{"entity":"loc", "value":"singrauli"}
+    - [sirmaur]{"entity":"loc", "value":"sirmaur"}
+    - [sirohi]{"entity":"loc", "value":"sirohi"}
+    - [sirsa]{"entity":"loc", "value":"sirsa"}
+    - [sitamarhi]{"entity":"loc", "value":"sitamarhi"}
+    - [sitapur]{"entity":"loc", "value":"sitapur"}
+    - [sivaganga]{"entity":"loc", "value":"sivaganga"}
+    - [siwan]{"entity":"loc", "value":"siwan"}
+    - [solan]{"entity":"loc", "value":"solan"}
+    - [solapur]{"entity":"loc", "value":"solapur"}
+    - [sonbhadra]{"entity":"loc", "value":"sonbhadra"}
+    - [sonipat]{"entity":"loc", "value":"sonipat"}
+    - [sonitpur]{"entity":"loc", "value":"sonitpur"}
+    - [south 24 parganas]{"entity":"loc", "value":"south 24 parganas"}
+    - [south delhi]{"entity":"loc", "value":"south delhi"}
+    - [south garo hills]{"entity":"loc", "value":"south garo hills"}
+    - [south goa]{"entity":"loc", "value":"south goa"}
+    - [south sikkim]{"entity":"loc", "value":"south sikkim"}
+    - [south tripura]{"entity":"loc", "value":"south tripura"}
+    - [south west delhi]{"entity":"loc", "value":"south west delhi"}
+    - [sri muktsar sahib]{"entity":"loc", "value":"sri muktsar sahib"}
+    - [srikakulam]{"entity":"loc", "value":"srikakulam"}
+    - [srinagar]{"entity":"loc", "value":"srinagar"}
+    - [sonepur]{"entity":"loc", "value":"sonepur"}
+    - [subarnapur]{"entity":"loc", "value":"subarnapur"}
+    - [sultanpur]{"entity":"loc", "value":"sultanpur"}
+    - [sundergarh]{"entity":"loc", "value":"sundergarh"}
+    - [supaul]{"entity":"loc", "value":"supaul"}
+    - [surat]{"entity":"loc", "value":"surat"}
+    - [surendranagar]{"entity":"loc", "value":"surendranagar"}
+    - [surguja]{"entity":"loc", "value":"surguja"}
+    - [tamenglong]{"entity":"loc", "value":"tamenglong"}
+    - [tarn taran]{"entity":"loc", "value":"tarn taran"}
+    - [tawang]{"entity":"loc", "value":"tawang"}
+    - [tehri garhwal]{"entity":"loc", "value":"tehri garhwal"}
+    - [thane]{"entity":"loc", "value":"thane"}
+    - [thanjavur]{"entity":"loc", "value":"thanjavur"}
+    - [the dangs]{"entity":"loc", "value":"the dangs"}
+    - [theni]{"entity":"loc", "value":"theni"}
+    - [thiruvananthapuram]{"entity":"loc", "value":"thiruvananthapuram"}
+    - [thoothukudi]{"entity":"loc", "value":"thoothukudi"}
+    - [thoubal]{"entity":"loc", "value":"thoubal"}
+    - [thrissur]{"entity":"loc", "value":"thrissur"}
+    - [tikamgarh]{"entity":"loc", "value":"tikamgarh"}
+    - [tinsukia]{"entity":"loc", "value":"tinsukia"}
+    - [tirap]{"entity":"loc", "value":"tirap"}
+    - [tiruchirappalli]{"entity":"loc", "value":"tiruchirappalli"}
+    - [tirunelveli]{"entity":"loc", "value":"tirunelveli"}
+    - [tirupur]{"entity":"loc", "value":"tirupur"}
+    - [tiruvallur]{"entity":"loc", "value":"tiruvallur"}
+    - [tiruvannamalai]{"entity":"loc", "value":"tiruvannamalai"}
+    - [tiruvarur]{"entity":"loc", "value":"tiruvarur"}
+    - [tonk]{"entity":"loc", "value":"tonk"}
+    - [tuensang]{"entity":"loc", "value":"tuensang"}
+    - [tumkur]{"entity":"loc", "value":"tumkur"}
+    - [udaipur]{"entity":"loc", "value":"udaipur"}
+    - [udalguri]{"entity":"loc", "value":"udalguri"}
+    - [udham singh nagar]{"entity":"loc", "value":"udham singh nagar"}
+    - [udhampur]{"entity":"loc", "value":"udhampur"}
+    - [udupi]{"entity":"loc", "value":"udupi"}
+    - [ujjain]{"entity":"loc", "value":"ujjain"}
+    - [ukhrul]{"entity":"loc", "value":"ukhrul"}
+    - [umaria]{"entity":"loc", "value":"umaria"}
+    - [una]{"entity":"loc", "value":"una"}
+    - [unnao]{"entity":"loc", "value":"unnao"}
+    - [upper siang]{"entity":"loc", "value":"upper siang"}
+    - [upper subansiri]{"entity":"loc", "value":"upper subansiri"}
+    - [uttar dinajpur]{"entity":"loc", "value":"uttar dinajpur"}
+    - [uttara kannada]{"entity":"loc", "value":"uttara kannada"}
+    - [uttarkashi]{"entity":"loc", "value":"uttarkashi"}
+    - [vadodara]{"entity":"loc", "value":"vadodara"}
+    - [vaishali]{"entity":"loc", "value":"vaishali"}
+    - [valsad]{"entity":"loc", "value":"valsad"}
+    - [varanasi]{"entity":"loc", "value":"varanasi"}
+    - [vellore]{"entity":"loc", "value":"vellore"}
+    - [vidisha]{"entity":"loc", "value":"vidisha"}
+    - [viluppuram]{"entity":"loc", "value":"viluppuram"}
+    - [virudhunagar]{"entity":"loc", "value":"virudhunagar"}
+    - [visakhapatnam]{"entity":"loc", "value":"visakhapatnam"}
+    - [vizianagaram]{"entity":"loc", "value":"vizianagaram"}
+    - [vyara]{"entity":"loc", "value":"vyara"}
+    - [warangal]{"entity":"loc", "value":"warangal"}
+    - [wardha]{"entity":"loc", "value":"wardha"}
+    - [washim]{"entity":"loc", "value":"washim"}
+    - [wayanad]{"entity":"loc", "value":"wayanad"}
+    - [west champaran]{"entity":"loc", "value":"west champaran"}
+    - [west delhi]{"entity":"loc", "value":"west delhi"}
+    - [west garo hills]{"entity":"loc", "value":"west garo hills"}
+    - [west kameng]{"entity":"loc", "value":"west kameng"}
+    - [west khasi hills]{"entity":"loc", "value":"west khasi hills"}
+    - [west siang]{"entity":"loc", "value":"west siang"}
+    - [west sikkim]{"entity":"loc", "value":"west sikkim"}
+    - [west singhbhum]{"entity":"loc", "value":"west singhbhum"}
+    - [west tripura]{"entity":"loc", "value":"west tripura"}
+    - [wokha]{"entity":"loc", "value":"wokha"}
+    - [yadgir]{"entity":"loc", "value":"yadgir"}
+    - [yamuna nagar]{"entity":"loc", "value":"yamuna nagar"}
+    - [yanam]{"entity":"loc", "value":"yanam"}
+    - [yavatmal]{"entity":"loc", "value":"yavatmal"}
+    - [zunheboto]{"entity":"loc", "value":"zunheboto"}
+    - [ADILABAD]{"entity":"loc","value":"ADILABAD"}
+    - [AGRA]{"entity":"loc","value":"AGRA"}
+    - [AHMEDABAD]{"entity":"loc","value":"AHMEDABAD"}
+    - [AHMEDNAGAR]{"entity":"loc","value":"AHMEDNAGAR"}
+    - [AIZAWL]{"entity":"loc","value":"AIZAWL"}
+    - [MOHALI]{"entity":"loc","value":"MOHALI"}
+    - [AJITGARH]{"entity":"loc","value":"AJITGARH"}
+    - [AJMER]{"entity":"loc","value":"AJMER"}
+    - [AKOLA]{"entity":"loc","value":"AKOLA"}
+    - [ALAPPUZHA]{"entity":"loc","value":"ALAPPUZHA"}
+    - [ALIGARH]{"entity":"loc","value":"ALIGARH"}
+    - [ALIRAJPUR]{"entity":"loc","value":"ALIRAJPUR"}
+    - [ALLAHABAD]{"entity":"loc","value":"ALLAHABAD"}
+    - [ALMORA]{"entity":"loc","value":"ALMORA"}
+    - [ALWAR]{"entity":"loc","value":"ALWAR"}
+    - [AMBALA]{"entity":"loc","value":"AMBALA"}
+    - [AMBEDKAR NAGAR]{"entity":"loc","value":"AMBEDKAR NAGAR"}
+    - [AMRAVATI]{"entity":"loc","value":"AMRAVATI"}
+    - [AMRELI DISTRICT]{"entity":"loc","value":"AMRELI DISTRICT"}
+    - [AMRITSAR]{"entity":"loc","value":"AMRITSAR"}
+    - [ANAND]{"entity":"loc","value":"ANAND"}
+    - [ANANTAPUR]{"entity":"loc","value":"ANANTAPUR"}
+    - [ANANTNAG]{"entity":"loc","value":"ANANTNAG"}
+    - [ANGUL]{"entity":"loc","value":"ANGUL"}
+    - [ANJAW]{"entity":"loc","value":"ANJAW"}
+    - [ANUPPUR]{"entity":"loc","value":"ANUPPUR"}
+    - [ARARIA]{"entity":"loc","value":"ARARIA"}
+    - [ARIYALUR]{"entity":"loc","value":"ARIYALUR"}
+    - [ARWAL]{"entity":"loc","value":"ARWAL"}
+    - [ASHOK NAGAR]{"entity":"loc","value":"ASHOK NAGAR"}
+    - [AURAIYA]{"entity":"loc","value":"AURAIYA"}
+    - [AURANGABAD]{"entity":"loc","value":"AURANGABAD"}
+    - [AURANGABAD]{"entity":"loc","value":"AURANGABAD"}
+    - [AZAMGARH]{"entity":"loc","value":"AZAMGARH"}
+    - [BADGAM]{"entity":"loc","value":"BADGAM"}
+    - [BAGALKOT]{"entity":"loc","value":"BAGALKOT"}
+    - [BAGESHWAR]{"entity":"loc","value":"BAGESHWAR"}
+    - [BAGPAT]{"entity":"loc","value":"BAGPAT"}
+    - [BAHRAICH]{"entity":"loc","value":"BAHRAICH"}
+    - [BAKSA]{"entity":"loc","value":"BAKSA"}
+    - [BALAGHAT]{"entity":"loc","value":"BALAGHAT"}
+    - [BALANGIR]{"entity":"loc","value":"BALANGIR"}
+    - [BALASORE]{"entity":"loc","value":"BALASORE"}
+    - [BALLIA]{"entity":"loc","value":"BALLIA"}
+    - [BALRAMPUR]{"entity":"loc","value":"BALRAMPUR"}
+    - [BANASKANTHA]{"entity":"loc","value":"BANASKANTHA"}
+    - [BANDA]{"entity":"loc","value":"BANDA"}
+    - [BANDIPORA]{"entity":"loc","value":"BANDIPORA"}
+    - [BANGALORE RURAL]{"entity":"loc","value":"BANGALORE RURAL"}
+    - [BANGALORE URBAN]{"entity":"loc","value":"BANGALORE URBAN"}
+    - [BANKA]{"entity":"loc","value":"BANKA"}
+    - [BANKURA]{"entity":"loc","value":"BANKURA"}
+    - [BANSWARA]{"entity":"loc","value":"BANSWARA"}
+    - [BARABANKI]{"entity":"loc","value":"BARABANKI"}
+    - [BARAMULLA]{"entity":"loc","value":"BARAMULLA"}
+    - [BARAN]{"entity":"loc","value":"BARAN"}
+    - [BARDHAMAN]{"entity":"loc","value":"BARDHAMAN"}
+    - [BAREILLY]{"entity":"loc","value":"BAREILLY"}
+    - [BARAGARH]{"entity":"loc","value":"BARAGARH"}
+    - [Bargarh]{"entity":"loc","value":"BARGARH"}
+    - [BARMER]{"entity":"loc","value":"BARMER"}
+    - [BARNALA]{"entity":"loc","value":"BARNALA"}
+    - [BARPETA]{"entity":"loc","value":"BARPETA"}
+    - [BARWANI]{"entity":"loc","value":"BARWANI"}
+    - [BASTAR]{"entity":"loc","value":"BASTAR"}
+    - [BASTI]{"entity":"loc","value":"BASTI"}
+    - [BATHINDA]{"entity":"loc","value":"BATHINDA"}
+    - [BEED]{"entity":"loc","value":"BEED"}
+    - [BEGUSARAI]{"entity":"loc","value":"BEGUSARAI"}
+    - [BELGAUM]{"entity":"loc","value":"BELGAUM"}
+    - [BELLARY]{"entity":"loc","value":"BELLARY"}
+    - [BETUL]{"entity":"loc","value":"BETUL"}
+    - [BHADRAK]{"entity":"loc","value":"BHADRAK"}
+    - [BHAGALPUR]{"entity":"loc","value":"BHAGALPUR"}
+    - [BHANDARA]{"entity":"loc","value":"BHANDARA"}
+    - [BHARATPUR]{"entity":"loc","value":"BHARATPUR"}
+    - [BHARUCH]{"entity":"loc","value":"BHARUCH"}
+    - [BHAVNAGAR]{"entity":"loc","value":"BHAVNAGAR"}
+    - [BHILWARA]{"entity":"loc","value":"BHILWARA"}
+    - [BHIND]{"entity":"loc","value":"BHIND"}
+    - [BHIWANI]{"entity":"loc","value":"BHIWANI"}
+    - [BHOJPUR]{"entity":"loc","value":"BHOJPUR"}
+    - [BHOPAL]{"entity":"loc","value":"BHOPAL"}
+    - [BIDAR]{"entity":"loc","value":"BIDAR"}
+    - [BIJAPUR]{"entity":"loc","value":"BIJAPUR"}
+    - [BIJAPUR]{"entity":"loc","value":"BIJAPUR"}
+    - [BIJNOR]{"entity":"loc","value":"BIJNOR"}
+    - [BIKANER]{"entity":"loc","value":"BIKANER"}
+    - [BILASPUR]{"entity":"loc","value":"BILASPUR"}
+    - [BILASPUR]{"entity":"loc","value":"BILASPUR"}
+    - [BIRBHUM]{"entity":"loc","value":"BIRBHUM"}
+    - [BISHNUPUR]{"entity":"loc","value":"BISHNUPUR"}
+    - [BOKARO]{"entity":"loc","value":"BOKARO"}
+    - [BONGAIGAON]{"entity":"loc","value":"BONGAIGAON"}
+    - [BUDAUN]{"entity":"loc","value":"BUDAUN"}
+    - [BULANDSHAHR]{"entity":"loc","value":"BULANDSHAHR"}
+    - [BULDHANA]{"entity":"loc","value":"BULDHANA"}
+    - [BUNDI]{"entity":"loc","value":"BUNDI"}
+    - [BURHANPUR]{"entity":"loc","value":"BURHANPUR"}
+    - [BUXAR]{"entity":"loc","value":"BUXAR"}
+    - [CACHAR]{"entity":"loc","value":"CACHAR"}
+    - [CENTRAL DELHI]{"entity":"loc","value":"CENTRAL DELHI"}
+    - [CHAMARAJNAGAR]{"entity":"loc","value":"CHAMARAJNAGAR"}
+    - [CHAMBA]{"entity":"loc","value":"CHAMBA"}
+    - [CHAMOLI]{"entity":"loc","value":"CHAMOLI"}
+    - [CHAMPAWAT]{"entity":"loc","value":"CHAMPAWAT"}
+    - [CHAMPHAI]{"entity":"loc","value":"CHAMPHAI"}
+    - [CHANDAULI]{"entity":"loc","value":"CHANDAULI"}
+    - [CHANDEL]{"entity":"loc","value":"CHANDEL"}
+    - [CHANDIGARH]{"entity":"loc","value":"CHANDIGARH"}
+    - [CHANDRAPUR]{"entity":"loc","value":"CHANDRAPUR"}
+    - [CHANGLANG]{"entity":"loc","value":"CHANGLANG"}
+    - [CHATRA]{"entity":"loc","value":"CHATRA"}
+    - [CHENNAI]{"entity":"loc","value":"CHENNAI"}
+    - [CHHATARPUR]{"entity":"loc","value":"CHHATARPUR"}
+    - [CHHATRAPATI SHAHUJI MAHARAJ NAGAR]{"entity":"loc","value":"CHHATRAPATI SHAHUJI MAHARAJ NAGAR"}
+    - [CHHINDWARA]{"entity":"loc","value":"CHHINDWARA"}
+    - [CHIKKABALLAPUR]{"entity":"loc","value":"CHIKKABALLAPUR"}
+    - [CHIKKAMAGALURU]{"entity":"loc","value":"CHIKKAMAGALURU"}
+    - [CHIRANG]{"entity":"loc","value":"CHIRANG"}
+    - [CHITRADURGA]{"entity":"loc","value":"CHITRADURGA"}
+    - [CHITRAKOOT]{"entity":"loc","value":"CHITRAKOOT"}
+    - [CHITTOOR]{"entity":"loc","value":"CHITTOOR"}
+    - [CHITTORGARH]{"entity":"loc","value":"CHITTORGARH"}
+    - [CHURACHANDPUR]{"entity":"loc","value":"CHURACHANDPUR"}
+    - [CHURU]{"entity":"loc","value":"CHURU"}
+    - [COIMBATORE]{"entity":"loc","value":"COIMBATORE"}
+    - [COOCH BEHAR]{"entity":"loc","value":"COOCH BEHAR"}
+    - [CUDDALORE]{"entity":"loc","value":"CUDDALORE"}
+    - [CUTTACK]{"entity":"loc","value":"CUTTACK"}
+    - [DADRA AND NAGAR HAVELI]{"entity":"loc","value":"DADRA AND NAGAR HAVELI"}
+    - [DAHOD]{"entity":"loc","value":"DAHOD"}
+    - [DAKSHIN DINAJPUR]{"entity":"loc","value":"DAKSHIN DINAJPUR"}
+    - [DAKSHINA KANNADA]{"entity":"loc","value":"DAKSHINA KANNADA"}
+    - [DAMAN]{"entity":"loc","value":"DAMAN"}
+    - [DAMOH]{"entity":"loc","value":"DAMOH"}
+    - [DANTEWADA]{"entity":"loc","value":"DANTEWADA"}
+    - [DARBHANGA]{"entity":"loc","value":"DARBHANGA"}
+    - [DARJEELING]{"entity":"loc","value":"DARJEELING"}
+    - [DARRANG]{"entity":"loc","value":"DARRANG"}
+    - [DATIA]{"entity":"loc","value":"DATIA"}
+    - [DAUSA]{"entity":"loc","value":"DAUSA"}
+    - [DAVANAGERE]{"entity":"loc","value":"DAVANAGERE"}
+    - [DEHRADUN]{"entity":"loc","value":"DEHRADUN"}
+    - [DEOGHAR]{"entity":"loc","value":"DEOGHAR"}
+    - [DEORIA]{"entity":"loc","value":"DEORIA"}
+    - [DEWAS]{"entity":"loc","value":"DEWAS"}
+    - [DHALAI]{"entity":"loc","value":"DHALAI"}
+    - [DHAMTARI]{"entity":"loc","value":"DHAMTARI"}
+    - [DHANBAD]{"entity":"loc","value":"DHANBAD"}
+    - [DHAR]{"entity":"loc","value":"DHAR"}
+    - [DHARMAPURI]{"entity":"loc","value":"DHARMAPURI"}
+    - [DHARWAD]{"entity":"loc","value":"DHARWAD"}
+    - [DHEMAJI]{"entity":"loc","value":"DHEMAJI"}
+    - [DHENKANAL]{"entity":"loc","value":"DHENKANAL"}
+    - [DHOLPUR]{"entity":"loc","value":"DHOLPUR"}
+    - [DHUBRI]{"entity":"loc","value":"DHUBRI"}
+    - [DHULE]{"entity":"loc","value":"DHULE"}
+    - [DIBANG VALLEY]{"entity":"loc","value":"DIBANG VALLEY"}
+    - [DIBRUGARH]{"entity":"loc","value":"DIBRUGARH"}
+    - [DIMA HASAO]{"entity":"loc","value":"DIMA HASAO"}
+    - [DIMAPUR]{"entity":"loc","value":"DIMAPUR"}
+    - [DINDIGUL]{"entity":"loc","value":"DINDIGUL"}
+    - [DINDORI]{"entity":"loc","value":"DINDORI"}
+    - [DIU]{"entity":"loc","value":"DIU"}
+    - [DODA]{"entity":"loc","value":"DODA"}
+    - [DUMKA]{"entity":"loc","value":"DUMKA"}
+    - [DUNGAPUR]{"entity":"loc","value":"DUNGAPUR"}
+    - [DURG]{"entity":"loc","value":"DURG"}
+    - [EAST CHAMPARAN]{"entity":"loc","value":"EAST CHAMPARAN"}
+    - [EAST DELHI]{"entity":"loc","value":"EAST DELHI"}
+    - [EAST GARO HILLS]{"entity":"loc","value":"EAST GARO HILLS"}
+    - [EAST KHASI HILLS]{"entity":"loc","value":"EAST KHASI HILLS"}
+    - [EAST SIANG]{"entity":"loc","value":"EAST SIANG"}
+    - [EAST SIKKIM]{"entity":"loc","value":"EAST SIKKIM"}
+    - [EAST SINGHBHUM]{"entity":"loc","value":"EAST SINGHBHUM"}
+    - [ELURU]{"entity":"loc","value":"ELURU"}
+    - [ERNAKULAM]{"entity":"loc","value":"ERNAKULAM"}
+    - [ERODE]{"entity":"loc","value":"ERODE"}
+    - [ETAH]{"entity":"loc","value":"ETAH"}
+    - [ETAWAH]{"entity":"loc","value":"ETAWAH"}
+    - [FAIZABAD]{"entity":"loc","value":"FAIZABAD"}
+    - [FARIDABAD]{"entity":"loc","value":"FARIDABAD"}
+    - [FARIDKOT]{"entity":"loc","value":"FARIDKOT"}
+    - [FARRUKHABAD]{"entity":"loc","value":"FARRUKHABAD"}
+    - [FATEHABAD]{"entity":"loc","value":"FATEHABAD"}
+    - [FATEHGARH SAHIB]{"entity":"loc","value":"FATEHGARH SAHIB"}
+    - [FATEHPUR]{"entity":"loc","value":"FATEHPUR"}
+    - [FAZILKA]{"entity":"loc","value":"FAZILKA"}
+    - [FIROZABAD]{"entity":"loc","value":"FIROZABAD"}
+    - [FIROZPUR]{"entity":"loc","value":"FIROZPUR"}
+    - [GADAG]{"entity":"loc","value":"GADAG"}
+    - [GADCHIROLI]{"entity":"loc","value":"GADCHIROLI"}
+    - [GAJAPATI]{"entity":"loc","value":"GAJAPATI"}
+    - [GANDERBAL]{"entity":"loc","value":"GANDERBAL"}
+    - [GANDHINAGAR]{"entity":"loc","value":"GANDHINAGAR"}
+    - [GANGANAGAR]{"entity":"loc","value":"GANGANAGAR"}
+    - [GANJAM]{"entity":"loc","value":"GANJAM"}
+    - [GARHWA]{"entity":"loc","value":"GARHWA"}
+    - [GAUTAM BUDDH NAGAR]{"entity":"loc","value":"GAUTAM BUDDH NAGAR"}
+    - [GAYA]{"entity":"loc","value":"GAYA"}
+    - [GHAZIABAD]{"entity":"loc","value":"GHAZIABAD"}
+    - [GHAZIPUR]{"entity":"loc","value":"GHAZIPUR"}
+    - [GIRIDIH]{"entity":"loc","value":"GIRIDIH"}
+    - [GOALPARA]{"entity":"loc","value":"GOALPARA"}
+    - [GODDA]{"entity":"loc","value":"GODDA"}
+    - [GOLAGHAT]{"entity":"loc","value":"GOLAGHAT"}
+    - [GONDA]{"entity":"loc","value":"GONDA"}
+    - [GONDIA]{"entity":"loc","value":"GONDIA"}
+    - [GOPALGANJ]{"entity":"loc","value":"GOPALGANJ"}
+    - [GORAKHPUR]{"entity":"loc","value":"GORAKHPUR"}
+    - [GULBARGA]{"entity":"loc","value":"GULBARGA"}
+    - [GUMLA]{"entity":"loc","value":"GUMLA"}
+    - [GUNA]{"entity":"loc","value":"GUNA"}
+    - [GUNTUR]{"entity":"loc","value":"GUNTUR"}
+    - [GURDASPUR]{"entity":"loc","value":"GURDASPUR"}
+    - [GURGAON]{"entity":"loc","value":"GURGAON"}
+    - [GWALIOR]{"entity":"loc","value":"GWALIOR"}
+    - [HAILAKANDI]{"entity":"loc","value":"HAILAKANDI"}
+    - [HAMIRPUR]{"entity":"loc","value":"HAMIRPUR"}
+    - [HAMIRPUR]{"entity":"loc","value":"HAMIRPUR"}
+    - [HANUMANGARH]{"entity":"loc","value":"HANUMANGARH"}
+    - [HARDA]{"entity":"loc","value":"HARDA"}
+    - [HARDOI]{"entity":"loc","value":"HARDOI"}
+    - [HARIDWAR]{"entity":"loc","value":"HARIDWAR"}
+    - [HASSAN]{"entity":"loc","value":"HASSAN"}
+    - [HAVERI DISTRICT]{"entity":"loc","value":"HAVERI DISTRICT"}
+    - [HAZARIBAG]{"entity":"loc","value":"HAZARIBAG"}
+    - [HINGOLI]{"entity":"loc","value":"HINGOLI"}
+    - [HISSAR]{"entity":"loc","value":"HISSAR"}
+    - [HOOGHLY]{"entity":"loc","value":"HOOGHLY"}
+    - [HOSHANGABAD]{"entity":"loc","value":"HOSHANGABAD"}
+    - [HOSHIARPUR]{"entity":"loc","value":"HOSHIARPUR"}
+    - [HOWRAH]{"entity":"loc","value":"HOWRAH"}
+    - [HYDERABAD]{"entity":"loc","value":"HYDERABAD"}
+    - [HYDERABAD]{"entity":"loc","value":"HYDERABAD"}
+    - [IDUKKI]{"entity":"loc","value":"IDUKKI"}
+    - [IMPHAL EAST]{"entity":"loc","value":"IMPHAL EAST"}
+    - [IMPHAL WEST]{"entity":"loc","value":"IMPHAL WEST"}
+    - [INDORE]{"entity":"loc","value":"INDORE"}
+    - [JABALPUR]{"entity":"loc","value":"JABALPUR"}
+    - [JAGATSINGHPUR]{"entity":"loc","value":"JAGATSINGHPUR"}
+    - [JAINTIA HILLS]{"entity":"loc","value":"JAINTIA HILLS"}
+    - [JAIPUR]{"entity":"loc","value":"JAIPUR"}
+    - [JAISALMER]{"entity":"loc","value":"JAISALMER"}
+    - [JAJPUR]{"entity":"loc","value":"JAJPUR"}
+    - [JALANDHAR]{"entity":"loc","value":"JALANDHAR"}
+    - [JALAUN]{"entity":"loc","value":"JALAUN"}
+    - [JALGAON]{"entity":"loc","value":"JALGAON"}
+    - [JALNA]{"entity":"loc","value":"JALNA"}
+    - [JALORE]{"entity":"loc","value":"JALORE"}
+    - [JALPAIGURI]{"entity":"loc","value":"JALPAIGURI"}
+    - [JAMMU]{"entity":"loc","value":"JAMMU"}
+    - [JAMNAGAR]{"entity":"loc","value":"JAMNAGAR"}
+    - [JAMTARA]{"entity":"loc","value":"JAMTARA"}
+    - [JAMUI]{"entity":"loc","value":"JAMUI"}
+    - [JANJGIR-CHAMPA]{"entity":"loc","value":"JANJGIR-CHAMPA"}
+    - [JASHPUR]{"entity":"loc","value":"JASHPUR"}
+    - [JAUNPUR DISTRICT]{"entity":"loc","value":"JAUNPUR DISTRICT"}
+    - [JEHANABAD]{"entity":"loc","value":"JEHANABAD"}
+    - [JHABUA]{"entity":"loc","value":"JHABUA"}
+    - [JHAJJAR]{"entity":"loc","value":"JHAJJAR"}
+    - [JHALAWAR]{"entity":"loc","value":"JHALAWAR"}
+    - [JHANSI]{"entity":"loc","value":"JHANSI"}
+    - [JHARSUGUDA]{"entity":"loc","value":"JHARSUGUDA"}
+    - [JHUNJHUNU]{"entity":"loc","value":"JHUNJHUNU"}
+    - [JIND]{"entity":"loc","value":"JIND"}
+    - [JODHPUR]{"entity":"loc","value":"JODHPUR"}
+    - [JORHAT]{"entity":"loc","value":"JORHAT"}
+    - [JUNAGADH]{"entity":"loc","value":"JUNAGADH"}
+    - [JYOTIBA PHULE NAGAR]{"entity":"loc","value":"JYOTIBA PHULE NAGAR"}
+    - [KADAPA]{"entity":"loc","value":"KADAPA"}
+    - [KAIMUR]{"entity":"loc","value":"KAIMUR"}
+    - [KAITHAL]{"entity":"loc","value":"KAITHAL"}
+    - [KAKINADA]{"entity":"loc","value":"KAKINADA"}
+    - [KALAHANDI]{"entity":"loc","value":"KALAHANDI"}
+    - [KAMRUP]{"entity":"loc","value":"KAMRUP"}
+    - [KAMRUP METROPOLITAN]{"entity":"loc","value":"KAMRUP METROPOLITAN"}
+    - [KANCHIPURAM]{"entity":"loc","value":"KANCHIPURAM"}
+    - [KANDHAMAL]{"entity":"loc","value":"KANDHAMAL"}
+    - [KANGRA]{"entity":"loc","value":"KANGRA"}
+    - [KANKER]{"entity":"loc","value":"KANKER"}
+    - [KANNAUJ]{"entity":"loc","value":"KANNAUJ"}
+    - [KANNUR]{"entity":"loc","value":"KANNUR"}
+    - [KANPUR]{"entity":"loc","value":"KANPUR"}
+    - [KANSHI RAM NAGAR]{"entity":"loc","value":"KANSHI RAM NAGAR"}
+    - [KANYAKUMARI]{"entity":"loc","value":"KANYAKUMARI"}
+    - [KAPURTHALA]{"entity":"loc","value":"KAPURTHALA"}
+    - [KARAIKAL]{"entity":"loc","value":"KARAIKAL"}
+    - [KARAULI]{"entity":"loc","value":"KARAULI"}
+    - [KARBI ANGLONG]{"entity":"loc","value":"KARBI ANGLONG"}
+    - [KARGIL]{"entity":"loc","value":"KARGIL"}
+    - [KARIMGANJ]{"entity":"loc","value":"KARIMGANJ"}
+    - [KARIMNAGAR]{"entity":"loc","value":"KARIMNAGAR"}
+    - [KARNAL]{"entity":"loc","value":"KARNAL"}
+    - [KARUR]{"entity":"loc","value":"KARUR"}
+    - [KASARAGOD]{"entity":"loc","value":"KASARAGOD"}
+    - [KATHUA]{"entity":"loc","value":"KATHUA"}
+    - [KATIHAR]{"entity":"loc","value":"KATIHAR"}
+    - [KATNI]{"entity":"loc","value":"KATNI"}
+    - [KAUSHAMBI]{"entity":"loc","value":"KAUSHAMBI"}
+    - [KENDRAPARA]{"entity":"loc","value":"KENDRAPARA"}
+    - [KHAGARIA]{"entity":"loc","value":"KHAGARIA"}
+    - [KHAMMAM]{"entity":"loc","value":"KHAMMAM"}
+    - [KHARGONE]{"entity":"loc","value":"KHARGONE"}
+    - [KHEDA]{"entity":"loc","value":"KHEDA"}
+    - [KHORDHA]{"entity":"loc","value":"KHORDHA"}
+    - [KHOWAI]{"entity":"loc","value":"KHOWAI"}
+    - [KHUNTI]{"entity":"loc","value":"KHUNTI"}
+    - [KINNAUR]{"entity":"loc","value":"KINNAUR"}
+    - [KISHANGANJ]{"entity":"loc","value":"KISHANGANJ"}
+    - [KISHTWAR]{"entity":"loc","value":"KISHTWAR"}
+    - [KODAGU]{"entity":"loc","value":"KODAGU"}
+    - [KODERMA]{"entity":"loc","value":"KODERMA"}
+    - [KOHIMA]{"entity":"loc","value":"KOHIMA"}
+    - [KOKRAJHAR]{"entity":"loc","value":"KOKRAJHAR"}
+    - [KOLAR]{"entity":"loc","value":"KOLAR"}
+    - [KOLASIB]{"entity":"loc","value":"KOLASIB"}
+    - [KOLHAPUR]{"entity":"loc","value":"KOLHAPUR"}
+    - [KOLKATA]{"entity":"loc","value":"KOLKATA"}
+    - [KOLLAM]{"entity":"loc","value":"KOLLAM"}
+    - [KOPPAL]{"entity":"loc","value":"KOPPAL"}
+    - [KORAPUT]{"entity":"loc","value":"KORAPUT"}
+    - [KORBA]{"entity":"loc","value":"KORBA"}
+    - [KORIYA]{"entity":"loc","value":"KORIYA"}
+    - [KOTA]{"entity":"loc","value":"KOTA"}
+    - [KOTTAYAM]{"entity":"loc","value":"KOTTAYAM"}
+    - [KOZHIKODE]{"entity":"loc","value":"KOZHIKODE"}
+    - [KRISHNA]{"entity":"loc","value":"KRISHNA"}
+    - [KULGAM]{"entity":"loc","value":"KULGAM"}
+    - [KULLU]{"entity":"loc","value":"KULLU"}
+    - [KUPWARA]{"entity":"loc","value":"KUPWARA"}
+    - [KURNOOL]{"entity":"loc","value":"KURNOOL"}
+    - [KURUKSHETRA]{"entity":"loc","value":"KURUKSHETRA"}
+    - [KURUNG KUMEY]{"entity":"loc","value":"KURUNG KUMEY"}
+    - [KUSHINAGAR]{"entity":"loc","value":"KUSHINAGAR"}
+    - [KUTCH]{"entity":"loc","value":"KUTCH"}
+    - [LAHAUL AND SPITI]{"entity":"loc","value":"LAHAUL AND SPITI"}
+    - [LAKHIMPUR]{"entity":"loc","value":"LAKHIMPUR"}
+    - [LAKHIMPUR KHERI]{"entity":"loc","value":"LAKHIMPUR KHERI"}
+    - [LAKHISARAI]{"entity":"loc","value":"LAKHISARAI"}
+    - [LALITPUR]{"entity":"loc","value":"LALITPUR"}
+    - [LATEHAR]{"entity":"loc","value":"LATEHAR"}
+    - [LATUR]{"entity":"loc","value":"LATUR"}
+    - [LAWNGTLAI]{"entity":"loc","value":"LAWNGTLAI"}
+    - [LEH]{"entity":"loc","value":"LEH"}
+    - [LOHARDAGA]{"entity":"loc","value":"LOHARDAGA"}
+    - [LOHIT]{"entity":"loc","value":"LOHIT"}
+    - [LOWER DIBANG VALLEY]{"entity":"loc","value":"LOWER DIBANG VALLEY"}
+    - [LOWER SUBANSIRI]{"entity":"loc","value":"LOWER SUBANSIRI"}
+    - [LUCKNOW]{"entity":"loc","value":"LUCKNOW"}
+    - [LUDHIANA]{"entity":"loc","value":"LUDHIANA"}
+    - [LUNGLEI]{"entity":"loc","value":"LUNGLEI"}
+    - [MADHEPURA]{"entity":"loc","value":"MADHEPURA"}
+    - [MADHUBANI]{"entity":"loc","value":"MADHUBANI"}
+    - [MADURAI]{"entity":"loc","value":"MADURAI"}
+    - [MAHAMAYA NAGAR]{"entity":"loc","value":"MAHAMAYA NAGAR"}
+    - [MAHARAJGANJ]{"entity":"loc","value":"MAHARAJGANJ"}
+    - [MAHASAMUND]{"entity":"loc","value":"MAHASAMUND"}
+    - [MAHBUBNAGAR]{"entity":"loc","value":"MAHBUBNAGAR"}
+    - [MAHE]{"entity":"loc","value":"MAHE"}
+    - [MAHENDRAGARH]{"entity":"loc","value":"MAHENDRAGARH"}
+    - [MAHOBA]{"entity":"loc","value":"MAHOBA"}
+    - [MAINPURI]{"entity":"loc","value":"MAINPURI"}
+    - [MALAPPURAM]{"entity":"loc","value":"MALAPPURAM"}
+    - [MALDAH]{"entity":"loc","value":"MALDAH"}
+    - [MALKANGIRI]{"entity":"loc","value":"MALKANGIRI"}
+    - [MAMIT]{"entity":"loc","value":"MAMIT"}
+    - [MANDI]{"entity":"loc","value":"MANDI"}
+    - [MANDLA]{"entity":"loc","value":"MANDLA"}
+    - [MANDSAUR]{"entity":"loc","value":"MANDSAUR"}
+    - [MANDYA]{"entity":"loc","value":"MANDYA"}
+    - [MANSA]{"entity":"loc","value":"MANSA"}
+    - [MARIGAON]{"entity":"loc","value":"MARIGAON"}
+    - [MATHURA]{"entity":"loc","value":"MATHURA"}
+    - [MAU]{"entity":"loc","value":"MAU"}
+    - [MAYURBHANJ]{"entity":"loc","value":"MAYURBHANJ"}
+    - [MEDAK]{"entity":"loc","value":"MEDAK"}
+    - [MEERUT]{"entity":"loc","value":"MEERUT"}
+    - [MEHSANA]{"entity":"loc","value":"MEHSANA"}
+    - [MEWAT]{"entity":"loc","value":"MEWAT"}
+    - [MIRZAPUR]{"entity":"loc","value":"MIRZAPUR"}
+    - [MOGA]{"entity":"loc","value":"MOGA"}
+    - [MOKOKCHUNG]{"entity":"loc","value":"MOKOKCHUNG"}
+    - [MON]{"entity":"loc","value":"MON"}
+    - [MORADABAD]{"entity":"loc","value":"MORADABAD"}
+    - [MORENA]{"entity":"loc","value":"MORENA"}
+    - [MUMBAI CITY]{"entity":"loc","value":"MUMBAI CITY"}
+    - [MUMBAI SUBURBAN]{"entity":"loc","value":"MUMBAI SUBURBAN"}
+    - [MUNGER]{"entity":"loc","value":"MUNGER"}
+    - [MURSHIDABAD]{"entity":"loc","value":"MURSHIDABAD"}
+    - [MUZAFFARNAGAR]{"entity":"loc","value":"MUZAFFARNAGAR"}
+    - [MUZAFFARPUR]{"entity":"loc","value":"MUZAFFARPUR"}
+    - [MYSORE]{"entity":"loc","value":"MYSORE"}
+    - [NABARANGPUR]{"entity":"loc","value":"NABARANGPUR"}
+    - [NADIA]{"entity":"loc","value":"NADIA"}
+    - [NAGAON]{"entity":"loc","value":"NAGAON"}
+    - [NAGAPATTINAM]{"entity":"loc","value":"NAGAPATTINAM"}
+    - [NAGAUR]{"entity":"loc","value":"NAGAUR"}
+    - [NAGPUR]{"entity":"loc","value":"NAGPUR"}
+    - [NAINITAL]{"entity":"loc","value":"NAINITAL"}
+    - [NALANDA]{"entity":"loc","value":"NALANDA"}
+    - [NALBARI]{"entity":"loc","value":"NALBARI"}
+    - [NALGONDA]{"entity":"loc","value":"NALGONDA"}
+    - [NAMAKKAL]{"entity":"loc","value":"NAMAKKAL"}
+    - [NANDED]{"entity":"loc","value":"NANDED"}
+    - [NANDURBAR]{"entity":"loc","value":"NANDURBAR"}
+    - [NARAYANPUR]{"entity":"loc","value":"NARAYANPUR"}
+    - [NARMADA]{"entity":"loc","value":"NARMADA"}
+    - [NARSINGHPUR]{"entity":"loc","value":"NARSINGHPUR"}
+    - [NASHIK]{"entity":"loc","value":"NASHIK"}
+    - [NAVSARI]{"entity":"loc","value":"NAVSARI"}
+    - [NAWADA]{"entity":"loc","value":"NAWADA"}
+    - [NAWANSHAHR]{"entity":"loc","value":"NAWANSHAHR"}
+    - [NAYAGARH]{"entity":"loc","value":"NAYAGARH"}
+    - [NEEMUCH]{"entity":"loc","value":"NEEMUCH"}
+    - [NELLORE]{"entity":"loc","value":"NELLORE"}
+    - [NEW DELHI]{"entity":"loc","value":"NEW DELHI"}
+    - [NILGIRIS]{"entity":"loc","value":"NILGIRIS"}
+    - [NIZAMABAD]{"entity":"loc","value":"NIZAMABAD"}
+    - [NORTH 24 PARGANAS]{"entity":"loc","value":"NORTH 24 PARGANAS"}
+    - [NORTH DELHI]{"entity":"loc","value":"NORTH DELHI"}
+    - [NORTH EAST DELHI]{"entity":"loc","value":"NORTH EAST DELHI"}
+    - [NORTH GOA]{"entity":"loc","value":"NORTH GOA"}
+    - [NORTH SIKKIM]{"entity":"loc","value":"NORTH SIKKIM"}
+    - [NORTH TRIPURA]{"entity":"loc","value":"NORTH TRIPURA"}
+    - [NORTH WEST DELHI]{"entity":"loc","value":"NORTH WEST DELHI"}
+    - [NUAPADA]{"entity":"loc","value":"NUAPADA"}
+    - [ONGOLE]{"entity":"loc","value":"ONGOLE"}
+    - [OSMANABAD]{"entity":"loc","value":"OSMANABAD"}
+    - [PAKUR]{"entity":"loc","value":"PAKUR"}
+    - [PALAKKAD]{"entity":"loc","value":"PALAKKAD"}
+    - [PALAMU]{"entity":"loc","value":"PALAMU"}
+    - [PALI]{"entity":"loc","value":"PALI"}
+    - [PALWAL]{"entity":"loc","value":"PALWAL"}
+    - [PANCHKULA]{"entity":"loc","value":"PANCHKULA"}
+    - [PANCHMAHAL]{"entity":"loc","value":"PANCHMAHAL"}
+    - [PANIPAT]{"entity":"loc","value":"PANIPAT"}
+    - [PANNA]{"entity":"loc","value":"PANNA"}
+    - [PAPUM PARE]{"entity":"loc","value":"PAPUM PARE"}
+    - [PARBHANI]{"entity":"loc","value":"PARBHANI"}
+    - [PASCHIM MEDINIPUR]{"entity":"loc","value":"PASCHIM MEDINIPUR"}
+    - [PATAN]{"entity":"loc","value":"PATAN"}
+    - [PATHANAMTHITTA]{"entity":"loc","value":"PATHANAMTHITTA"}
+    - [PATHANKOT]{"entity":"loc","value":"PATHANKOT"}
+    - [PATIALA]{"entity":"loc","value":"PATIALA"}
+    - [PATNA]{"entity":"loc","value":"PATNA"}
+    - [PAURI GARHWAL]{"entity":"loc","value":"PAURI GARHWAL"}
+    - [PERAMBALUR]{"entity":"loc","value":"PERAMBALUR"}
+    - [PHEK]{"entity":"loc","value":"PHEK"}
+    - [PILIBHIT]{"entity":"loc","value":"PILIBHIT"}
+    - [PITHORAGARH]{"entity":"loc","value":"PITHORAGARH"}
+    - [PONDICHERRY]{"entity":"loc","value":"PONDICHERRY"}
+    - [POONCH]{"entity":"loc","value":"POONCH"}
+    - [PORBANDAR]{"entity":"loc","value":"PORBANDAR"}
+    - [PRATAPGARH]{"entity":"loc","value":"PRATAPGARH"}
+    - [PRATAPGARH]{"entity":"loc","value":"PRATAPGARH"}
+    - [PUDUKKOTTAI]{"entity":"loc","value":"PUDUKKOTTAI"}
+    - [PULWAMA]{"entity":"loc","value":"PULWAMA"}
+    - [PUNE]{"entity":"loc","value":"PUNE"}
+    - [PURBA MEDINIPUR]{"entity":"loc","value":"PURBA MEDINIPUR"}
+    - [PURI]{"entity":"loc","value":"PURI"}
+    - [PURNIA]{"entity":"loc","value":"PURNIA"}
+    - [PURULIA]{"entity":"loc","value":"PURULIA"}
+    - [RAEBARELI]{"entity":"loc","value":"RAEBARELI"}
+    - [RAICHUR]{"entity":"loc","value":"RAICHUR"}
+    - [RAIGAD]{"entity":"loc","value":"RAIGAD"}
+    - [RAIGARH]{"entity":"loc","value":"RAIGARH"}
+    - [RAIPUR]{"entity":"loc","value":"RAIPUR"}
+    - [RAISEN]{"entity":"loc","value":"RAISEN"}
+    - [RAJAURI]{"entity":"loc","value":"RAJAURI"}
+    - [RAJGARH]{"entity":"loc","value":"RAJGARH"}
+    - [RAJKOT]{"entity":"loc","value":"RAJKOT"}
+    - [RAJNANDGAON]{"entity":"loc","value":"RAJNANDGAON"}
+    - [RAJSAMAND]{"entity":"loc","value":"RAJSAMAND"}
+    - [RAMANAGARA]{"entity":"loc","value":"RAMANAGARA"}
+    - [RAMANATHAPURAM]{"entity":"loc","value":"RAMANATHAPURAM"}
+    - [RAMBAN]{"entity":"loc","value":"RAMBAN"}
+    - [RAMGARH]{"entity":"loc","value":"RAMGARH"}
+    - [RAMPUR]{"entity":"loc","value":"RAMPUR"}
+    - [RANCHI]{"entity":"loc","value":"RANCHI"}
+    - [RATLAM]{"entity":"loc","value":"RATLAM"}
+    - [RATNAGIRI]{"entity":"loc","value":"RATNAGIRI"}
+    - [RAYAGADA]{"entity":"loc","value":"RAYAGADA"}
+    - [REASI]{"entity":"loc","value":"REASI"}
+    - [REWA]{"entity":"loc","value":"REWA"}
+    - [REWARI]{"entity":"loc","value":"REWARI"}
+    - [RI BHOI]{"entity":"loc","value":"RI BHOI"}
+    - [ROHTAK]{"entity":"loc","value":"ROHTAK"}
+    - [ROHTAS]{"entity":"loc","value":"ROHTAS"}
+    - [RUDRAPRAYAG]{"entity":"loc","value":"RUDRAPRAYAG"}
+    - [RUPNAGAR]{"entity":"loc","value":"RUPNAGAR"}
+    - [SABARKANTHA]{"entity":"loc","value":"SABARKANTHA"}
+    - [SAGAR]{"entity":"loc","value":"SAGAR"}
+    - [SAHARANPUR]{"entity":"loc","value":"SAHARANPUR"}
+    - [SAHARSA]{"entity":"loc","value":"SAHARSA"}
+    - [SAHIBGANJ]{"entity":"loc","value":"SAHIBGANJ"}
+    - [SAIHA]{"entity":"loc","value":"SAIHA"}
+    - [SALEM]{"entity":"loc","value":"SALEM"}
+    - [SAMASTIPUR]{"entity":"loc","value":"SAMASTIPUR"}
+    - [SAMBA]{"entity":"loc","value":"SAMBA"}
+    - [SAMBALPUR]{"entity":"loc","value":"SAMBALPUR"}
+    - [SANGLI]{"entity":"loc","value":"SANGLI"}
+    - [SANGRUR]{"entity":"loc","value":"SANGRUR"}
+    - [SANT KABIR NAGAR]{"entity":"loc","value":"SANT KABIR NAGAR"}
+    - [SANT RAVIDAS NAGAR]{"entity":"loc","value":"SANT RAVIDAS NAGAR"}
+    - [SARAN]{"entity":"loc","value":"SARAN"}
+    - [SATARA]{"entity":"loc","value":"SATARA"}
+    - [SATNA]{"entity":"loc","value":"SATNA"}
+    - [SAWAI MADHOPUR]{"entity":"loc","value":"SAWAI MADHOPUR"}
+    - [SEHORE]{"entity":"loc","value":"SEHORE"}
+    - [SENAPATI]{"entity":"loc","value":"SENAPATI"}
+    - [SEONI]{"entity":"loc","value":"SEONI"}
+    - [SERAIKELA KHARSAWAN]{"entity":"loc","value":"SERAIKELA KHARSAWAN"}
+    - [SERCHHIP]{"entity":"loc","value":"SERCHHIP"}
+    - [SHAHDOL]{"entity":"loc","value":"SHAHDOL"}
+    - [SHAHJAHANPUR]{"entity":"loc","value":"SHAHJAHANPUR"}
+    - [SHAJAPUR]{"entity":"loc","value":"SHAJAPUR"}
+    - [SHAMLI]{"entity":"loc","value":"SHAMLI"}
+    - [SHEIKHPURA]{"entity":"loc","value":"SHEIKHPURA"}
+    - [SHEOHAR]{"entity":"loc","value":"SHEOHAR"}
+    - [SHEOPUR]{"entity":"loc","value":"SHEOPUR"}
+    - [SHIMLA]{"entity":"loc","value":"SHIMLA"}
+    - [SHIMOGA]{"entity":"loc","value":"SHIMOGA"}
+    - [SHIVPURI]{"entity":"loc","value":"SHIVPURI"}
+    - [SHOPIAN]{"entity":"loc","value":"SHOPIAN"}
+    - [SHRAVASTI]{"entity":"loc","value":"SHRAVASTI"}
+    - [SIBSAGAR]{"entity":"loc","value":"SIBSAGAR"}
+    - [SIDDHARTHNAGAR]{"entity":"loc","value":"SIDDHARTHNAGAR"}
+    - [SIDHI]{"entity":"loc","value":"SIDHI"}
+    - [SIKAR]{"entity":"loc","value":"SIKAR"}
+    - [SIMDEGA]{"entity":"loc","value":"SIMDEGA"}
+    - [SINDHUDURG]{"entity":"loc","value":"SINDHUDURG"}
+    - [SINGRAULI]{"entity":"loc","value":"SINGRAULI"}
+    - [SIRMAUR]{"entity":"loc","value":"SIRMAUR"}
+    - [SIROHI]{"entity":"loc","value":"SIROHI"}
+    - [SIRSA]{"entity":"loc","value":"SIRSA"}
+    - [SITAMARHI]{"entity":"loc","value":"SITAMARHI"}
+    - [SITAPUR]{"entity":"loc","value":"SITAPUR"}
+    - [SIVAGANGA]{"entity":"loc","value":"SIVAGANGA"}
+    - [SIWAN]{"entity":"loc","value":"SIWAN"}
+    - [SOLAN]{"entity":"loc","value":"SOLAN"}
+    - [SOLAPUR]{"entity":"loc","value":"SOLAPUR"}
+    - [SONBHADRA]{"entity":"loc","value":"SONBHADRA"}
+    - [SONIPAT]{"entity":"loc","value":"SONIPAT"}
+    - [SONITPUR]{"entity":"loc","value":"SONITPUR"}
+    - [SOUTH 24 PARGANAS]{"entity":"loc","value":"SOUTH 24 PARGANAS"}
+    - [SOUTH DELHI]{"entity":"loc","value":"SOUTH DELHI"}
+    - [SOUTH GARO HILLS]{"entity":"loc","value":"SOUTH GARO HILLS"}
+    - [SOUTH GOA]{"entity":"loc","value":"SOUTH GOA"}
+    - [SOUTH SIKKIM]{"entity":"loc","value":"SOUTH SIKKIM"}
+    - [SOUTH TRIPURA]{"entity":"loc","value":"SOUTH TRIPURA"}
+    - [SOUTH WEST DELHI]{"entity":"loc","value":"SOUTH WEST DELHI"}
+    - [SRI MUKTSAR SAHIB]{"entity":"loc","value":"SRI MUKTSAR SAHIB"}
+    - [SRIKAKULAM]{"entity":"loc","value":"SRIKAKULAM"}
+    - [SRINAGAR]{"entity":"loc","value":"SRINAGAR"}
+    - [SONEPUR]{"entity":"loc","value":"SONEPUR"}
+    - [subarnapur]{"entity":"loc","value":"subarnapur"}
+    - [SULTANPUR]{"entity":"loc","value":"SULTANPUR"}
+    - [SUNDERGARH]{"entity":"loc","value":"SUNDERGARH"}
+    - [SUPAUL]{"entity":"loc","value":"SUPAUL"}
+    - [SURAT]{"entity":"loc","value":"SURAT"}
+    - [SURENDRANAGAR]{"entity":"loc","value":"SURENDRANAGAR"}
+    - [SURGUJA]{"entity":"loc","value":"SURGUJA"}
+    - [TAMENGLONG]{"entity":"loc","value":"TAMENGLONG"}
+    - [TARN TARAN]{"entity":"loc","value":"TARN TARAN"}
+    - [TAWANG]{"entity":"loc","value":"TAWANG"}
+    - [TEHRI GARHWAL]{"entity":"loc","value":"TEHRI GARHWAL"}
+    - [THANE]{"entity":"loc","value":"THANE"}
+    - [THANJAVUR]{"entity":"loc","value":"THANJAVUR"}
+    - [THE DANGS]{"entity":"loc","value":"THE DANGS"}
+    - [THENI]{"entity":"loc","value":"THENI"}
+    - [THIRUVANANTHAPURAM]{"entity":"loc","value":"THIRUVANANTHAPURAM"}
+    - [THOOTHUKUDI]{"entity":"loc","value":"THOOTHUKUDI"}
+    - [THOUBAL]{"entity":"loc","value":"THOUBAL"}
+    - [THRISSUR]{"entity":"loc","value":"THRISSUR"}
+    - [TIKAMGARH]{"entity":"loc","value":"TIKAMGARH"}
+    - [TINSUKIA]{"entity":"loc","value":"TINSUKIA"}
+    - [TIRAP]{"entity":"loc","value":"TIRAP"}
+    - [TIRUCHIRAPPALLI]{"entity":"loc","value":"TIRUCHIRAPPALLI"}
+    - [TIRUNELVELI]{"entity":"loc","value":"TIRUNELVELI"}
+    - [TIRUPUR]{"entity":"loc","value":"TIRUPUR"}
+    - [TIRUVALLUR]{"entity":"loc","value":"TIRUVALLUR"}
+    - [TIRUVANNAMALAI]{"entity":"loc","value":"TIRUVANNAMALAI"}
+    - [TIRUVARUR]{"entity":"loc","value":"TIRUVARUR"}
+    - [TONK]{"entity":"loc","value":"TONK"}
+    - [TUENSANG]{"entity":"loc","value":"TUENSANG"}
+    - [TUMKUR]{"entity":"loc","value":"TUMKUR"}
+    - [UDAIPUR]{"entity":"loc","value":"UDAIPUR"}
+    - [UDALGURI]{"entity":"loc","value":"UDALGURI"}
+    - [UDHAM SINGH NAGAR]{"entity":"loc","value":"UDHAM SINGH NAGAR"}
+    - [UDHAMPUR]{"entity":"loc","value":"UDHAMPUR"}
+    - [UDUPI]{"entity":"loc","value":"UDUPI"}
+    - [UJJAIN]{"entity":"loc","value":"UJJAIN"}
+    - [UKHRUL]{"entity":"loc","value":"UKHRUL"}
+    - [UMARIA]{"entity":"loc","value":"UMARIA"}
+    - [UNA]{"entity":"loc","value":"UNA"}
+    - [UNNAO]{"entity":"loc","value":"UNNAO"}
+    - [UPPER SIANG]{"entity":"loc","value":"UPPER SIANG"}
+    - [UPPER SUBANSIRI]{"entity":"loc","value":"UPPER SUBANSIRI"}
+    - [UTTAR DINAJPUR]{"entity":"loc","value":"UTTAR DINAJPUR"}
+    - [UTTARA KANNADA]{"entity":"loc","value":"UTTARA KANNADA"}
+    - [UTTARKASHI]{"entity":"loc","value":"UTTARKASHI"}
+    - [VADODARA]{"entity":"loc","value":"VADODARA"}
+    - [VAISHALI]{"entity":"loc","value":"VAISHALI"}
+    - [VALSAD]{"entity":"loc","value":"VALSAD"}
+    - [VARANASI]{"entity":"loc","value":"VARANASI"}
+    - [VELLORE]{"entity":"loc","value":"VELLORE"}
+    - [VIDISHA]{"entity":"loc","value":"VIDISHA"}
+    - [VILUPPURAM]{"entity":"loc","value":"VILUPPURAM"}
+    - [VIRUDHUNAGAR]{"entity":"loc","value":"VIRUDHUNAGAR"}
+    - [VISAKHAPATNAM]{"entity":"loc","value":"VISAKHAPATNAM"}
+    - [VIZIANAGARAM]{"entity":"loc","value":"VIZIANAGARAM"}
+    - [VYARA]{"entity":"loc","value":"VYARA"}
+    - [WARANGAL]{"entity":"loc","value":"WARANGAL"}
+    - [WARDHA]{"entity":"loc","value":"WARDHA"}
+    - [WASHIM]{"entity":"loc","value":"WASHIM"}
+    - [WAYANAD]{"entity":"loc","value":"WAYANAD"}
+    - [WEST CHAMPARAN]{"entity":"loc","value":"WEST CHAMPARAN"}
+    - [WEST DELHI]{"entity":"loc","value":"WEST DELHI"}
+    - [WEST GARO HILLS]{"entity":"loc","value":"WEST GARO HILLS"}
+    - [WEST KAMENG]{"entity":"loc","value":"WEST KAMENG"}
+    - [WEST KHASI HILLS]{"entity":"loc","value":"WEST KHASI HILLS"}
+    - [WEST SIANG]{"entity":"loc","value":"WEST SIANG"}
+    - [WEST SIKKIM]{"entity":"loc","value":"WEST SIKKIM"}
+    - [WEST SINGHBHUM]{"entity":"loc","value":"WEST SINGHBHUM"}
+    - [WEST TRIPURA]{"entity":"loc","value":"WEST TRIPURA"}
+    - [WOKHA]{"entity":"loc","value":"WOKHA"}
+    - [YADGIR]{"entity":"loc","value":"YADGIR"}
+    - [YAMUNA NAGAR]{"entity":"loc","value":"YAMUNA NAGAR"}
+    - [YANAM]{"entity":"loc","value":"YANAM"}
+    - [YAVATMAL]{"entity":"loc","value":"YAVATMAL"}
+    - [ZUNHEBOTO]{"entity":"loc","value":"ZUNHEBOTO"}
+- intent: City_Attractions_spa
+  examples: |
+    - Enjoy [Spa]{"entity":"typeofservices","value":"Spa"} for relaxation 
+    - i m want to book a [Spa]{"entity":"typeofservices","value":"Spa"}
+    - looking for [Spa]{"entity":"typeofservices","value":"Spa"}
+    - can you give details about [Spa]{"entity":"typeofservices","value":"Spa"}
+    - [Spa]{"entity":"typeofservices","value":"Spa"}
+    - [Spa]{"entity":"typeofservices","value":"Spa"}
+    - i m want to book a [Spa]{"entity":"typeofservices","value":"Spa"}
+    - i want to book the [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to book a swimming [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to book a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i'm just wondering if you 'd like to book a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to book a [Spa]{"entity":"typeofservices","value":"Spa"} for the night.
+    - i want to order a massage.
+    - i want to book an [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to book a bath.
+    - i wanted to book a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i'm booking a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to hire a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i 'd like to book a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to be on a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to hire a [Spa]{"entity":"typeofservices","value":"Spa"}
+    - i wanted to book a [Spa]{"entity":"typeofservices","value":"Spa"}, and i don't know where to take you.
+    - i want to buy a [Spa]{"entity":"typeofservices","value":"Spa"}.
+    - i want to book a [Spa]{"entity":"typeofservices","value":"Spa"}
+- intent: City_Attractions
+  examples: |
+    - Visit Movie Theaters [Multiplex]{"entity":"typeofservices","value":"Multiplex"}
+    - [Movie]{"entity":"typeofservices","value":"Multiplex"} Theaters
+    - [Shopping]{"entity":"typeofservices","value":"Shopping"} in mall
+    - exchange currancy availibity 
+    - [Tourism help desk]{"entity":"typeofservices","value":"Tourism Offices"} 
+    - [Tourist Places]{"entity":"typeofservices","value":"Tourist Places"}
+    - 3D Laser Scanning Services
+    - AC Dealers
+    - Acoustic Enclosure Suppliers
+    - Acoustic Home Theater System Dealers
+    - Actuarial Services
+    - Advertising Agency
+    - Audio Video Equipment Dealers
+    - Audio Visual Equipment Dealers
+    - Audio Visual Equipment Rentals
+    - Battery Dealers
+    - Billing Machine Dealers
+    - BPO Company
+    - Bulk Email Services
+    - Bulk SMS Providers
+    - Business Centres
+    - Business Consultancy
+    - Business Management Consultant
+    - Business Opportunities
+    - Cable Manufacturers and Suppliers
+    - CAD Engineering Services
+    - Canteen Equipment Dealers
+    - Cash Register Suppliers
+    - Chartered Accountant
+    - Cleaning Services
+    - Commercial Printer
+    - Conference Hall Rentals
+    - Corporate Gift Dealers
+    - Corporate Gifts Printing
+    - Corporate Training Providers
+    - Corrugated Box Suppliers
+    - Crane Services
+    - Custom Label Printer
+    - Data Recovery
+    - Digital Advertising Agency
+    - Digital Display System Dealers
+    - Digital Marketing
+    - Digital Printing Service
+    - Document Management Services
+    - Drinking Water Suppliers
+    - Electrical Contractors
+    - Elevator Installation and Maintenance Services
+    - Email Marketing
+    - Email Solutions
+    - Engineering Consultant
+    - EPABX Dealers and Services and Rentals
+    - Event Organisers
+    - Fax Machine Dealers and Services and Rentals
+    - Fire Fighting Equipment Dealers
+    - Foreign Exchange and Money Transfer services
+    - Forensic Consultancy
+    - Garment Machinery Dealers and Services
+    - Generator Dealers
+    - Graphics Designer
+    - Guest Houses
+    - Gym Equipment
+    - Holograms Manufacturers
+    - Housekeeping Services
+    - Industrial Chiller Manufacturers
+    - Industrial Electrical System Services
+    - Internet Service Providers
+    - Inverter Dealers and Services and Rentals
+    - Iso Consultancy
+    - ISO Consultants
+    - Isp Office
+    - Labels and Barcode Sticker Suppliers
+    - Labour Legal Services Consultancy
+    - Lamination Machine Manufacturers
+    - Law Enforcement Agency
+    - Linksys Wireless WiFi Services
+    - Marketing Agency
+    - Mineral Water Manufacturers
+    - Name Plate Dealers
+    - Office Accessories
+    - Office Machines
+    - Packaging Machinery Dealers
+    - Packaging Material Suppliers
+    - Paint Dealers
+    - Paper Shredders and Paper Cutters Manufacturers
+    - Patent and Trade Mark Consultants
+    - Photography Equipment Dealers
+    - Placement Consultancies
+    - Plastic ID Card Machine Manufacturers
+    - Point of Sale Equipment Dealers
+    - Power Factor Products and System Delaers
+    - Printing Dye Suppliers
+    - Printing Press
+    - Printing Services
+    - Production House
+    - Robotic Spare Parts Dealers
+    - Safety Product Dealers
+    - Screen Projection Manufactuers
+    - Security Guards
+    - Security System Dealers
+    - Sign Board Agencies
+    - Software Companies
+    - Software Development Services
+    - Software Engineer
+    - Solar Energy Company
+    - Stationary Asseccories
+    - Steel Casting Dealers
+    - Sun Control Film Dealers
+    - Towing and Recovering Services
+    - Translator
+    - Translators and Interpreters
+    - Transporters
+    - UPS Dealers
+    - UPS Rentals
+    - UPS Services
+    - Used Office Appliance
+    - Vending Machine Dealers
+    - Warehouse Service
+    - Water Purifier Dealers
+    - Water Purifier Manufacturers
+    - Web Design and Development
+    - Web Designer
+    - Web Developer
+    - Weighing Scale Dealers
+    - Writing Board Dealers
+
+- intent: spa_service
+  examples: |
+    - [Body Massage]{"entity":"typeofspaservices","value":"Body Massage"}
+    - [Steam Bath]{"entity":"typeofspaservices","value":"Steam Bath"}
+    - [Body Scrub]{"entity":"typeofspaservices","value":"Body Scrub"}
+    - [Pain Relief]{"entity":"typeofspaservices","value":"Pain Relief"} Treatment
+    - [Body Polish]{"entity":"typeofspaservices","value":"Body Polish"}
+    - [Body Wraps]{"entity":"typeofspaservices","value":"Body Wraps"}
+    - [Skin Care]{"entity":"typeofspaservices","value":"Skin Care"} Treatment
+
+- intent: gender
+  examples: |
+    - [Male]{"entity":"gender","value":"Male"}
+    - [Female]{"entity":"gender","value":"Female"}
+    - i m a [male]{"entity":"gender","value":"Male"}
+    - i m a [lady]{"entity":"gender","value":"Female"}
+    - i m a young [Man]{"entity":"gender","value":"Male"}
+    - [women]{"entity":"gender","value":"Female"}
+    - [girl]{"entity":"gender","value":"Female"}
+    - [boy]{"entity":"gender","value":"Male"}
+
+- intent: Educational_Supplies_Dealers
+  examples: |
+    - [Art and Crafts Suppliers]{"entity":"educationalsuppliesdealers","value":"Art and Crafts Suppliers"}
+    - [Binding and Photocopy Shops]{"entity":"educationalsuppliesdealers","value":"Binding and Photocopy Shops"}
+    - [School Project Kits Suppliers]{"entity":"educationalsuppliesdealers","value":"School Project Kits Suppliers"}
+    - [Stationery Shops]{"entity":"educationalsuppliesdealers","value":"Stationery Shops"}
+    - Educational Equipment
+    - Educational Supplies Dealers
+    - Education Appliances
+    - Education Equipment Distributors
+    - items for distributorship
+    - Looking for Collage near me 
+    - To certify in Psychology
+    - check for College Admission forms online 
+    - Apply for the certication and class
+    - once approved look for in house Libraries 
+    - check book banks to get good deals 
+
+- intent: book_shop
+  examples: |
+    - [Book Shops]{"entity":"book_shops","value":"Book Shops"}
+    - I m looking for [Book Shops]{"entity":"book_shops","value":"Book Shops"} nearby
+    - tell me nearest [Book Shops]{"entity":"book_shops","value":"Book Shops"} 
+    - do you have information regarding [Book Shops]{"entity":"book_shops","value":"Book Shops"} near me?
+    - I m looking for [Book Shops]{"entity":"book_shops","value":"Book Shops"} nearby
+    - i'm looking for [bookstores]{"entity":"book_shops","value":"Book Shops"}.
+    - i'm looking for a [book shop]{"entity":"book_shops","value":"Book Shops"}.
+    - i'm looking for [Book Shops]{"entity":"book_shops","value":"Book Shops"} around.
+    - i'm looking for a [book shop]{"entity":"book_shops","value":"Book Shops"} next door.
+    - i'm looking for [book clubs]{"entity":"book_shops","value":"Book Shops"}
+    - i'm looking for [bookstores]{"entity":"book_shops","value":"Book Shops"} nearby.
+    - i'm looking for [bookstores]{"entity":"book_shops","value":"Book Shops"} nearby
+    - i'm looking for a [bookshop]{"entity":"book_shops","value":"Book Shops"} next to me.
+    - i'm looking for [bookstores]{"entity":"book_shops","value":"Book Shops"}
+- intent: type_of_book_shop
+  examples: |
+    - [College]{"entity":"type_of_book_shops","value":"College"} Book Shops
+    - [Competitive Exams]{"entity":"type_of_book_shops","value":"Competitive Exams"} Books Shops
+    - [School]{"entity":"type_of_book_shops","value":"School"} Book Shops
+    - [General]{"entity":"type_of_book_shops","value":"General"} Book Shops
+    - [Used]{"entity":"type_of_book_shops","value":"Used"} Book Shops
+    - [Professional]{"entity":"type_of_book_shops","value":"Professional"} Book Shops
+    - [Religious & Spiritual]{"entity":"type_of_book_shops","value":"Religious & Spiritual"} Book Shops
+    - [UGC Net preparation]{"entity":"type_of_book_shops","value":"UGC Net preparation"} Book Shops
+    - [eBook Online Stores]{"entity":"type_of_book_shops","value":"eBook Online Stores"}
+    - [Other Language]{"entity":"type_of_book_shops","value":"Other Language"} Book Shops
+
+- intent: Financial_Services
+  examples: |
+    - home improvement loan
+    - financial services industry
+    - Personal Loans
+    - financial services agency
+    - financial services brands
+    - financial services broker
+    - Car Loans
+- intent: Accountant
+  examples: |
+    - [Accountant]{"entity":"Accountant","value":"Accountant"}
+    - i m looking for [Accountant]{"entity":"Accountant","value":"Accountant"}
+    - can you provide me [Accountant]{"entity":"Accountant","value":"Accountant"} provider nearby
+- intent: ATM
+  examples: |
+    - [ATM]{"entity":"ATM","value":"ATM"}
+    - i m looking for [ATM]{"entity":"ATM","value":"ATM"}
+    - can you provide me [ATM]{"entity":"ATM","value":"ATM"} provider nearby
+- intent: Auditors
+  examples: |
+    - [Auditors]{"entity":"Auditors","value":"Auditors"}
+    - i m looking for [Auditors]{"entity":"Auditors","value":"Auditors"}
+    - can you provide me [Auditors]{"entity":"Auditors","value":"Auditors"} provider nearby
+- intent: Bank_Drop_Boxes
+  examples: |
+    - [Bank Drop Boxes]{"entity":"Bank_Drop_Box","value":"Bank Drop Boxes"}
+    - i m looking for [Bank Drop Boxes]{"entity":"Bank_Drop_Box","value":"Bank Drop Boxes"}
+    - can you provide me [Bank Drop Boxes]{"entity":"Bank_Drop_Box","value":"Bank Drop Boxes"} provider nearby
+- intent: Bank
+  examples: |
+    - [Banks]{"entity":"Bank","value":"Bank"}
+    - i m looking for [Banks]{"entity":"Bank","value":"Bank"}
+    - can you provide me [Banks]{"entity":"Bank","value":"Bank"} provider nearby
+- intent: Brokerage_House
+  examples: |
+    - [Brokerage House]{"entity":"Brokerage_House","value":"Brokerage House"}
+    - i m looking for [Brokerage House]{"entity":"Brokerage_House","value":"Brokerage House"}
+    - can you provide me [Brokerage House]{"entity":"Brokerage_House","value":"Brokerage House"} provider nearby
+- intent: Chartered_Tax
+  examples: |
+    - [Chartered Tax Adviser]{"entity":"Chartered_Tax_Adviser","value":"Chartered Tax Adviser"}
+    - i m looking for [Chartered Tax Adviser]{"entity":"Chartered_Tax_Adviser","value":"Chartered Tax Adviser"}
+    - can you provide me [Chartered Tax Adviser]{"entity":"Chartered_Tax_Adviser","value":"Chartered Tax Adviser"} provider nearby
+
+- intent: Co_op_Housing
+  examples: |
+    - [Coop Housing Society Billing and Accounting]{"entity":"Co_op_Housing_Society","value":"Coop Housing Society Billing and Accounting"}
+    - i m looking for [Coop Housing Society Billing and Accounting]{"entity":"Co_op_Housing_Society","value":"Coop Housing Society Billing and Accounting"}
+    - can you provide me [Coop Housing Society Billing and Accounting]{"entity":"Co_op_Housing_Society","value":"Coop Housing Society Billing and Accounting"} provider nearby
+- intent: Commodity
+  examples: |
+    - [Commodity Brokerage Houses]{"entity":"Commodity","value":"Commodity Brokerage Houses"}
+    - i m looking for [Commodity Brokerage Houses]{"entity":"Commodity","value":"Commodity Brokerage Houses"}
+    - can you provide me [Commodity Brokerage Houses]{"entity":"Commodity","value":"Commodity Brokerage Houses"} provider nearby
+- intent: Credit_card
+  examples: |
+    - [Credit Card]{"entity":"Credit_card","value":"Credit card"} Providers
+    - [Credit Card Providers]{"entity":"Credit_card","value":"Credit card Providers"}
+    - i m looking for [Credit Card]{"entity":"Credit_card","value":"Credit card"}
+    - can you provide me [Credit Card Providers]{"entity":"Credit_card","value":"Credit card Providers"} nearby
+- intent: Finance_and_Taxation
+  examples: |
+    - [Finance and Taxation Services]{"entity":"Finance_Taxation","value":"Finance and Taxation Services"}
+    - i m looking for [Finance and Taxation Services]{"entity":"Finance_Taxation","value":"Finance and Taxation Services"}
+    - can you provide me [Finance and Taxation Services]{"entity":"Finance_Taxation","value":"Finance and Taxation Services"} nearby
+- intent: Finance_Consultant
+  examples: |
+    - [Financial Consultant]{"entity":"Finance_Consultant","value":"Finance Consultant"}
+    - i m looking for [Financial Consultant]{"entity":"Finance_Consultant","value":"Finance Consultant"}
+    - can you provide me [Financial Consultant]{"entity":"Finance_Consultant","value":"Finance Consultant"} nearby
+- intent: Four_wheeler_loans
+  examples: |
+    - [Four wheeler loans]{"entity":"Four_wheeler_loans","value":"Four wheeler loans"}
+    - i m looking for [Four wheeler loans]{"entity":"Four_wheeler_loans","value":"Four wheeler loans"}
+    - can you provide me [Four wheeler loans]{"entity":"Four_wheeler_loans","value":"Four wheeler loans"} nearby
+- intent: Income_Tax_Consultant
+  examples: |
+    - [Income Tax Consultant]{"entity":"Income_Tax_Consultant","value":"Income Tax Consultant"}
+    - i m looking for [Income Tax Consultant]{"entity":"Income_Tax_Consultant","value":"Income Tax Consultant"}
+    - can you provide me [Income Tax Consultant]{"entity":"Income_Tax_Consultant","value":"Income Tax Consultant"} nearby
+- intent: Income_Tax_Department
+  examples: |
+    - [Income Tax Department]{"entity":"Income_Tax_Department","value":"Income Tax Department"}
+    - i m looking for [Income Tax Department]{"entity":"Income_Tax_Department","value":"Income Tax Department"}
+    - can you provide me [Income Tax Department]{"entity":"Income_Tax_Department","value":"Income Tax Department"} nearby
+
+- intent: Insurance
+  examples: |
+    - [Insurance]{"entity":"insurance","value":"Insurance"}
+    - i m looking for [insurance]{"entity":"insurance","value":"Insurance"}
+    - can you provide me [Insurance]{"entity":"insurance","value":"Insurance"} provider nearby
+- intent: type_of_insurance
+  examples: |
+    - [Vehicle Insurance]{"entity":"type_of_insurance","value":"Vehicle Insurance"}
+    - [Life insurance]{"entity":"type_of_insurance","value":"Life insurance"}
+    - [Health insurance]{"entity":"type_of_insurance","value":"Health insurance"}
+    - [Commercial insurance]{"entity":"type_of_insurance","value":"Commercial insurance"}
+    - [Travel insurance]{"entity":"type_of_insurance","value":"Travel insurance"}
+    - [Home insurance]{"entity":"type_of_insurance","value":"Home insurance"}
+    - [Corporate group insurance]{"entity":"type_of_insurance","value":"Corporate group insurance"}
+    - [Mobile phone insurance]{"entity":"type_of_insurance","value":"Mobile phone insurance"}
+- intent: Insurance_agency
+  examples: |
+    - [Insurance Agency]{"entity":"Insurance_agency","value":"Insurance agency"}
+    - i m looking for [Insurance Agency]{"entity":"Insurance_agency","value":"Insurance agency"}
+    - can you provide me [Insurance Agency]{"entity":"Insurance_agency","value":"Insurance agency"} provider nearby
+
+- intent: Insurance_Company
+  examples: |
+    - [Insurance Company]{"entity":"Insurance_Company","value":"Insurance Company"}
+    - i m looking for [Insurance Company]{"entity":"Insurance_Company","value":"Insurance Company"}
+    - can you provide me [Insurance Company]{"entity":"Insurance_Company","value":"Insurance Company"} provider nearby
+- intent: Investment_Company
+  examples: |
+    - [Investment Company]{"entity":"Investment_Company","value":"Investment Company"}
+    - i m looking for [Investment Company]{"entity":"Investment_Company","value":"Investment Company"}
+    - can you provide me [Investment Company]{"entity":"Investment_Company","value":"Investment Company"} provider nearby
+- intent: Investment
+  examples: |
+    - [Investment Consultants]{"entity":"investment","value":"Investment Consultants"}
+    - i m looking for [Investment Consultants]{"entity":"investment","value":"Investment Consultants"}
+    - can you provide me [Investment Consultants]{"entity":"investment","value":"Investment Consultants"} nearby
+- intent: type_of_investment
+  examples: |
+    - [Investment consultancy service]{"entity":"type_of_investment","value":"Investment consultancy service"}
+    - [Certified financial planners consultancy]{"entity":"type_of_investment","value":"Certified financial planners consultancy"}
+
+- intent: Loan_Office
+  examples: |
+    - [Loan Office]{"entity":"Loan_Office","value":"Loan Office"}
+    - i m looking for [Loan Office]{"entity":"Loan_Office","value":"Loan Office"}
+    - can you provide me [Loan Office]{"entity":"Loan_Office","value":"Loan Office"} provider nearby
+- intent: Loan
+  examples: |
+    - [Loans]{"entity":"Loan","value":"Loan"}
+    - i m looking for [Loans]{"entity":"Loan","value":"Loan"}
+    - can you provide me [Loans]{"entity":"Loan","value":"Loan"} provider nearby
+- intent: type_of_Loan
+  examples: |
+    - [Home]{"entity":"type_of_Loan","value":"Home"}
+    - [Personal]{"entity":"type_of_Loan","value":"Personal"}
+    - [Gold]{"entity":"type_of_Loan","value":"Gold"}
+    - [Vehicle]{"entity":"type_of_Loan","value":"Vehicle"}
+    - [Business]{"entity":"type_of_Loan","value":"Business"}
+    - [Mortgage]{"entity":"type_of_Loan","value":"Mortgage"}
+    - [Unsecured]{"entity":"type_of_Loan","value":"Unsecured"}
+    - [Project]{"entity":"type_of_Loan","value":"Project"}
+    - [Education]{"entity":"type_of_Loan","value":"Education"}
+    - [Private finance]{"entity":"type_of_Loan","value":"Private finance"}
+    - [Loan against securities and cards]{"entity":"type_of_Loan","value":"Loan against securities and cards"}
+    - [NRI]{"entity":"type_of_Loan","value":"NRI"}
+    - [Machinery]{"entity":"type_of_Loan","value":"Machinery"}
+    - [Loan against insurance policy]{"entity":"type_of_Loan","value":"Loan against insurance policy"}
+    - [Silver]{"entity":"type_of_Loan","value":"Silver"}
+    - [Diamond]{"entity":"type_of_Loan","value":"Diamond"}
+- intent: Pawnbrokers
+  examples: |
+    - [Pawnbrokers]{"entity":"Pawnbrokers","value":"Pawnbrokers"}
+    - i m looking for [Pawnbrokers]{"entity":"Pawnbrokers","value":"Pawnbrokers"}
+    - can you provide me [Pawnbrokers]{"entity":"Pawnbrokers","value":"Pawnbrokers"} provider nearby
+
+- intent: Real_Estate_Agency
+  examples: |
+    - [Real Estate Agency]{"entity":"Real_Estate_Agency","value":"Real Estate Agency"}
+    - i m looking for [Real Estate Agency]{"entity":"Real_Estate_Agency","value":"Real Estate Agency"}
+    - can you provide me [Real Estate Agency]{"entity":"Real_Estate_Agency","value":"Real Estate Agency"} provider nearby
+- intent: Real_Estate_Appraisal
+  examples: |
+    - [Real Estate Appraisal]{"entity":"Real_Estate_Appraisal","value":"Real Estate Appraisal"}
+    - i m looking for [Real Estate Appraisal]{"entity":"Real_Estate_Appraisal","value":"Real Estate Appraisal"}
+    - can you provide me [Real Estate Appraisal]{"entity":"Real_Estate_Appraisal","value":"Real Estate Appraisal"} provider nearby
+- intent: Safe_Deposit
+  examples: |
+    - [Safe Deposit Locker Facility]{"entity":"Safe_Deposit_box","value":"Safe Deposit Locker Facility"}
+    - i m looking for [Safe Deposit Locker Facility]{"entity":"Safe_Deposit_box","value":"Safe Deposit Locker Facility"}
+    - can you provide me [Safe Deposit Locker Facility]{"entity":"Safe_Deposit_box","value":"Safe Deposit Locker Facility"} provider nearby
+- intent: Sales_Tax
+  examples: |
+    - [Sales Tax Registration]{"entity":"Sales_Tax","value":"Sales Tax Registration"}
+    - i m looking for [Sales Tax Registration]{"entity":"Sales_Tax","value":"Sales Tax Registration"}
+    - can you provide me [Sales Tax Registration]{"entity":"Sales_Tax","value":"Sales Tax Registration"} provider nearby
+    - i m looking for [Sales Tax Agent]{"entity":"Sales_Tax","value":"Sales Tax Registration"}
+- intent: Share_Brokers
+  examples: |
+    - [Share Brokers]{"entity":"Share_Brokers","value":"Share Brokers"}
+    - i m looking for [Share Brokers]{"entity":"Share_Brokers","value":"Share Brokers"}
+    - can you provide me [Share Brokers]{"entity":"Share_Brokers","value":"Share Brokers"} provider nearby
+
+- intent: USA_Tax_Filing
+  examples: |
+    - [USA Tax Filing Services]{"entity":"USA_Tax_Filing","value":"USA Tax Filing Services"}
+    - i m looking for [USA Tax Filing Services]{"entity":"USA_Tax_Filing","value":"USA Tax Filing Services"}
+    - can you provide me [USA Tax Filing Services]{"entity":"USA_Tax_Filing","value":"USA Tax Filing Services"} provider nearby
+    - i m looking for [USA Tax Filing Services Agent]{"entity":"USA_Tax_Filing","value":"USA Tax Filing Services Agent"}    
+
+
+- intent: Government_Offices
+  examples: |
+    - government offices open today
+    - government offices emails
+    - government offices hours
+    - government offices near me
+    - government offices services
+    - government offices jobs
+
+- intent: type_of_govt_office
+  examples: |
+    - [Birth and Death Registration Offices]{"entity":"govt","value":"Birth and Death Registration Offices"}
+    - [Consulates and Embassies]{"entity":"govt","value":"Consulates and Embassies"}
+    - [Employment Offices]{"entity":"govt","value":"Employment Offices"}
+    - [Government Hospitals]{"entity":"govt","value":"Government Hospitals"}
+    - [Law and Justice Offices]{"entity":"govt","value":"Law and Justice Offices"}
+    - [Vehicle Registration Offices]{"entity":"govt","value":"Vehicle Registration Offices"}
+
+- intent: Nightlife
+  examples: |
+    - nightlife definition
+    - night entertainment
+    - nightclubs
+    - Party halls
+    - live music 
+    - open clubs
+    - night clubs and halls
+
+- intent: type_of_Nightlife
+  examples: |
+    - [Lounges]{"entity":"type_of_Nightlife","value":"Lounges"}
+    - [Night Clubs]{"entity":"type_of_Nightlife","value":"Night Clubs"}
+    - [Pubs]{"entity":"type_of_Nightlife","value":"Pubs"}
+
+- intent: Hookah
+  examples: |
+    - [Hookah Bars]{"entity":"Hookah","value":"Hookah Bars"}
+    - i m looking for [Hookah Bars]{"entity":"Hookah","value":"Hookah Bars"}
+    - i m looking for [Hookah Bars]{"entity":"Hookah","value":"Hookah Bars"} near me.
+
+- intent: Schools
+  examples: |
+    - Top schools in my city
+    - [Anglo Indian Schools]{"entity":"Schools","value":"Anglo Indian Schools"}
+    - [CBSE Schools]{"entity":"Schools","value":"CBSE Schools"}
+    - [ICSE Schools]{"entity":"Schools","value":"ICSE Schools"}
+    - [International Schools]{"entity":"Schools","value":"International Schools"}
+    - [Kindergarten Schools]{"entity":"Schools","value":"Kindergarten Schools"}
+    - [KG schools]{"entity":"Schools","value":"KG schools"}
+    - [Madrasa Schools]{"entity":"Schools","value":"Madrasa Schools"}
+    - [Matriculation Schools]{"entity":"Schools","value":"Matriculation Schools"}
+    - [State Board Schools]{"entity":"Schools","value":"State Board Schools"}
+    - [Play Group Equipment Dealers]{"entity":"Schools","value":"Play Group Equipment Dealers"}
+    - [Playschools]{"entity":"Schools","value":"Playschools"}
+    - [Residential Schools]{"entity":"Schools","value":"Residential Schools"}
+
+- intent: Schools_Retakers
+  examples: |
+    - [School Retakers]{"entity":"Schools_Retakers","value":"School Retakers"}
+    - i want to [retake school]{"entity":"Schools_Retakers","value":"School Retakers"}
+    - i want to [retake school]{"entity":"Schools_Retakers","value":"School Retakers"} exam 
+    - i m a [school retaker]{"entity":"Schools_Retakers","value":"School Retakers"}
+
+- intent: school_class
+  examples: |
+    - [class 9]{"entity":"Schools_Retakers_class","value":"class 9"}
+    - [class 10]{"entity":"Schools_Retakers_class","value":"class 10"}
+    - [class 11]{"entity":"Schools_Retakers_class","value":"class 11"}
+    - [class 12]{"entity":"Schools_Retakers_class","value":"class 12"}
+- intent: Games_Centers
+  examples: |
+    - game centers around me
+    - gaming entertainment centers
+    - game center help
+    - open gaming centers
+    - new game center
+    - popular game center [Billiard and Snookers Games]{"entity":"Games_Centers","value":"Billiard and Snookers Games"}
+    - [Billiard and Snookers Games]{"entity":"Games_Centers","value":"Billiard and Snookers Games"}
+    - [Bowling Games]{"entity":"Games_Centers","value":"Bowling Games"}
+    - [Boxing Games]{"entity":"Games_Centers","value":"Boxing Games"}
+    - [Playstations]{"entity":"Games_Centers","value":"Playstations"}
+    - [Roller Skating Games]{"entity":"Games_Centers","value":"Roller Skating Games"}
+    - [Video Game Stations]{"entity":"Games_Centers","value":"Video Game Stations"}
+    - [Water Games]{"entity":"Games_Centers","value":"Water Games"}
+
+- intent: Food_and_Dining
+  examples: |
+    - Top restaurants
+    - best restaurant in my city
+    - Top chefs
+    - Find me some great food
+    - best Food Product Suppliers
+    - Fresh Fruits and Snacks Suppliers
+    - Find me some good food
+    
+- intent: Food_and_Dining_location
+  examples: |  
+    - [Bajji Corners]{"entity":"Food_and_Dining_location","value":"Bajji Corners"}
+    - [Bakery]{"entity":"Food_and_Dining_location","value":"Bakery"}
+    - [Cake Shop]{"entity":"Food_and_Dining_location","value":"Cake Shop"}
+    - [Chocolates and Ice Cream Parlours]{"entity":"Food_and_Dining_location","value":"Chocolates and Ice Cream Parlours"}
+    - [Dry Fruit Shop]{"entity":"Food_and_Dining_location","value":"Dry Fruit Shop"}
+    - [Fruit and Vegetable Shops]{"entity":"Food_and_Dining_location","value":"Fruit and Vegetable Shops"}
+    - [Fruits and Snacks Suppliers]{"entity":"Food_and_Dining_location","value":"Fruits and Snacks Suppliers"}
+    - [Meat and Poultry Shops]{"entity":"Food_and_Dining_location","value":"Meat and Poultry Shops"}
+    - [Packed Food Services]{"entity":"Food_and_Dining_location","value":"Packed Food Services"}
+    - [Spice Manufacturers]{"entity":"Food_and_Dining_location","value":"Spice Manufacturers"}
+
+- intent: Food_and_Dining_Tobacco
+  examples: |  
+    - [Tobacco Shops]{"entity":"Food_and_Dining_Tobacco","value":"Tobacco Shops"}
+    - i m looking for [tobacco shops]{"entity":"Food_and_Dining_Tobacco","value":"Tobacco Shops"} nearby
+    - tell me some [tobacco dukan]{"entity":"Food_and_Dining_Tobacco","value":"Tobacco Shops"} nearby
+
+- intent: Food_and_Dining_Food_Product_Suppliers
+  examples: |  
+    - [Food Product Suppliers]{"entity":"Food_Product_Suppliers","value":"Food Product Suppliers"}
+    - i m looking for [Food Product Suppliers]{"entity":"Food_Product_Suppliers","value":"Food Product Suppliers"} nearby
+    - tell me some [Food Product Suppliers]{"entity":"Food_Product_Suppliers","value":"Food Product Suppliers"}
+
+- intent: Food_and_Dining_Food_Product_Suppliers_type
+  examples: |  
+    - [Readymade Food Product Dealers]{"entity":"type_Food_Product_Suppliers","value":"Readymade Food Product Dealers"}
+    - [Homemade Chocolate Suppliers]{"entity":"type_Food_Product_Suppliers","value":"Homemade Chocolate Suppliers"}
+    - [Homemade Cake Dealers]{"entity":"type_Food_Product_Suppliers","value":"Homemade Cake Dealers"}
+
+- intent: Food_and_Dining_Restaurant
+  examples: | 
+    - [Restaurant]{"entity":"Food_and_Dining_Restaurant","value":"Restaurant"}
+    - [Restaurants]{"entity":"Food_and_Dining_Restaurant","value":"Restaurant"}
+
+- intent: Food_and_Dining_Restaurant_type
+  examples: | 
+    - [Idli]{"entity":"Food_and_Dining_Restaurant_type","value":"Idli"} Outlets
+    - [Hyderabadi]{"entity":"Food_and_Dining_Restaurant_type","value":"Hyderabadi"} Restaurants
+    - [Iranian Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Iranian Cuisine"} Restaurants
+    - [Grill Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Grill Cuisine"} Restaurants
+    - [Goan]{"entity":"Food_and_Dining_Restaurant_type","value":"Goan"} Restaurants
+    - [Coorg Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Coorg Cuisine"} Restaurants
+    - [Parsi Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Parsi Cuisine"} Restaurants
+    - [Garden]{"entity":"Food_and_Dining_Restaurant_type","value":"Garden"} Restaurants
+    - [Mexican Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Mexican Cuisine"} Restaurants
+    - [Spanish Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Spanish Cuisine"} Restaurants
+    - [Japanese]{"entity":"Food_and_Dining_Restaurant_type","value":"Japanese"} Restaurants
+    - [Thai]{"entity":"Food_and_Dining_Restaurant_type","value":"Thai"} Restaurants
+    - [Lucknowi Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Lucknowi Cuisine"} Restaurants
+    - [Afghan Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Afghan Cuisine"} Restaurants
+    - [Continental]{"entity":"Food_and_Dining_Restaurant_type","value":"Continental"} Restaurants
+    - [Tibetian Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Tibetian Cuisine"} Restaurants
+    - [Italian]{"entity":"Food_and_Dining_Restaurant_type","value":"Italian"} Restaurants
+    - [Mangalorean Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Mangalorean Cuisine"} Restaurants
+    - [German Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"German Cuisine"} Restaurants
+    - [Greek Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Greek Cuisine"} Restaurants
+    - [Fusion Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Fusion Cuisine"} Restaurants
+    - [Global]{"entity":"Food_and_Dining_Restaurant_type","value":"Global"} Restaurants
+    - [Persian]{"entity":"Food_and_Dining_Restaurant_type","value":"Persian"} Restaurants
+    - [Konkan Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Konkan Cuisine"} Restaurants
+    - [Indonesian Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Indonesian Cuisine"} Restaurants
+    - [Oriental Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Oriental Cuisine"} Restaurants
+    - [French Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"French Cuisine"} Restaurants
+    - [Vietnamese Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Vietnamese Cuisine"} Restaurants
+    - [Brazilian Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Brazilian Cuisine"} Restaurants
+    - [Malaysian Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Malaysian Cuisine"} Restaurants
+    - [European Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"European Cuisine"} Restaurants
+    - [Caribbean Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Caribbean Cuisine"} Restaurants
+    - [Portuguese Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Portuguese Cuisine"} Restaurants
+    - [Mangolian Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Mangolian Cuisine"} Restaurants
+    - [Burmese Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Burmese Cuisine"} Restaurants
+    - [Lebanese Cuisine]{"entity":"Food_and_Dining_Restaurant_type","value":"Lebanese Cuisine"} Restaurants
+
+- intent: Food_and_Dining_Seafood
+  examples: | 
+    - [Seafood Stores]{"entity":"Food_and_Dining_Seafood","value":"Seafood Stores"}
+    - i m looking for [Seafood Stores]{"entity":"Food_and_Dining_Seafood","value":"Seafood Stores"} nearby
+    - tell me some [Seafood Stores]{"entity":"Food_and_Dining_Seafood","value":"Seafood Stores"}
+
+- intent: Food_and_Dining_Seafood_type
+  examples: | 
+    - [Frozen Fish Shops]{"entity":"Food_and_Dining_Seafood_type","value":"Frozen Fish Shops"}
+    - [Prawn Shops]{"entity":"Food_and_Dining_Seafood_type","value":"Prawn Shops"}
+    - [Crab Shops]{"entity":"Food_and_Dining_Seafood_type","value":"Crab Shops"}
+
+- intent: Food_and_Dining_Sweet
+  examples: | 
+    - [Sweet Shops]{"entity":"Food_and_Dining_Sweet","value":"Sweet Shops"}
+    - i m looking for [Sweet Shops]{"entity":"Food_and_Dining_Sweet","value":"Sweet Shops"} nearby
+    - tell me some [Sweet Shops]{"entity":"Food_and_Dining_Sweet","value":"Sweet Shops"}
+
+- intent: Food_and_Dining_Sweet_type
+  examples: | 
+    - [South Indian Sweet Shops]{"entity":"Food_and_Dining_Sweet_type","value":"South Indian Sweet Shops"}
+    - [Bengali Sweet Shops]{"entity":"Food_and_Dining_Sweet_type","value":"Bengali Sweet Shops"}
+    - [North Indian Sweet Shops]{"entity":"Food_and_Dining_Sweet_type","value":"North Indian Sweet Shops"}
+
+- intent: Grocery
+  examples: | 
+    - Who delivers grocery in my area
+    - online grocery
+    - grocery store near me
+    - where can I go grocery shopping
+    - How much is grocery home delivery
+    - upload grocer items list 
+- intent: Clinics_and_Doctors
+  examples: | 
+    - Doctor apointment
+    - near doctor
+    - Clinic nearby
+    - Need treatment
+    - plan surgery
+    - Specialist appointment
+    - Schedule therapy
+    - Medical treatment
+    - find me a childrens doctor
+    - find me a surgeon 
+    - i m looking for Doctors
+    - do you know any nearby Doctors
+    - i need a health check up, tell me some doctors in my area
+    - i need a health check up
+
+- intent: Clinics_and_Doctors_type
+  examples: | 
+    - [24 Hour Clinics]{"entity":"Clinics_and_Doctors_type","value":"24 Hour Clinics"}
+    - [Abortion Clinics]{"entity":"Clinics_and_Doctors_type","value":"Abortion Clinics"}
+    - [Acupuncture and Acupressure Doctors]{"entity":"Clinics_and_Doctors_type","value":"Acupuncture and Acupressure Doctors"}
+    - [Allergy Specialists]{"entity":"Clinics_and_Doctors_type","value":"Allergy Specialists"}
+    - [Anaesthetists]{"entity":"Clinics_and_Doctors_type","value":"Anaesthetists"}
+    - [Andrologist]{"entity":"Clinics_and_Doctors_type","value":"Andrologist"}
+    - [Asthma and Allergy]{"entity":"Clinics_and_Doctors_type","value":"Asthma and Allergy"}
+    - [Bach Flower Treatment Centres]{"entity":"Clinics_and_Doctors_type","value":"Bach Flower Treatment Centres"}
+    - [Bariatric Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Bariatric Surgeons"}
+    - [Breast Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Breast Surgeons"}
+    - [Cardiac Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Cardiac Surgeons"}
+    - [Cardiologists]{"entity":"Clinics_and_Doctors_type","value":"Cardiologists"}
+    - [Chest Physicians]{"entity":"Clinics_and_Doctors_type","value":"Chest Physicians"}
+    - [Child Specialists]{"entity":"Clinics_and_Doctors_type","value":"Child Specialists"}
+    - [Cosmetic Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Cosmetic Surgeons"}
+    - [Diabetologists]{"entity":"Clinics_and_Doctors_type","value":"Diabetologists"}
+    - [Endocrinologists]{"entity":"Clinics_and_Doctors_type","value":"Endocrinologists"}
+    - [ENT Specialists]{"entity":"Clinics_and_Doctors_type","value":"ENT Specialists"}
+    - [Fat Reduction Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Fat Reduction Surgeons"}
+    - [Foot Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Foot Surgeons"}
+    - [Gastroenterologists]{"entity":"Clinics_and_Doctors_type","value":"Gastroenterologists"}
+    - [General Physicians]{"entity":"Clinics_and_Doctors_type","value":"General Physicians"}
+    - [General Surgeons]{"entity":"Clinics_and_Doctors_type","value":"General Surgeons"}
+    - [Gynecologists and Obstetricians]{"entity":"Clinics_and_Doctors_type","value":"Gynecologists and Obstetricians"}
+    - [Hair Transplant Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Hair Transplant Surgeons"}
+    - [Hematologists]{"entity":"Clinics_and_Doctors_type","value":"Hematologists"}
+    - [Hernia Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Hernia Surgeons"}
+    - [Homeopathy Doctors]{"entity":"Clinics_and_Doctors_type","value":"Homeopathy Doctors"}
+    - [Infertility Treatment]{"entity":"Clinics_and_Doctors_type","value":"Infertility Treatment"}
+    - [IUI Clinics]{"entity":"Clinics_and_Doctors_type","value":"IUI Clinics"}
+    - [IVF Clinics]{"entity":"Clinics_and_Doctors_type","value":"IVF Clinics"}
+    - [Kidney Stones Treatment]{"entity":"Clinics_and_Doctors_type","value":"Kidney Stones Treatment"}
+    - [Laproscopic Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Laproscopic Surgeons"}
+    - [Laser and Skin Clinics]{"entity":"Clinics_and_Doctors_type","value":"Laser and Skin Clinics"}
+    - [Lasik Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Lasik Surgeons"}
+    - [Lipoma Removal Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Lipoma Removal Surgeons"}
+    - [Marital Therapy]{"entity":"Clinics_and_Doctors_type","value":"Marital Therapy"}
+    - [Mental Health Clinic]{"entity":"Clinics_and_Doctors_type","value":"Mental Health Clinic"}
+    - [Natural Cure Treatment]{"entity":"Clinics_and_Doctors_type","value":"Natural Cure Treatment"}
+    - [Naturopathic Doctors]{"entity":"Clinics_and_Doctors_type","value":"Naturopathic Doctors"}
+    - [Neurologists]{"entity":"Clinics_and_Doctors_type","value":"Neurologists"}
+    - [Neurosurgeons]{"entity":"Clinics_and_Doctors_type","value":"Neurosurgeons"}
+    - [Neurotherapists]{"entity":"Clinics_and_Doctors_type","value":"Neurotherapists"}
+    - [Non Surgical Treatment]{"entity":"Clinics_and_Doctors_type","value":"Non Surgical Treatment"}
+    - [Nursing Homes]{"entity":"Clinics_and_Doctors_type","value":"Nursing Homes"}
+    - [Obesity Surgery]{"entity":"Clinics_and_Doctors_type","value":"Obesity Surgery"}
+    - [Ophthalmologists]{"entity":"Clinics_and_Doctors_type","value":"Ophthalmologists"}
+    - [Optical Accessories]{"entity":"Clinics_and_Doctors_type","value":"Optical Accessories"}
+    - [Oral Tissue Biopsy Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Oral Tissue Biopsy Surgeons"}
+    - [Orthodontists]{"entity":"Clinics_and_Doctors_type","value":"Orthodontists"}
+    - [Orthopaedic Doctors]{"entity":"Clinics_and_Doctors_type","value":"Orthopaedic Doctors"}
+    - [Pathologists]{"entity":"Clinics_and_Doctors_type","value":"Pathologists"}
+    - [Pathology and Microbiology Labs]{"entity":"Clinics_and_Doctors_type","value":"Pathology and Microbiology Labs"}
+    - [Physiotherapy]{"entity":"Clinics_and_Doctors_type","value":"Physiotherapy"}
+    - [Piles Specialists]{"entity":"Clinics_and_Doctors_type","value":"Piles Specialists"}
+    - [Plastic Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Plastic Surgeons"}
+    - [Polyclinics]{"entity":"Clinics_and_Doctors_type","value":"Polyclinics"}
+    - [Proctology and Cryosurgery Doctors]{"entity":"Clinics_and_Doctors_type","value":"Proctology and Cryosurgery Doctors"}
+    - [Psoriasis Treatment]{"entity":"Clinics_and_Doctors_type","value":"Psoriasis Treatment"}
+    - [Psychiatrists]{"entity":"Clinics_and_Doctors_type","value":"Psychiatrists"}
+    - [Psychologists]{"entity":"Clinics_and_Doctors_type","value":"Psychologists"}
+    - [Radiologists]{"entity":"Clinics_and_Doctors_type","value":"Radiologists"}
+    - [Rheumatologists]{"entity":"Clinics_and_Doctors_type","value":"Rheumatologists"}
+    - [Sexual Medicine Doctors]{"entity":"Clinics_and_Doctors_type","value":"Sexual Medicine Doctors"}
+    - [Siddha Doctors]{"entity":"Clinics_and_Doctors_type","value":"Siddha Doctors"}
+    - [Silicone Breast Implant Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Silicone Breast Implant Surgeons"}
+    - [Silicone Breast Prosthesis Suppliers]{"entity":"Clinics_and_Doctors_type","value":"Silicone Breast Prosthesis Suppliers"}
+    - [Sinus Doctors]{"entity":"Clinics_and_Doctors_type","value":"Sinus Doctors"}
+    - [Small Bowel Resection Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Small Bowel Resection Surgeons"}
+    - [Somnologists]{"entity":"Clinics_and_Doctors_type","value":"Somnologists"}
+    - [Sonologist]{"entity":"Clinics_and_Doctors_type","value":"Sonologist"}
+    - [Sperm Banks]{"entity":"Clinics_and_Doctors_type","value":"Sperm Banks"}
+    - [Spine and Disc Replacement Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Spine and Disc Replacement Surgeons"}
+    - [Spine Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Spine Surgeons"}
+    - [Spleen Removal Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Spleen Removal Surgeons"}
+    - [Stomach Cancer Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Stomach Cancer Surgeons"}
+    - [Surrogacy Clinics]{"entity":"Clinics_and_Doctors_type","value":"Surrogacy Clinics"}
+    - [Surrogate Motherhood Centres]{"entity":"Clinics_and_Doctors_type","value":"Surrogate Motherhood Centres"}
+    - [Testicular Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Testicular Surgeons"}
+    - [Thyroid Gland Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Testicular Surgeons"}
+    - [Thyroid Specialists]{"entity":"Clinics_and_Doctors_type","value":"Thyroid Specialists"}
+    - [Tracheostomy Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Tracheostomy Surgeons"}
+    - [Unani Doctors]{"entity":"Clinics_and_Doctors_type","value":"Unani Doctors"}
+    - [Urologists and Nephrologists]{"entity":"Clinics_and_Doctors_type","value":"Urologists and Nephrologists"}
+    - [Vagotomy Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Vagotomy Surgeons"}
+    - [Varicocele Removal Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Varicocele Removal Surgeons"}
+    - [Varicose veins Treatment]{"entity":"Clinics_and_Doctors_type","value":"Varicose veins Treatment"}
+    - [Vasectomy Surgeons]{"entity":"Clinics_and_Doctors_type","value":"Vasectomy Surgeons"}
+    - [Veterinary Doctors]{"entity":"Clinics_and_Doctors_type","value":"Veterinary Doctors"}
+    - [Vitiligo Surgery]{"entity":"Clinics_and_Doctors_type","value":"Vitiligo Surgery"}
+- intent: Clinics_and_Doctors_other
+  examples: | 
+    - [other doctor services]{"entity":"Clinics_and_Doctors_other","value":"other doctor services"}
+    - [more services]{"entity":"Clinics_and_Doctors_other","value":"other doctor services"}
+
+- intent: Clinics_and_Doctors_Chiropractors
+  examples: |
+    - [Chiropractors]{"entity":"Clinics_and_Doctors_Chiropractors","value":"Chiropractors"}
+    - i m looking for [Chiropractors]{"entity":"Clinics_and_Doctors_Chiropractors","value":"Chiropractors"}
+    - i m looking for [Chiropractors]{"entity":"Clinics_and_Doctors_Chiropractors","value":"Chiropractors"} nearby
+
+- intent: Clinics_and_Doctors_Chiropractors_type
+  examples: |
+    - [Scoliosis]{"entity":"Clinics_and_Doctors_Chiropractors_type","value":"Scoliosis"}
+    - [Spondylitis]{"entity":"Clinics_and_Doctors_Chiropractors_type","value":"Spondylitis"}
+    - [Headache]{"entity":"Clinics_and_Doctors_Chiropractors_type","value":"Headache"}
+    - [Migraine]{"entity":"Clinics_and_Doctors_Chiropractors_type","value":"Migraine"}
+
+- intent: Clinics_and_Doctors_Dentists
+  examples: |
+    - [Dental Surgeons]{"entity":"Clinics_and_Doctors_Dentists","value":"Dental Surgeons"}
+    - [Dentists]{"entity":"Clinics_and_Doctors_Dentists","value":"Dentists"}
+
+- intent: Clinics_and_Doctors_Dentists_type
+  examples: |
+    - [General checkup]{"entity":"Clinics_and_Doctors_Dentists_type","value":"General checkup"}
+    - [Dental implants]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Dental implants"}
+    - [Root canal treatment]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Root canal treatment"}
+    - [Teeth cleaning Scaling]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Teeth cleaning Scaling"}
+    - [Veneers]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Veneers"}
+    - [Extractions]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Extractions"}
+    - [Tooth alignment issues]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Tooth alignment issues"}
+    - [Tooth decay]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Tooth decay"}
+    - [Toothaches]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Toothaches"}
+    - [Braces treatment]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Braces treatment"}
+    - [Tooth sensitivity issues]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Tooth sensitivity issues"}
+    - [Gum bleeding]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Gum bleeding"}
+    - [Bad breath]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Bad breath"}
+    - [Mouth sores]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Mouth sores"}
+    - [Crown and braces]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Crown and braces"}
+    - [Laminates]{"entity":"Clinics_and_Doctors_Dentists_type","value":"Laminates"}
+
+- intent: Emergency_Services
+  examples: |
+    - emergency services bureau
+    - emergency services act
+    - emergency services near me
+    - emergency services number
+    - emergency services jobs
+    - emergency services app
+- intent: Emergency_Services_type
+  examples: |
+    - [Ambulance and Paramedics Services]{"entity":"Emergency_Services","value":"Ambulance and Paramedics Services"}
+    - [Enquiry Numbers]{"entity":"Emergency_Services","value":"Enquiry Numbers"}
+    - [Fire Services]{"entity":"Emergency_Services","value":"Fire Services"}
+    - [Fund Raising Organizations]{"entity":"Emergency_Services","value":"Fund Raising Organizations"}
+    - [Police Stations]{"entity":"Emergency_Services","value":"Police Stations"}
+
+- intent: Legal_Service
+  examples: |
+    - legal services corporation
+    - legal service agreement
+    - legal services near me
+    - legal service business
+    - legal service department
+    - legal service exam
+    - legal service contracts
+    - legal service companies
+    - legal service center
+    - legal service careers
+
+- intent: Legal_Service_type
+  examples: |
+    - [Aadhar Card Agents]{"entity":"Legal_Service_type","value":"Aadhar Card Agents"}
+    - [Arbitration Services]{"entity":"Legal_Service_type","value":"Arbitration Services"}
+    - [Civil Registration]{"entity":"Legal_Service_type","value":"Civil Registration"}
+    - [Fbr Office]{"entity":"Legal_Service_type","value":"Fbr Office"}
+    - [Law Office]{"entity":"Legal_Service_type","value":"Law Office"}
+    - [Legal Document Writers]{"entity":"Legal_Service_type","value":"Legal Document Writers"}
+    - [Notaries]{"entity":"Legal_Service_type","value":"Notaries"}
+    - [PAN Card Consultants]{"entity":"Legal_Service_type","value":"PAN Card Consultants"}
+    - [Registration Consultancy]{"entity":"Legal_Service_type","value":"Registration Consultancy"}
+
+- intent: Legal_Service_Advocates
+  examples: |
+    - [Advocates and Lawyers]{"entity":"Legal_Service_Advocates","value":"Advocates and Lawyers"}
+    - [Advocates]{"entity":"Legal_Service_Advocates","value":"Advocates and Lawyers"}
+    - [Lawyers]{"entity":"Legal_Service_Advocates","value":"Advocates and Lawyers"}
+
+- intent: Legal_Service_Advocates_type 
+  examples: |
+    - [Divorce and family lawyers]{"entity":"Legal_Service_Advocates_type","value":"Divorce and family lawyers"}
+    - [Court marriage lawyers]{"entity":"Legal_Service_Advocates_type","value":"Court marriage lawyers"}
+    - [Real estate and property disputes lawyers]{"entity":"Legal_Service_Advocates_type","value":"Real estate and property disputes lawyers"}
+    - [Civil lawyers]{"entity":"Legal_Service_Advocates_type","value":"Civil lawyers"}
+    - [Criminal lawyers]{"entity":"Legal_Service_Advocates_type","value":"Criminal lawyers"}
+    - [Corporate Trade and industrial disputes lawyers]{"entity":"Legal_Service_Advocates_type","value":"Corporate Trade and industrial disputes lawyers"}
+    - [Consumer protection and dispute lawyers]{"entity":"Legal_Service_Advocates_type","value":"Consumer protection and dispute lawyers"}
+    - [Cyber lawyers]{"entity":"Legal_Service_Advocates_type","value":"Cyber lawyers"}
+    - [Armed forces tribunal lawyers]{"entity":"Legal_Service_Advocates_type","value":"Armed forces tribunal lawyers"}
+
+- intent: Legal_Service_Immigration 
+  examples: |
+    - [Immigration Consultancy]{"entity":"Legal_Service_Immigration","value":"Immigration Consultancy"}
+    - [Immigration Consultants]{"entity":"Legal_Service_Immigration","value":"Immigration Consultancy"}
+    - can you help me with [immigration]{"entity":"Legal_Service_Immigration","value":"Immigration Consultancy"}
+- intent: Countries
+  examples: |
+    - [Canada]{"entity":"Countries","value":"Canada"}
+    - [Europe]{"entity":"Countries","value":"Europe"}
+    - [UK]{"entity":"Countries","value":"UK"}
+    - [Singapore]{"entity":"Countries","value":"Singapore"}
+    - [Australia and south pacific]{"entity":"Countries","value":"Australia and south pacific"}
+    - [America]{"entity":"Countries","value":"America"}
+    - [UAE]{"entity":"Countries","value":"UAE"}
+    - [New zealand]{"entity":"Countries","value":"New zealand"}
+    - [Middle east]{"entity":"Countries","value":"Middle east"}
+    - [Asia]{"entity":"Countries","value":"Asia"}
+    - [Africa]{"entity":"Countries","value":"Africa"}
+    - [Far east]{"entity":"Countries","value":"Far east"}
+
+- intent: Legal_Service_Passport
+  examples: |
+    - [Passport Agency]{"entity":"Legal_Service_Passport","value":"Passport Agency"}
+    - i m looking for [passport agent]{"entity":"Legal_Service_Passport","value":"Passport Agency"}
+
+- intent: Legal_Service_Passport_type
+  examples: |
+    - [New Passport]{"entity":"Legal_Service_Passport_type","value":"New Passport"}
+    - [Renewal of Passport]{"entity":"Legal_Service_Passport_type","value":"Renewal"}
+
+- intent: Legal_Service_Passport_mode
+  examples: |
+    - [Tatkal]{"entity":"Legal_Service_Passport_mode","value":"Tatkal"}
+    - [Regular]{"entity":"Legal_Service_Passport_mode","value":"Regular"}
+
+- intent: Legal_Service_Passport_age
+  examples: |
+    - [Minor]{"entity":"Legal_Service_Passport_age","value":"Minor"}
+    - [Adult]{"entity":"Legal_Service_Passport_age","value":"Adult"}
+    - [Senior citizen]{"entity":"Legal_Service_Passport_age","value":"Senior citizen"}
+
+- intent: Funerals_and_Memorials
+  examples: |
+    - funeral memorial book
+    - funeral and memorial center
+    - funeral memorial donations
+    - funeral memorial definition
+    - funeral memorial program
+
+- intent: Funerals_and_Memorials_type
+  examples: |
+    - [Caskets and Coffins Dealers]{"entity":"Funerals_and_Memorials_type","value":"Caskets and Coffins Dealers"}
+    - [Cemeteries]{"entity":"Funerals_and_Memorials_type","value":"Cemeteries"}
+    - [Cremation Services]{"entity":"Funerals_and_Memorials_type","value":"Cremation Services"}
+    - [Freezer Box Rentals]{"entity":"Funerals_and_Memorials_type","value":"Freezer Box Rentals"}
+    - [Funeral Services]{"entity":"Funerals_and_Memorials_type","value":"Funeral Services"}
+    - [Mobile Mortuary Services]{"entity":"Funerals_and_Memorials_type","value":"Mobile Mortuary Services"}
+    - [Pandit]{"entity":"Funerals_and_Memorials_type","value":"Pandit"}
+
+- intent: Garden_and_Lawn
+  examples: |
+    - garden and lawn services
+    - garden and lawn care near me
+    - garden and lawn care
+    - garden and lawn maintenance
+    - lawn and garden at walmart
+    - garden lawn design
+
+- intent: Garden_and_Lawn_type
+  examples: |
+    - [Bonsai Plant Dealers]{"entity":"Garden_and_Lawn_type","value":"Bonsai Plant Dealers"}
+    - [Fertilisers and Soil Conditioner Dealers]{"entity":"Garden_and_Lawn_type","value":"Fertilisers and Soil Conditioner Dealers"}
+    - [Garden Product Suppliers]{"entity":"Garden_and_Lawn_type","value":"Garden Product Suppliers"}
+    - [Indoor Plant Rentals]{"entity":"Garden_and_Lawn_type","value":"Indoor Plant Rentals"}
+    - [Indoor Plants Dealers]{"entity":"Garden_and_Lawn_type","value":"Indoor Plants Dealers"}
+    - [Plant Nurseries]{"entity":"Garden_and_Lawn_type","value":"Plant Nurseries"}
+    - [Water Fountain Dealers]{"entity":"Garden_and_Lawn_type","value":"Water Fountain Dealers"}
+
+- intent: Garden_and_Lawn_Garden
+  examples: |
+    - [Garden Services]{"entity":"Garden_and_Lawn_Garden","value":"Garden Services"}
+    - i m looking for [Garden Services]{"entity":"Garden_and_Lawn_Garden","value":"Garden Services"}
+
+- intent: Garden_and_Lawn_Garden_type
+  examples: |
+    - [Garden maintenance]{"entity":"Garden_and_Lawn_Garden_type","value":"Garden maintenance"}
+    - [Garden designing]{"entity":"Garden_and_Lawn_Garden_type","value":"Garden designing"}
+
+- intent: Garden_and_Lawn_Irrigation
+  examples: |
+    - [Irrigation System Dealers]{"entity":"Garden_and_Lawn_Irrigation","value":"Irrigation System Dealers"}
+    - i m looking for [Irrigation System Dealers]{"entity":"Garden_and_Lawn_Irrigation","value":"Irrigation System Dealers"}
+
+- intent: Garden_and_Lawn_Irrigation_type
+  examples: |
+    - [Drip Irrigation System Dealers]{"entity":"Garden_and_Lawn_Irrigation_type","value":"Drip Irrigation System Dealers"}
+    - [Sprinkler Irrigation System Dealers]{"entity":"Garden_and_Lawn_Irrigation_type","value":"Sprinkler Irrigation System Dealers"}
+
+- intent: Arts_and_Entertainment
+  examples: |
+    - Need sound design
+    - Theme park reservation
+    - Visit art gallery
+    - Hire artist
+    - Book auditorium
+    - Visit Casino
+    - Reserve theather shows
+    - Book golf game
+    - Use photo studio
+    - Visti Zoo
+    - Rent recording studio
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

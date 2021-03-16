@@ -1,0 +1,3540 @@
+version: "2.0"
+
+stories:
+
+- story: Accommodation_Services_Hotel
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Accommodation_Services
+  - action: utter_hoteltype
+  - intent: Accommodation_Services
+    entities:
+    - Hoteltype: "Budget"
+  - slot_was_set:
+    - Hoteltype: "Budget"
+  - action: utter_no_of_person
+  - intent: number
+    entities:
+    - nos: "1"
+  - slot_was_set:
+    - nos: "1"
+  - action: utter_duration_stay
+  - intent: days
+    entities:
+    - day: "1 Day"
+  - slot_was_set:
+    - day: "1 Day"
+  - action: utter_amenities
+  - intent: amenities
+    entities:
+    - amenity: "AC"
+  - slot_was_set:
+    - amenity: "AC"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Accommodation_Services_Hotel
+  - action: action_restart
+
+- story: city_attraction_spa
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions_spa
+    entities:
+    - typeofservices: "Spa"
+  - slot_was_set:
+    - typeofservices: "Spa"
+  - action: utter_type_of_spa
+  - intent: spa_service
+    entities:
+    - typeofspaservices: "Body Massage"
+  - slot_was_set:
+    - typeofspaservices: "Body Massage"
+  - action: utter_gender
+  - intent: gender
+    entities:
+    - gender: "Male"
+  - slot_was_set:
+    - gender: "Male"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_spa
+  - action: action_restart
+
+- story: city_attraction_spa
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: City_Attractions_spa
+    entities:
+    - typeofservices: "Spa"
+  - slot_was_set:
+    - typeofservices: "Spa"
+  - action: utter_type_of_spa
+  - intent: spa_service
+    entities:
+    - typeofspaservices: "Body Massage"
+  - slot_was_set:
+    - typeofspaservices: "Body Massage"
+  - action: utter_gender
+  - intent: gender
+    entities:
+    - gender: "Male"
+  - slot_was_set:
+    - gender: "Male"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_spa
+  - action: action_restart
+
+
+
+
+- story: city_attraction_spa
+  steps:
+  - intent: City_Attractions_spa
+    entities:
+    - typeofservices: "Spa"
+  - slot_was_set:
+    - typeofservices: "Spa"
+  - action: utter_type_of_spa
+  - intent: spa_service
+    entities:
+    - typeofspaservices: "Body Massage"
+  - slot_was_set:
+    - typeofspaservices: "Body Massage"
+  - action: utter_gender
+  - intent: gender
+    entities:
+    - gender: "Male"
+  - slot_was_set:
+    - gender: "Male"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_spa
+  - action: action_restart
+
+
+- story: city_attraction_multiplex
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Multiplex"
+  - slot_was_set:
+    - typeofservices: "Multiplex"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_multiplex
+  - action: action_restart
+
+- story: city_attraction_Shopping 
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Shopping"
+  - slot_was_set:
+    - typeofservices: "Shopping"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_Shopping
+  - action: action_restart
+
+- story: city_attraction_Tourism_Offices
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Tourism Offices"
+  - slot_was_set:
+    - typeofservices: "Tourism Offices"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_Tourism_Offices
+  - action: action_restart
+
+- story: city_attraction_Tourism_Places
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Tourism Places"
+  - slot_was_set:
+    - typeofservices: "Tourism Places"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_Tourism_Places
+  - action: action_restart
+
+- story: city_attraction_spa
+  steps:
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions_spa
+    entities:
+    - typeofservices: "Spa"
+  - slot_was_set:
+    - typeofservices: "Spa"
+  - action: utter_type_of_spa
+  - intent: spa_service
+    entities:
+    - typeofspaservices: "Body Massage"
+  - slot_was_set:
+    - typeofspaservices: "Body Massage"
+  - action: utter_gender
+  - intent: gender
+    entities:
+    - gender: "Male"
+  - slot_was_set:
+    - gender: "Male"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_spa
+  - action: action_restart  
+
+- story: city_attraction_spa
+  steps:
+  - intent: City_Attractions_spa
+    entities:
+    - typeofservices: "Spa"
+  - slot_was_set:
+    - typeofservices: "Spa"
+  - action: utter_type_of_spa
+  - intent: spa_service
+    entities:
+    - typeofspaservices: "Body Massage"
+  - slot_was_set:
+    - typeofspaservices: "Body Massage"
+  - action: utter_gender
+  - intent: gender
+    entities:
+    - gender: "Male"
+  - slot_was_set:
+    - gender: "Male"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_spa
+  - action: action_restart
+
+- story: city_attraction_multiplex
+  steps:
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Multiplex"
+  - slot_was_set:
+    - typeofservices: "Multiplex"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_multiplex
+  - action: action_restart
+
+- story: city_attraction_Shopping 
+  steps:
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Shopping"
+  - slot_was_set:
+    - typeofservices: "Shopping"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_Shopping
+  - action: action_restart
+
+- story: city_attraction_Tourism_Offices
+  steps:
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Tourism Offices"
+  - slot_was_set:
+    - typeofservices: "Tourism Offices"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_Tourism_Offices
+  - action: action_restart
+
+- story: city_attraction_Tourism_Places
+  steps:
+  - intent: City_Attractions
+  - action: utter_city_attraction
+  - intent: City_Attractions
+    entities:
+    - typeofservices: "Tourism Places"
+  - slot_was_set:
+    - typeofservices: "Tourism Places"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_city_attraction_Tourism_Places
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers_book_shop
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: book_shop
+    entities:
+    - book_shops: "Book Shops"
+  - slot_was_set:
+    - book_shops: "Book Shops"
+  - action: utter_type_of_book_shop
+  - intent: type_of_book_shop
+    entities:
+    - type_of_book_shops: "College Book Shops"
+  - slot_was_set:
+    - type_of_book_shops: "College Book Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers_book_shop
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers_book_shop
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: book_shop
+    entities:
+    - book_shops: "Book Shops"
+  - slot_was_set:
+    - book_shops: "Book Shops"
+  - action: utter_type_of_book_shop
+  - intent: type_of_book_shop
+    entities:
+    - type_of_book_shops: "College Book Shops"
+  - slot_was_set:
+    - type_of_book_shops: "College Book Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers_book_shop
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers_book_shop
+  steps:
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: book_shop
+    entities:
+    - book_shops: "Book Shops"
+  - slot_was_set:
+    - book_shops: "Book Shops"
+  - action: utter_type_of_book_shop
+  - intent: type_of_book_shop
+    entities:
+    - type_of_book_shops: "College Book Shops"
+  - slot_was_set:
+    - type_of_book_shops: "College Book Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers_book_shop
+  - action: action_restart  
+
+- story: Educational_Supplies_Dealers_book_shop
+  steps:
+  - intent: book_shop
+    entities:
+    - book_shops: "Book Shops"
+  - slot_was_set:
+    - book_shops: "Book Shops"
+  - action: utter_type_of_book_shop
+  - intent: type_of_book_shop
+    entities:
+    - type_of_book_shops: "College Book Shops"
+  - slot_was_set:
+    - type_of_book_shops: "College Book Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers_book_shop
+  - action: action_restart
+- story: Educational_Supplies_Dealers
+  steps:
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "Art and Crafts Suppliers"
+  - slot_was_set:
+    - educationalsuppliesdealers: "Art and Crafts Suppliers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "Art and Crafts Suppliers"
+  - slot_was_set:
+    - educationalsuppliesdealers: "Art and Crafts Suppliers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers_book_shop
+  steps:
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "Binding and Photocopy Shops"
+  - slot_was_set:
+    - educationalsuppliesdealers: "Binding and Photocopy Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "Binding and Photocopy Shops"
+  - slot_was_set:
+    - educationalsuppliesdealers: "Binding and Photocopy Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers
+  steps:
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - slot_was_set:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Educational_Supplies_Dealers
+  - action: utter_Educational_Supplies_Dealers
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - slot_was_set:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers
+  steps:
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - slot_was_set:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Educational_Supplies_Dealers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Educational_Supplies_Dealers
+    entities:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - slot_was_set:
+    - educationalsuppliesdealers: "School Project Kits Suppliers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Educational_Supplies_Dealers
+  - action: action_restart
+
+- story: Financial_Services_Accountant
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Accountant
+    entities:
+    - Accountant: "Accountant"
+  - slot_was_set:
+    - Accountant: "Accountant"
+  - action: action_post_Accountant
+  - action: action_restart
+
+- story: Financial_Services_Accountant
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Accountant
+    entities:
+    - Accountant: "Accountant"
+  - slot_was_set:
+    - Accountant: "Accountant"
+  - action: action_post_Accountant
+  - action: action_restart
+
+- story: Financial_Services_Accountant
+  steps:
+  - intent: Accountant
+    entities:
+    - Accountant: "Accountant"
+  - slot_was_set:
+    - Accountant: "Accountant"
+  - action: action_post_Accountant
+  - action: action_restart
+
+- story: Financial_Services_ATM
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: ATM
+    entities:
+    - ATM: "ATM"
+  - slot_was_set:
+    - ATM: "ATM"
+  - action: action_post_ATM
+  - action: action_restart
+
+- story: Financial_Services_ATM
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: ATM
+    entities:
+    - ATM: "ATM"
+  - slot_was_set:
+    - ATM: "ATM"
+  - action: action_post_ATM
+  - action: action_restart
+
+- story: Financial_Services_Accountant
+  steps:
+  - intent: ATM
+    entities:
+    - ATM: "ATM"
+  - slot_was_set:
+    - ATM: "ATM"
+  - action: action_post_ATM
+  - action: action_restart
+
+- story: Financial_Services_Auditors
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Auditors
+    entities:
+    - Auditors: "Auditors"
+  - slot_was_set:
+    - Auditors: "Auditors"
+  - action: action_post_Auditors
+  - action: action_restart
+
+- story: Financial_Services_Auditors
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Auditors
+    entities:
+    - Auditors: "Auditors"
+  - slot_was_set:
+    - Auditors: "Auditors"
+  - action: action_post_Auditors
+  - action: action_restart
+
+- story: Financial_Services_Auditors
+  steps:
+  - intent: Auditors
+    entities:
+    - Auditors: "Auditors"
+  - slot_was_set:
+    - Auditors: "Auditors"
+  - action: action_post_Auditors
+  - action: action_restart
+
+- story: Financial_Services_Bank_Drop_Boxes
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Bank_Drop_Boxes
+    entities:
+    - Bank_Drop_Box: "Bank Drop Boxes"
+  - slot_was_set:
+    - Bank_Drop_Box: "Bank Drop Boxes"
+  - action: action_post_Bank_Drop_Boxes
+  - action: action_restart
+
+- story: Financial_Services_Bank_Drop_Boxes
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Bank_Drop_Boxes
+    entities:
+    - Bank_Drop_Box: "Bank Drop Boxes"
+  - slot_was_set:
+    - Bank_Drop_Box: "Bank Drop Boxes"
+  - action: action_post_Bank_Drop_Boxes
+  - action: action_restart
+
+- story: Financial_Services_Bank_Drop_Boxes
+  steps:
+  - intent: Bank_Drop_Boxes
+    entities:
+    - Bank_Drop_Box: "Bank Drop Boxes"
+  - slot_was_set:
+    - Bank_Drop_Box: "Bank Drop Boxes"
+  - action: action_post_Bank_Drop_Boxes
+  - action: action_restart
+
+- story: Financial_Services_Bank
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Bank
+    entities:
+    - Bank: "Bank"
+  - slot_was_set:
+    - Bank: "Bank"
+  - action: action_post_Bank
+  - action: action_restart
+
+- story: Financial_Services_Bank
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Bank
+    entities:
+    - Bank: "Bank"
+  - slot_was_set:
+    - Bank: "Bank"
+  - action: action_post_Bank
+  - action: action_restart
+
+- story: Financial_Services_Bank
+  steps:
+  - intent: Bank
+    entities:
+    - Bank: "Bank"
+  - slot_was_set:
+    - Bank: "Bank"
+  - action: action_post_Bank
+  - action: action_restart
+
+- story: Financial_Services_Brokerage_House
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Brokerage_House
+    entities:
+    - Brokerage_House: "Brokerage House"
+  - slot_was_set:
+    - Brokerage_House: "Brokerage House"
+  - action: action_post_Brokerage_House
+  - action: action_restart
+
+- story: Financial_Services_Brokerage_House
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Brokerage_House
+    entities:
+    - Brokerage_House: "Brokerage House"
+  - slot_was_set:
+    - Brokerage_House: "Brokerage House"
+  - action: action_post_Brokerage_House
+  - action: action_restart
+
+- story: Financial_Services_Brokerage_House
+  steps:
+  - intent: Brokerage_House
+    entities:
+    - Brokerage_House: "Brokerage House"
+  - slot_was_set:
+    - Brokerage_House: "Brokerage House"
+  - action: action_post_Brokerage_House
+  - action: action_restart
+
+- story: Financial_Services_Chartered_Tax
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Chartered_Tax
+    entities:
+    - Chartered_Tax_Adviser: "Chartered Tax Adviser"
+  - slot_was_set:
+    - Chartered_Tax_Adviser: "Chartered Tax Adviser"
+  - action: action_post_Chartered_Tax
+  - action: action_restart
+
+- story: Financial_Services_Chartered_Tax
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Chartered_Tax
+    entities:
+    - Chartered_Tax_Adviser: "Chartered Tax Adviser"
+  - slot_was_set:
+    - Chartered_Tax_Adviser: "Chartered Tax Adviser"
+  - action: action_post_Chartered_Tax
+  - action: action_restart
+
+- story: Financial_Services_Chartered_Tax
+  steps:
+  - intent: Chartered_Tax
+    entities:
+    - Chartered_Tax_Adviser: "Chartered Tax Adviser"
+  - slot_was_set:
+    - Chartered_Tax_Adviser: "Chartered Tax Adviser"
+  - action: action_post_Chartered_Tax
+  - action: action_restart
+
+- story: Financial_Services_Co_op_Housing
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Co_op_Housing
+    entities:
+    - Co_op_Housing_Society: Coop Housing Society Billing and Accounting
+  - slot_was_set:
+    - Co_op_Housing_Society: Coop Housing Society Billing and Accounting
+  - action: action_post_Co_op_Housing
+  - action: action_restart
+
+- story: Financial_Services_Co_op_Housing
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Co_op_Housing
+    entities:
+    - Co_op_Housing_Society: Coop Housing Society Billing and Accounting
+  - slot_was_set:
+    - Co_op_Housing_Society: Coop Housing Society Billing and Accounting
+  - action: action_post_Co_op_Housing
+  - action: action_restart
+
+- story: Financial_Services_Co_op_Housing
+  steps:
+  - intent: Co_op_Housing
+    entities:
+    - Co_op_Housing_Society: Coop Housing Society Billing and Accounting
+  - slot_was_set:
+    - Co_op_Housing_Society: Coop Housing Society Billing and Accounting
+  - action: action_post_Co_op_Housing
+  - action: action_restart
+
+- story: Financial_Services_Commodity
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Commodity
+    entities:
+    - Commodity: "Commodity Brokerage Houses"
+  - slot_was_set:
+    - Commodity: "Commodity Brokerage Houses"
+  - action: action_post_Commodity
+  - action: action_restart
+
+- story: Financial_Services_Commodity
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Commodity
+    entities:
+    - Commodity: "Commodity Brokerage Houses"
+  - slot_was_set:
+    - Commodity: "Commodity Brokerage Houses"
+  - action: action_post_Commodity
+  - action: action_restart
+
+- story: Financial_Services_Commodity
+  steps:
+  - intent: Commodity
+    entities:
+    - Commodity: "Commodity Brokerage Houses"
+  - slot_was_set:
+    - Commodity: "Commodity Brokerage Houses"
+  - action: action_post_Commodity
+  - action: action_restart
+
+- story: Financial_Services_Credit_card
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Credit_card
+    entities:
+    - Credit_card: "Credit card"
+  - slot_was_set:
+    - Credit_card: "Credit card"
+  - action: action_post_Credit_card
+  - action: action_restart
+
+- story: Financial_Services_Credit_card
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Credit_card
+    entities:
+    - Credit_card: "Credit card"
+  - slot_was_set:
+    - Credit_card: "Credit card"
+  - action: action_post_Credit_card
+  - action: action_restart
+
+- story: Financial_Services_Credit_card
+  steps:
+  - intent: Credit_card
+    entities:
+    - Credit_card: "Credit card"
+  - slot_was_set:
+    - Credit_card: "Credit card"
+  - action: action_post_Credit_card
+  - action: action_restart
+
+- story: Financial_Services_Finance_and_Taxation
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Finance_and_Taxation
+    entities:
+    - Finance_Taxation: "Finance and Taxation Services"
+  - slot_was_set:
+    - Finance_Taxation: "Finance and Taxation Services"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Finance_and_Taxation
+  - action: action_restart
+
+- story: Financial_Services_Finance_and_Taxation
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Finance_and_Taxation
+    entities:
+    - Finance_Taxation: "Finance and Taxation Services"
+  - slot_was_set:
+    - Finance_Taxation: "Finance and Taxation Services"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Finance_and_Taxation
+  - action: action_restart
+
+- story: Financial_Services_Finance_and_Taxation
+  steps:
+  - intent: Finance_and_Taxation
+    entities:
+    - Finance_Taxation: "Finance and Taxation Services"
+  - slot_was_set:
+    - Finance_Taxation: "Finance and Taxation Services"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Finance_and_Taxation
+  - action: action_restart
+
+- story: Financial_Services_Finance_Consultant
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Finance_Consultant
+    entities:
+    - Finance_Consultant: "Finance Consultant"
+  - slot_was_set:
+    - Finance_Consultant: "Finance Consultant"
+  - action: action_post_Finance_Consultant
+  - action: action_restart
+
+- story: Financial_Services_Finance_Consultant
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Finance_Consultant
+    entities:
+    - Finance_Consultant: "Finance Consultant"
+  - slot_was_set:
+    - Finance_Consultant: "Finance Consultant"
+  - action: action_post_Finance_Consultant
+  - action: action_restart
+
+- story: Financial_Services_Finance_Consultant
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Finance_Consultant
+    entities:
+    - Finance_Consultant: "Finance Consultant"
+  - slot_was_set:
+    - Finance_Consultant: "Finance Consultant"
+  - action: action_post_Finance_Consultant
+  - action: action_restart
+
+- story: Financial_Services_Four_wheeler_loans
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Four_wheeler_loans
+    entities:
+    - Four_wheeler_loans: "Four wheeler loans"
+  - slot_was_set:
+    - Four_wheeler_loans: "Four wheeler loans"
+  - action: action_post_Four_wheeler_loans
+  - action: action_restart
+
+- story: Financial_Services_Four_wheeler_loans
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Four_wheeler_loans
+    entities:
+    - Four_wheeler_loans: "Four wheeler loans"
+  - slot_was_set:
+    - Four_wheeler_loans: "Four wheeler loans"
+  - action: action_post_Four_wheeler_loans
+  - action: action_restart
+
+- story: Financial_Services_Four_wheeler_loans
+  steps:
+  - intent: Four_wheeler_loans
+    entities:
+    - Four_wheeler_loans: "Four wheeler loans"
+  - slot_was_set:
+    - Four_wheeler_loans: "Four wheeler loans"
+  - action: action_post_Four_wheeler_loans
+  - action: action_restart
+
+- story: Financial_Services_Income_Tax_Consultant
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Income_Tax_Consultant
+    entities:
+    - Income_Tax_Consultant: "Income Tax Consultant"
+  - slot_was_set:
+    - Income_Tax_Consultant: "Income Tax Consultant"
+  - action: action_post_Income_Tax_Consultant
+  - action: action_restart
+
+- story: Financial_Services_Income_Tax_Consultant
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Income_Tax_Consultant
+    entities:
+    - Income_Tax_Consultant: "Income Tax Consultant"
+  - slot_was_set:
+    - Income_Tax_Consultant: "Income Tax Consultant"
+  - action: action_post_Income_Tax_Consultant
+  - action: action_restart
+
+- story: Financial_Services_Income_Tax_Consultant
+  steps:
+  - intent: Income_Tax_Consultant
+    entities:
+    - Income_Tax_Consultant: "Income Tax Consultant"
+  - slot_was_set:
+    - Income_Tax_Consultant: "Income Tax Consultant"
+  - action: action_post_Income_Tax_Consultant
+  - action: action_restart
+
+- story: Financial_Services_Income_Tax_Department
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Income_Tax_Department
+    entities:
+    - Income_Tax_Department: "Income Tax Department"
+  - slot_was_set:
+    - Income_Tax_Department: "Income Tax Department"
+  - action: action_post_Income_Tax_Department
+  - action: action_restart
+
+- story: Financial_Services_Income_Tax_Department
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Income_Tax_Department
+    entities:
+    - Income_Tax_Department: "Income Tax Department"
+  - slot_was_set:
+    - Income_Tax_Department: "Income Tax Department"
+  - action: action_post_Income_Tax_Department
+  - action: action_restart
+
+- story: Financial_Services_Income_Tax_Department
+  steps:
+  - intent: Income_Tax_Department
+    entities:
+    - Income_Tax_Department: "Income Tax Department"
+  - slot_was_set:
+    - Income_Tax_Department: "Income Tax Department"
+  - action: action_post_Income_Tax_Department
+  - action: action_restart
+
+- story: Financial_Services_Insurance_agency
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Insurance_agency
+    entities:
+    - Insurance_agency: "Insurance agency"
+  - slot_was_set:
+    - Insurance_agency: "Insurance agency"
+  - action: action_post_Insurance_agency
+  - action: action_restart
+
+- story: Financial_Services_Insurance_agency
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Insurance_agency
+    entities:
+    - Insurance_agency: "Insurance agency"
+  - slot_was_set:
+    - Insurance_agency: "Insurance agency"
+  - action: action_post_Insurance_agency
+  - action: action_restart
+
+- story: Financial_Services_Insurance_agency
+  steps:
+  - intent: Insurance_agency
+    entities:
+    - Insurance_agency: "Insurance agency"
+  - slot_was_set:
+    - Insurance_agency: "Insurance agency"
+  - action: action_post_Insurance_agency
+  - action: action_restart
+
+- story: Financial_Services_Insurance_Company
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Insurance_Company
+    entities:
+    - Insurance_Company: "Insurance Company"
+  - slot_was_set:
+    - Insurance_Company: "Insurance Company"
+  - action: action_post_Insurance_Company
+  - action: action_restart
+
+- story: Financial_Services_Insurance_Company
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Insurance_Company
+    entities:
+    - Insurance_Company: "Insurance Company"
+  - slot_was_set:
+    - Insurance_Company: "Insurance Company"
+  - action: action_post_Insurance_Company
+  - action: action_restart
+
+- story: Financial_Services_Insurance_Company
+  steps:
+  - intent: Insurance_Company
+    entities:
+    - Insurance_Company: "Insurance Company"
+  - slot_was_set:
+    - Insurance_Company: "Insurance Company"
+  - action: action_post_Insurance_Company
+  - action: action_restart
+
+- story: Financial_Services_Investment_Company
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Investment_Company
+    entities:
+    - Investment_Company: "Investment Company"
+  - slot_was_set:
+    - Investment_Company: "Investment Company"
+  - action: action_post_Investment_Company
+  - action: action_restart
+
+- story: Financial_Services_Investment_Company
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Investment_Company
+    entities:
+    - Investment_Company: "Investment Company"
+  - slot_was_set:
+    - Investment_Company: "Investment Company"
+  - action: action_post_Investment_Company
+  - action: action_restart
+
+- story: Financial_Services_Investment_Company
+  steps:
+  - intent: Investment_Company
+    entities:
+    - Investment_Company: "Investment Company"
+  - slot_was_set:
+    - Investment_Company: "Investment Company"
+  - action: action_post_Investment_Company
+  - action: action_restart
+
+- story: Financial_Services_Loan_Office
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Loan_Office
+    entities:
+    - Loan_Office: "Loan Office"
+  - slot_was_set:
+    - Loan_Office: "Loan Office"
+  - action: action_post_Loan_Office
+  - action: action_restart
+
+- story: Financial_Services_Loan_Office
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Loan_Office
+    entities:
+    - Loan_Office: "Loan Office"
+  - slot_was_set:
+    - Loan_Office: "Loan Office"
+  - action: action_post_Loan_Office
+  - action: action_restart
+
+- story: Financial_Services_Loan_Office
+  steps:
+  - intent: Loan_Office
+    entities:
+    - Loan_Office: "Loan Office"
+  - slot_was_set:
+    - Loan_Office: "Loan Office"
+  - action: action_post_Loan_Office
+  - action: action_restart
+
+- story: Financial_Services_Pawnbrokers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Pawnbrokers
+    entities:
+    - Pawnbrokers: "Pawnbrokers"
+  - slot_was_set:
+    - Pawnbrokers: "Pawnbrokers"
+  - action: action_post_Pawnbrokers
+  - action: action_restart
+
+- story: Financial_Services_Pawnbrokers
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Pawnbrokers
+    entities:
+    - Pawnbrokers: "Pawnbrokers"
+  - slot_was_set:
+    - Pawnbrokers: "Pawnbrokers"
+  - action: action_post_Pawnbrokers
+  - action: action_restart
+
+- story: Financial_Services_Pawnbrokers
+  steps:
+  - intent: Pawnbrokers
+    entities:
+    - Pawnbrokers: "Pawnbrokers"
+  - slot_was_set:
+    - Pawnbrokers: "Pawnbrokers"
+  - action: action_post_Pawnbrokers
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Agency
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Real_Estate_Agency
+    entities:
+    - Real_Estate_Agency: "Real Estate Agency"
+  - slot_was_set:
+    - Real_Estate_Agency: "Real Estate Agency"
+  - action: action_post_Real_Estate_Agency
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Agency
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Real_Estate_Agency
+    entities:
+    - Real_Estate_Agency: "Real Estate Agency"
+  - slot_was_set:
+    - Real_Estate_Agency: "Real Estate Agency"
+  - action: action_post_Real_Estate_Agency
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Agency
+  steps:
+  - intent: Real_Estate_Agency
+    entities:
+    - Real_Estate_Agency: "Real Estate Agency"
+  - slot_was_set:
+    - Real_Estate_Agency: "Real Estate Agency"
+  - action: action_post_Real_Estate_Agency
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Appraisal
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Real_Estate_Appraisal
+    entities:
+    - Real_Estate_Appraisal: "Real Estate Appraisal"
+  - slot_was_set:
+    - Real_Estate_Appraisal: "Real Estate Appraisal"
+  - action: action_post_Real_Estate_Appraisal
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Appraisal
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Real_Estate_Appraisal
+    entities:
+    - Real_Estate_Appraisal: "Real Estate Appraisal"
+  - slot_was_set:
+    - Real_Estate_Appraisal: "Real Estate Appraisal"
+  - action: action_post_Real_Estate_Appraisal
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Appraisal
+  steps:
+  - intent: Real_Estate_Appraisal
+    entities:
+    - Real_Estate_Appraisal: "Real Estate Appraisal"
+  - slot_was_set:
+    - Real_Estate_Appraisal: "Real Estate Appraisal"
+  - action: action_post_Real_Estate_Appraisal
+  - action: action_restart
+
+- story: Financial_Services_Safe_Deposit
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Safe_Deposit
+    entities:
+    - Safe_Deposit_box: Safe Deposit Locker Facility
+  - slot_was_set:
+    - Safe_Deposit_box: Safe Deposit Locker Facility
+  - action: action_post_Real_Estate_Appraisal
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Appraisal
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Safe_Deposit
+    entities:
+    - Safe_Deposit_box: Safe Deposit Locker Facility
+  - slot_was_set:
+    - Safe_Deposit_box: Safe Deposit Locker Facility
+  - action: action_post_Real_Estate_Appraisal
+  - action: action_restart
+
+- story: Financial_Services_Real_Estate_Appraisal
+  steps:
+  - intent: Safe_Deposit
+    entities:
+    - Safe_Deposit_box: Safe Deposit Locker Facility
+  - slot_was_set:
+    - Safe_Deposit_box: Safe Deposit Locker Facility
+  - action: action_post_Real_Estate_Appraisal
+  - action: action_restart
+
+- story: Financial_Services_Sales_Tax
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Sales_Tax
+    entities:
+    - Sales_Tax: "Sales Tax Registration"
+  - slot_was_set:
+    - Sales_Tax: "Sales Tax Registration"
+  - action: action_post_Sales_Tax
+  - action: action_restart
+
+- story: Financial_Services_Sales_Tax
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Sales_Tax
+    entities:
+    - Sales_Tax: "Sales Tax Registration"
+  - slot_was_set:
+    - Sales_Tax: "Sales Tax Registration"
+  - action: action_post_Sales_Tax
+  - action: action_restart
+
+- story: Financial_Services_Sales_Tax
+  steps:
+  - intent: Sales_Tax
+    entities:
+    - Sales_Tax: "Sales Tax Registration"
+  - slot_was_set:
+    - Sales_Tax: "Sales Tax Registration"
+  - action: action_post_Sales_Tax
+  - action: action_restart
+
+- story: Financial_Services_Share_Brokers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Share_Brokers
+    entities:
+    - Share_Brokers: "Share Brokers"
+  - slot_was_set:
+    - Share_Brokers: "Share Brokers"
+  - action: action_post_Share_Brokers
+  - action: action_restart
+
+- story: Financial_Services_Share_Brokers
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Share_Brokers
+    entities:
+    - Share_Brokers: "Share Brokers"
+  - slot_was_set:
+    - Share_Brokers: "Share Brokers"
+  - action: action_post_Share_Brokers
+  - action: action_restart
+
+- story: Financial_Services_Share_Brokers
+  steps:
+  - intent: Share_Brokers
+    entities:
+    - Share_Brokers: "Share Brokers"
+  - slot_was_set:
+    - Share_Brokers: "Share Brokers"
+  - action: action_post_Share_Brokers
+  - action: action_restart
+
+- story: Financial_Services_USA_Tax_Filing
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: USA_Tax_Filing
+    entities:
+    - USA_Tax_Filing: "USA Tax Filing Services"
+  - slot_was_set:
+    - USA_Tax_Filing: "USA Tax Filing Services"
+  - action: action_post_USA_Tax_Filing
+  - action: action_restart
+
+- story: Financial_Services_USA_Tax_Filing
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: USA_Tax_Filing
+    entities:
+    - USA_Tax_Filing: "USA Tax Filing Services"
+  - slot_was_set:
+    - USA_Tax_Filing: "USA Tax Filing Services"
+  - action: action_post_USA_Tax_Filing
+  - action: action_restart
+
+- story: Financial_Services_USA_Tax_Filing
+  steps:
+  - intent: USA_Tax_Filing
+    entities:
+    - USA_Tax_Filing: "USA Tax Filing Services"
+  - slot_was_set:
+    - USA_Tax_Filing: "USA Tax Filing Services"
+  - action: action_post_USA_Tax_Filing
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Insurance
+    entities:
+    - insurance: "Insurance"
+  - slot_was_set:
+    - insurance: "Insurance"
+  - action: utter_insurance
+  - intent: type_of_insurance
+    entities:
+    - type_of_insurance: "Vehicle Insurance"
+  - slot_was_set:
+    - type_of_insurance: "Vehicle Insurance"
+  - action: action_post_Insurance
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Insurance
+    entities:
+    - insurance: "Insurance"
+  - slot_was_set:
+    - insurance: "Insurance"
+  - action: utter_insurance
+  - intent: type_of_insurance
+    entities:
+    - type_of_insurance: "Vehicle Insurance"
+  - slot_was_set:
+    - type_of_insurance: "Vehicle Insurance"
+  - action: action_post_Insurance
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: Insurance
+    entities:
+    - insurance: "Insurance"
+  - slot_was_set:
+    - insurance: "Insurance"
+  - action: utter_insurance
+  - intent: type_of_insurance
+    entities:
+    - type_of_insurance: "Vehicle Insurance"
+  - slot_was_set:
+    - type_of_insurance: "Vehicle Insurance"
+  - action: action_post_Insurance
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: type_of_insurance
+    entities:
+    - type_of_insurance: "Vehicle Insurance"
+  - slot_was_set:
+    - type_of_insurance: "Vehicle Insurance"
+  - action: action_post_Insurance
+  - action: action_restart
+
+- story: Financial_Services_Investment
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Investment
+    entities:
+    - investment: "Investment Consultants"
+  - slot_was_set:
+    - investment: "Investment Consultants"
+  - action: utter_Investment_Consultants
+  - intent: type_of_investment
+    entities:
+    - type_of_insurance: "Investment consultancy service"
+  - slot_was_set:
+    - type_of_insurance: "Investment consultancy service"
+  - action: action_post_Investment
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Investment
+    entities:
+    - investment: "Investment Consultants"
+  - slot_was_set:
+    - investment: "Investment Consultants"
+  - action: utter_Investment_Consultants
+  - intent: type_of_investment
+    entities:
+    - type_of_insurance: "Investment consultancy service"
+  - slot_was_set:
+    - type_of_insurance: "Investment consultancy service"
+  - action: action_post_Investment
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: Investment
+    entities:
+    - investment: "Investment Consultants"
+  - slot_was_set:
+    - investment: "Investment Consultants"
+  - action: utter_Investment_Consultants
+  - intent: type_of_investment
+    entities:
+    - type_of_insurance: "Investment consultancy service"
+  - slot_was_set:
+    - type_of_insurance: "Investment consultancy service"
+  - action: action_post_Investment
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: type_of_investment
+    entities:
+    - type_of_insurance: "Investment consultancy service"
+  - slot_was_set:
+    - type_of_insurance: "Investment consultancy service"
+  - action: action_post_Investment
+  - action: action_restart
+
+- story: Financial_Services_Loan
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Loan
+    entities:
+    - Loan: "Loan"
+  - slot_was_set:
+    - Loan: "Loan"
+  - action: utter_loans
+  - intent: type_of_Loan
+    entities:
+    - type_of_Loan: Home loans
+  - slot_was_set:
+    - type_of_Loan: Home loans
+  - action: action_post_Loan
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: Financial_Services
+  - action: utter_Financial_Services
+  - intent: Loan
+    entities:
+    - Loan: "Loan"
+  - slot_was_set:
+    - Loan: "Loan"
+  - action: utter_loans
+  - intent: type_of_Loan
+    entities:
+    - type_of_Loan: Home loans
+  - slot_was_set:
+    - type_of_Loan: Home loans
+  - action: action_post_Loan
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: Loan
+    entities:
+    - Loan: "Loan"
+  - slot_was_set:
+    - Loan: "Loan"
+  - action: utter_loans
+  - intent: type_of_Loan
+    entities:
+    - type_of_Loan: Home loans
+  - slot_was_set:
+    - type_of_Loan: Home loans
+  - action: action_post_Loan
+  - action: action_restart
+
+- story: Financial_Services_Insurance
+  steps:
+  - intent: type_of_Loan
+    entities:
+    - type_of_Loan: Home loans
+  - slot_was_set:
+    - type_of_Loan: Home loans
+  - action: action_post_Loan
+  - action: action_restart
+
+
+- story: Government_Offices
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Government_Offices
+  - action: utter_Government_Offices
+  - intent: type_of_govt_office
+    entities:
+    - govt: "Consulates and Embassies"
+  - slot_was_set:
+    - govt: "Consulates and Embassies"
+  - action: action_post_Government_Offices
+  - action: action_restart
+
+- story: Government_Offices
+  steps:
+  - intent: Government_Offices
+  - action: utter_Government_Offices
+  - intent: type_of_govt_office
+    entities:
+    - govt: "Consulates and Embassies"
+  - slot_was_set:
+    - govt: "Consulates and Embassies"
+  - action: action_post_Government_Offices
+  - action: action_restart
+
+- story: Government_Offices
+  steps:
+  - intent: type_of_govt_office
+    entities:
+    - govt: "Consulates and Embassies"
+  - slot_was_set:
+    - govt: "Consulates and Embassies"
+  - action: action_post_Government_Offices
+  - action: action_restart
+
+- story: Nightlife
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Nightlife
+  - action: utter_Nightlife
+  - intent: type_of_Nightlife
+    entities:
+    - type_of_Nightlife: "Lounges"
+  - slot_was_set:
+    - type_of_Nightlife: Lounges"
+  - action: action_post_Nightlife
+  - action: action_restart
+
+- story: Nightlife
+  steps:
+  - intent: Nightlife
+  - action: utter_Nightlife
+  - intent: type_of_Nightlife
+    entities:
+    - type_of_Nightlife: "Lounges"
+  - slot_was_set:
+    - type_of_Nightlife: Lounges"
+  - action: action_post_Nightlife
+  - action: action_restart
+
+- story: Nightlife
+  steps:
+  - intent: type_of_Nightlife
+    entities:
+    - type_of_Nightlife: "Lounges"
+  - slot_was_set:
+    - type_of_Nightlife: Lounges"
+  - action: action_post_Nightlife
+  - action: action_restart
+
+
+- story: Nightlife_Hookah
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Nightlife
+  - action: utter_Nightlife
+  - intent: Hookah
+    entities:
+    - Hookah: "Hookah Bars"
+  - slot_was_set:
+    - Hookah: "Hookah Bars"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Nightlife_Hookah
+  - action: action_restart
+
+- story: Nightlife_Hookah
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Hookah
+    entities:
+    - Hookah: "Hookah Bars"
+  - slot_was_set:
+    - Hookah: "Hookah Bars"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Nightlife_Hookah
+  - action: action_restart
+
+- story: Nightlife_Hookah
+  steps:
+  - intent: Nightlife
+  - action: utter_Nightlife
+  - intent: Hookah
+    entities:
+    - Hookah: "Hookah Bars"
+  - slot_was_set:
+    - Hookah: "Hookah Bars"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Nightlife_Hookah
+  - action: action_restart
+
+- story: Nightlife_Hookah
+  steps:
+  - intent: Hookah
+    entities:
+    - Hookah: "Hookah Bars"
+  - slot_was_set:
+    - Hookah: "Hookah Bars"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Nightlife_Hookah
+  - action: action_restart
+
+
+- story: Schools
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Schools
+  - action: utter_Schools
+  - intent: Schools
+    entities:
+    - Schools: "CBSE Schools"
+  - slot_was_set:
+    - Schools: CBSE Schools"
+  - action: action_post_Schools
+  - action: action_restart
+
+- story: Schools
+  steps:
+  - intent: Schools
+  - action: utter_Schools
+  - intent: Schools
+    entities:
+    - Schools: "CBSE Schools"
+  - slot_was_set:
+    - Schools: CBSE Schools"
+  - action: action_post_Schools
+  - action: action_restart
+
+- story: Schools
+  steps:
+  - intent: Schools
+    entities:
+    - Schools: "CBSE Schools"
+  - slot_was_set:
+    - Schools: CBSE Schools"
+  - action: action_post_Schools
+  - action: action_restart
+
+
+- story: Schools_Retakers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Schools
+  - action: utter_Schools
+  - intent: Schools_Retakers
+    entities:
+    - Schools_Retakers: "School Retakers"
+  - slot_was_set:
+    - Schools_Retakers: "School Retakers"
+  - action: utter_School Retakers
+  - intent: school_class
+    entities:
+    - Schools_Retakers_class: "Class 9"
+  - slot_was_set:
+    - Schools_Retakers_class: "Class 9"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Schools_Retakers
+  - action: action_restart
+
+- story: Schools_Retakers
+  steps:
+  - intent: Schools
+  - action: utter_Schools
+  - intent: Schools_Retakers
+    entities:
+    - Schools_Retakers: "School Retakers"
+  - slot_was_set:
+    - Schools_Retakers: "School Retakers"
+  - action: utter_School Retakers
+  - intent: school_class
+    entities:
+    - Schools_Retakers_class: "Class 9"
+  - slot_was_set:
+    - Schools_Retakers_class: "Class 9"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Schools_Retakers
+  - action: action_restart
+
+- story: Schools_Retakers
+  steps:
+  - intent: Schools_Retakers
+    entities:
+    - Schools_Retakers: "School Retakers"
+  - slot_was_set:
+    - Schools_Retakers: "School Retakers"
+  - action: utter_School Retakers
+  - intent: school_class
+    entities:
+    - Schools_Retakers_class: "Class 9"
+  - slot_was_set:
+    - Schools_Retakers_class: "Class 9"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Schools_Retakers
+  - action: action_restart
+
+- story: Games_Centers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Games_Centers
+  - action: utter_Games_Centers
+  - intent: Games_Centers
+    entities:
+    - Games_Centers: "Playstations"
+  - slot_was_set:
+    - Games_Centers: "Playstations"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Games_Centers
+  - action: action_restart
+
+- story: Games_Centers
+  steps:
+  - intent: Games_Centers
+  - action: utter_Games_Centers
+  - intent: Games_Centers
+    entities:
+    - Games_Centers: "Playstations"
+  - slot_was_set:
+    - Games_Centers: "Playstations"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Games_Centers
+  - action: action_restart
+
+
+- story: Games_Centers
+  steps:
+  - intent: Games_Centers
+    entities:
+    - Games_Centers: "Playstations"
+  - slot_was_set:
+    - Games_Centers: "Playstations"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Games_Centers
+  - action: action_restart
+
+
+- story: Food_and_Dining_location
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_location
+    entities:
+    - Food_and_Dining_location: "Bakery"
+  - slot_was_set:
+    - Food_and_Dining_location: "Bakery"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_location
+  - action: action_restart
+
+- story: Food_and_Dining_location
+  steps:
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_location
+    entities:
+    - Food_and_Dining_location: "Bakery"
+  - slot_was_set:
+    - Food_and_Dining_location: "Bakery"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_location
+  - action: action_restart
+
+- story: Food_and_Dining_location
+  steps:
+  - intent: Food_and_Dining_location
+    entities:
+    - Food_and_Dining_location: "Bakery"
+  - slot_was_set:
+    - Food_and_Dining_location: "Bakery"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_location
+  - action: action_restart
+
+
+
+- story: Food_and_Dining_Tobacco
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Tobacco
+    entities:
+    - Food_and_Dining_Tobacco: "Tobacco Shops"
+  - slot_was_set:
+    - Food_and_Dining_Tobacco: "Tobacco Shops"
+  - action: action_post_Food_and_Dining_Tobacco
+  - action: action_restart
+
+- story: Food_and_Dining_Tobacco
+  steps:
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Tobacco
+    entities:
+    - Food_and_Dining_Tobacco: "Tobacco Shops"
+  - slot_was_set:
+    - Food_and_Dining_Tobacco: "Tobacco Shops"
+  - action: action_post_Food_and_Dining_Tobacco
+  - action: action_restart
+
+- story: Food_and_Dining_Tobacco
+  steps:
+  - intent: Food_and_Dining_Tobacco
+    entities:
+    - Food_and_Dining_Tobacco: "Tobacco Shops"
+  - slot_was_set:
+    - Food_and_Dining_Tobacco: "Tobacco Shops"
+  - action: action_post_Food_and_Dining_Tobacco
+  - action: action_restart
+
+
+
+
+- story: Food_and_Dining_Food_Product_Suppliers
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Food_Product_Suppliers
+    entities:
+    - Food_Product_Suppliers: "Food Product Suppliers"
+  - slot_was_set:
+    - Food_Product_Suppliers: "Food Product Suppliers"
+  - action: utter_Food_Product_Suppliers
+  - intent: Food_and_Dining_Food_Product_Suppliers_type
+    entities:
+    - type_Food_Product_Suppliers: "Readymade Food Product Dealers"
+  - slot_was_set:
+    - type_Food_Product_Suppliers: "Readymade Food Product Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Food_Product_Suppliers
+  - action: action_restart
+
+- story: Food_and_Dining_Food_Product_Suppliers
+  steps:
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Food_Product_Suppliers
+    entities:
+    - Food_Product_Suppliers: "Food Product Suppliers"
+  - slot_was_set:
+    - Food_Product_Suppliers: "Food Product Suppliers"
+  - action: utter_Food_Product_Suppliers
+  - intent: Food_and_Dining_Food_Product_Suppliers_type
+    entities:
+    - type_Food_Product_Suppliers: "Readymade Food Product Dealers"
+  - slot_was_set:
+    - type_Food_Product_Suppliers: "Readymade Food Product Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Food_Product_Suppliers
+  - action: action_restart
+
+- story: Food_and_Dining_Food_Product_Suppliers
+  steps:
+  - intent: Food_and_Dining_Food_Product_Suppliers
+    entities:
+    - Food_Product_Suppliers: "Food Product Suppliers"
+  - slot_was_set:
+    - Food_Product_Suppliers: "Food Product Suppliers"
+  - action: utter_Food_Product_Suppliers
+  - intent: Food_and_Dining_Food_Product_Suppliers_type
+    entities:
+    - type_Food_Product_Suppliers: "Readymade Food Product Dealers"
+  - slot_was_set:
+    - type_Food_Product_Suppliers: "Readymade Food Product Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Food_Product_Suppliers
+  - action: action_restart
+
+
+
+- story: Food_and_Dining_Restaurant
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Restaurant
+    entities:
+    - Food_and_Dining_Restaurant: "Restaurant"
+  - slot_was_set:
+    - Food_and_Dining_Restaurant: "Restaurant"
+  - action: utter_Food_and_Dining_Restaurant
+  - intent: Food_and_Dining_Restaurant_type
+    entities:
+    - Food_and_Dining_Restaurant_type: "Idli"
+  - slot_was_set:
+    - Food_and_Dining_Restaurant_type: "Idli"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Restaurant
+  - action: action_restart
+
+- story: Food_and_Dining_Restaurant
+  steps:
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Restaurant
+    entities:
+    - Food_and_Dining_Restaurant: "Restaurant"
+  - slot_was_set:
+    - Food_and_Dining_Restaurant: "Restaurant"
+  - action: utter_Food_and_Dining_Restaurant
+  - intent: Food_and_Dining_Restaurant_type
+    entities:
+    - Food_and_Dining_Restaurant_type: "Idli"
+  - slot_was_set:
+    - Food_and_Dining_Restaurant_type: "Idli"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Restaurant
+  - action: action_restart
+
+- story: Food_and_Dining_Restaurant
+  steps:
+  - intent: Food_and_Dining_Restaurant
+    entities:
+    - Food_and_Dining_Restaurant: "Restaurant"
+  - slot_was_set:
+    - Food_and_Dining_Restaurant: "Restaurant"
+  - action: utter_Food_and_Dining_Restaurant
+  - intent: Food_and_Dining_Restaurant_type
+    entities:
+    - Food_and_Dining_Restaurant_type: "Idli"
+  - slot_was_set:
+    - Food_and_Dining_Restaurant_type: "Idli"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Restaurant
+  - action: action_restart
+
+
+- story: Food_and_Dining_Seafood
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Seafood
+    entities:
+    - Food_and_Dining_Seafood: "Seafood Stores"
+  - slot_was_set:
+    - Food_and_Dining_Seafood: "Seafood Stores"
+  - action: utter_Food_and_Dining_Seafood
+  - intent: Food_and_Dining_Seafood_type
+    entities:
+    - Food_and_Dining_Seafood_type: "Prawn Shops"
+  - slot_was_set:
+    - Food_and_Dining_Seafood_type: "Prawn Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Seafood
+  - action: action_restart
+
+- story: Food_and_Dining_Seafood
+  steps:
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Seafood
+    entities:
+    - Food_and_Dining_Seafood: "Seafood Stores"
+  - slot_was_set:
+    - Food_and_Dining_Seafood: "Seafood Stores"
+  - action: utter_Food_and_Dining_Seafood
+  - intent: Food_and_Dining_Seafood_type
+    entities:
+    - Food_and_Dining_Seafood_type: "Prawn Shops"
+  - slot_was_set:
+    - Food_and_Dining_Seafood_type: "Prawn Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Seafood
+  - action: action_restart
+
+- story: Food_and_Dining_Seafood
+  steps:
+  - intent: Food_and_Dining_Seafood
+    entities:
+    - Food_and_Dining_Seafood: "Seafood Stores"
+  - slot_was_set:
+    - Food_and_Dining_Seafood: "Seafood Stores"
+  - action: utter_Food_and_Dining_Seafood
+  - intent: Food_and_Dining_Seafood_type
+    entities:
+    - Food_and_Dining_Seafood_type: "Prawn Shops"
+  - slot_was_set:
+    - Food_and_Dining_Seafood_type: "Prawn Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Seafood
+  - action: action_restart
+
+
+
+- story: Food_and_Dining_Sweet
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Sweet
+    entities:
+    - Food_and_Dining_Sweet: "Sweet Shops"
+  - slot_was_set:
+    - Food_and_Dining_Sweet: "Sweet Shops"
+  - action: utter_Food_and_Dining_Sweet
+  - intent: Food_and_Dining_Sweet_type
+    entities:
+    - Food_and_Dining_Sweet_type: "Bengali Sweet Shops"
+  - slot_was_set:
+    - Food_and_Dining_Sweet_type: "Bengali Sweet Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Sweet
+  - action: action_restart
+
+- story: Food_and_Dining_Sweet
+  steps:
+  - intent: Food_and_Dining
+  - action: utter_Food_and_Dining
+  - intent: Food_and_Dining_Sweet
+    entities:
+    - Food_and_Dining_Sweet: "Sweet Stores"
+  - slot_was_set:
+    - Food_and_Dining_Sweet: "Sweet Stores"
+  - action: utter_Food_and_Dining_Sweet
+  - intent: Food_and_Dining_Sweet_type
+    entities:
+    - Food_and_Dining_Sweet_type: "Bengali Sweet Shops"
+  - slot_was_set:
+    - Food_and_Dining_Sweet_type: "Bengali Sweet Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Sweet
+  - action: action_restart
+
+- story: Food_and_Dining_Sweet
+  steps:
+  - intent: Food_and_Dining_Sweet
+    entities:
+    - Food_and_Dining_Sweet: "Sweet Stores"
+  - slot_was_set:
+    - Food_and_Dining_Sweet: "Sweet Stores"
+  - action: utter_Food_and_Dining_Sweet
+  - intent: Food_and_Dining_Sweet_type
+    entities:
+    - Food_and_Dining_Sweet_type: "Bengali Sweet Shops"
+  - slot_was_set:
+    - Food_and_Dining_Sweet_type: "Bengali Sweet Shops"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Food_and_Dining_Sweet
+  - action: action_restart
+
+
+- story: Grocery
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Grocery
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Grocery
+  - action: action_restart
+
+- story: Grocery
+  steps:
+  - intent: Grocery
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Grocery
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_type
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_type
+    entities:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - slot_was_set:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_type
+  steps:
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_type
+    entities:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - slot_was_set:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type
+  - action: action_restart
+
+- story: Clinics_and_Doctors_type
+  steps:
+  - intent: Clinics_and_Doctors_type
+    entities:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - slot_was_set:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type
+  - action: action_restart
+
+- story: Clinics_and_Doctors_type_other
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_other
+    entities:
+    - Clinics_and_Doctors_other: "other doctor services"
+  - slot_was_set:
+    - Clinics_and_Doctors_other: "other doctor services"
+  - action: utter_Clinics_and_Doctors_type_more
+  - intent: Clinics_and_Doctors_type
+    entities:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - slot_was_set:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_type_other
+  steps:
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_other
+    entities:
+    - Clinics_and_Doctors_other: "other doctor services"
+  - slot_was_set:
+    - Clinics_and_Doctors_other: "other doctor services"
+  - action: utter_Clinics_and_Doctors_type_more
+  - intent: Clinics_and_Doctors_type
+    entities:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - slot_was_set:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_type_other
+  steps:
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_other
+    entities:
+    - Clinics_and_Doctors_other: "other doctor services"
+  - slot_was_set:
+    - Clinics_and_Doctors_other: "other doctor services"
+  - action: utter_Clinics_and_Doctors_type_more
+  - intent: Clinics_and_Doctors_type
+    entities:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - slot_was_set:
+    - Clinics_and_Doctors_type: "Abortion Clinics"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_Chiropractors
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_Chiropractors
+    entities:
+    - Clinics_and_Doctors_Chiropractors: "Chiropractors"
+  - slot_was_set:
+    - Clinics_and_Doctors_Chiropractors: "Chiropractors"
+  - action: utter_Clinics_and_Doctors_Chiropractors_type
+  - intent: Clinics_and_Doctors_Chiropractors_type
+    entities:
+    - Clinics_and_Doctors_Chiropractors_type: "Scoliosis"
+  - slot_was_set:
+    - Clinics_and_Doctors_Chiropractors_type: "Scoliosis"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type_Chiropractors
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_Chiropractors
+  steps:
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_Chiropractors
+    entities:
+    - Clinics_and_Doctors_Chiropractors: "Chiropractors"
+  - slot_was_set:
+    - Clinics_and_Doctors_Chiropractors: "Chiropractors"
+  - action: utter_Clinics_and_Doctors_Chiropractors_type
+  - intent: Clinics_and_Doctors_Chiropractors_type
+    entities:
+    - Clinics_and_Doctors_Chiropractors_type: "Scoliosis"
+  - slot_was_set:
+    - Clinics_and_Doctors_Chiropractors_type: "Scoliosis"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type_Chiropractors
+  - action: action_restart
+
+- story: Clinics_and_Doctors_Chiropractors
+  steps:
+  - intent: Clinics_and_Doctors_Chiropractors
+    entities:
+    - Clinics_and_Doctors_Chiropractors: "Chiropractors"
+  - slot_was_set:
+    - Clinics_and_Doctors_Chiropractors: "Chiropractors"
+  - action: utter_Clinics_and_Doctors_Chiropractors_type
+  - intent: Clinics_and_Doctors_Chiropractors_type
+    entities:
+    - Clinics_and_Doctors_Chiropractors_type: "Scoliosis"
+  - slot_was_set:
+    - Clinics_and_Doctors_Chiropractors_type: "Scoliosis"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type_Chiropractors
+  - action: action_restart
+
+
+
+- story: Clinics_and_Doctors_Dentists
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_Dentists
+    entities:
+    - Clinics_and_Doctors_Dentists: "Dentists"
+  - slot_was_set:
+    - Clinics_and_Doctors_Dentists: "Dentists"
+  - action: utter_Clinics_and_Doctors_Dentists_type
+  - intent: Clinics_and_Doctors_Dentists_type
+    entities:
+    - Clinics_and_Doctors_Dentists_type: "Root canal treatment"
+  - slot_was_set:
+    - Clinics_and_Doctors_Dentists_type: "Root canal treatment"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type_Dentists
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_Dentists
+  steps:
+  - intent: Clinics_and_Doctors
+  - action: utter_Clinics_and_Doctors_type
+  - intent: Clinics_and_Doctors_Dentists
+    entities:
+    - Clinics_and_Doctors_Dentists: "Dentists"
+  - slot_was_set:
+    - Clinics_and_Doctors_Dentists: "Dentists"
+  - action: utter_Clinics_and_Doctors_Dentists_type
+  - intent: Clinics_and_Doctors_Dentists_type
+    entities:
+    - Clinics_and_Doctors_Dentists_type: "Root canal treatment"
+  - slot_was_set:
+    - Clinics_and_Doctors_Dentists_type: "Root canal treatment"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type_Dentists
+  - action: action_restart
+
+
+- story: Clinics_and_Doctors_Dentists
+  steps:
+  - intent: Clinics_and_Doctors_Dentists
+    entities:
+    - Clinics_and_Doctors_Dentists: "Dentists"
+  - slot_was_set:
+    - Clinics_and_Doctors_Dentists: "Dentists"
+  - action: utter_Clinics_and_Doctors_Dentists_type
+  - intent: Clinics_and_Doctors_Dentists_type
+    entities:
+    - Clinics_and_Doctors_Dentists_type: "Root canal treatment"
+  - slot_was_set:
+    - Clinics_and_Doctors_Dentists_type: "Root canal treatment"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Clinics_and_Doctors_type_Dentists
+  - action: action_restart
+
+
+- story: Emergency_Services
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Emergency_Services
+  - action: utter_Emergency_Services
+  - intent: Emergency_Services_type
+    entities:
+    - Emergency_Services: "Fire Services"
+  - slot_was_set:
+    - Emergency_Services: "Fire Services"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Emergency_Services
+  - action: action_restart
+
+- story: Emergency_Services
+  steps:
+  - intent: Emergency_Services
+  - action: utter_Emergency_Services
+  - intent: Emergency_Services_type
+    entities:
+    - Emergency_Services: "Fire Services"
+  - slot_was_set:
+    - Emergency_Services: "Fire Services"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Emergency_Services
+  - action: action_restart
+
+
+- story: Emergency_Services
+  steps:
+  - intent: Emergency_Services_type
+    entities:
+    - Emergency_Services: "Fire Services"
+  - slot_was_set:
+    - Emergency_Services: "Fire Services"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Emergency_Services
+  - action: action_restart
+
+
+
+- story: Legal_Service
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_type
+    entities:
+    - Legal_Service_type: "Aadhar Card Agents"
+  - slot_was_set:
+    - Legal_Service_type: "Aadhar Card Agents"
+  - action: action_post_Legal_Service
+  - action: action_restart
+
+- story: Legal_Service
+  steps:
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_type
+    entities:
+    - Legal_Service_type: "Aadhar Card Agents"
+  - slot_was_set:
+    - Legal_Service_type: "Aadhar Card Agents"
+  - action: action_post_Legal_Service
+  - action: action_restart
+
+
+- story: Legal_Service
+  steps:
+  - intent: Legal_Service_type
+    entities:
+    - Legal_Service_type: "Aadhar Card Agents"
+  - slot_was_set:
+    - Legal_Service_type: "Aadhar Card Agents"
+  - action: action_post_Legal_Service
+  - action: action_restart
+
+
+- story: Legal_Service_Advocates
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_Advocates
+    entities:
+    - Legal_Service_Advocates: "Advocates and Lawyers"
+  - slot_was_set:
+    - Legal_Service_Advocates: "Advocates and Lawyers"
+  - action: utter_Legal_Service_Advocates_type
+  - intent: Legal_Service_Advocates_type
+    entities:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - slot_was_set:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Advocates
+  - action: action_restart
+
+- story: Legal_Service
+  steps:
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_Advocates
+    entities:
+    - Legal_Service_Advocates: "Advocates and Lawyers"
+  - slot_was_set:
+    - Legal_Service_Advocates: "Advocates and Lawyers"
+  - action: utter_Legal_Service_Advocates_type
+  - intent: Legal_Service_Advocates_type
+    entities:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - slot_was_set:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Advocates
+  - action: action_restart
+
+
+- story: Legal_Service
+  steps:
+  - intent: Legal_Service_Advocates
+    entities:
+    - Legal_Service_Advocates: "Advocates and Lawyers"
+  - slot_was_set:
+    - Legal_Service_Advocates: "Advocates and Lawyers"
+  - action: utter_Legal_Service_Advocates_type
+  - intent: Legal_Service_Advocates_type
+    entities:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - slot_was_set:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Advocates
+  - action: action_restart
+
+- story: Legal_Service
+  steps:
+  - intent: Legal_Service_Advocates_type
+    entities:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - slot_was_set:
+    - Legal_Service_Advocates_type: "Court marriage lawyers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Advocates
+  - action: action_restart
+
+
+
+- story: Legal_Service_Immigration
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_Immigration
+    entities:
+    - Legal_Service_Immigration: "Immigration Consultancy"
+  - slot_was_set:
+    - Legal_Service_Immigration: "Immigration Consultancy"
+  - action: utter_Countries
+  - intent: Countries
+    entities:
+    - Countries: "Canada"
+  - slot_was_set:
+    - Countries: "Canada"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Immigration
+  - action: action_restart
+
+- story: Legal_Service
+  steps:
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_Immigration
+    entities:
+    - Legal_Service_Immigration: "Immigration Consultancy"
+  - slot_was_set:
+    - Legal_Service_Immigration: "Immigration Consultancy"
+  - action: utter_Countries
+  - intent: Countries
+    entities:
+    - Countries: "Canada"
+  - slot_was_set:
+    - Countries: "Canada"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Immigration
+  - action: action_restart
+
+
+- story: Legal_Service
+  steps:
+  - intent: Legal_Service_Immigration
+    entities:
+    - Legal_Service_Immigration: "Immigration Consultancy"
+  - slot_was_set:
+    - Legal_Service_Immigration: "Immigration Consultancy"
+  - action: utter_Countries
+  - intent: Countries
+    entities:
+    - Countries: "Canada"
+  - slot_was_set:
+    - Countries: "Canada"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Immigration
+  - action: action_restart
+
+
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_Passport
+    entities:
+    - Legal_Service_Passport: "Passport Agency"
+  - slot_was_set:
+    - Legal_Service_Passport: "Passport Agency"
+  - action: utter_Legal_Service_Passport_type
+  - intent: Legal_Service_Passport_type
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+  - action: utter_Legal_Service_Passport_mode
+  - intent: Legal_Service_Passport_mode
+    entities:
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - intent: Legal_Service_Passport_age
+    entities:
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: Legal_Service
+  - action: utter_Legal_Service
+  - intent: Legal_Service_Passport
+    entities:
+    - Legal_Service_Passport: "Passport Agency"
+  - slot_was_set:
+    - Legal_Service_Passport: "Passport Agency"
+  - action: utter_Legal_Service_Passport_type
+  - intent: Legal_Service_Passport_type
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+  - action: utter_Legal_Service_Passport_mode
+  - intent: Legal_Service_Passport_mode
+    entities:
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - intent: Legal_Service_Passport_age
+    entities:
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: Legal_Service_Passport
+    entities:
+    - Legal_Service_Passport: "Passport Agency"
+  - slot_was_set:
+    - Legal_Service_Passport: "Passport Agency"
+  - action: utter_Legal_Service_Passport_type
+  - intent: Legal_Service_Passport_type
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+  - action: utter_Legal_Service_Passport_mode
+  - intent: Legal_Service_Passport_mode
+    entities:
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - intent: Legal_Service_Passport_age
+    entities:
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: Legal_Service_Passport_type
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+  - action: utter_Legal_Service_Passport_mode
+  - intent: Legal_Service_Passport_mode
+    entities:
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - intent: Legal_Service_Passport_age
+    entities:
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: Legal_Service_Passport_type
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_Legal_Service_Passport_mode
+  - intent: Legal_Service_Passport_mode
+    entities:
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: Legal_Service_Passport_age
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_Legal_Service_Passport_mode
+  - intent: Legal_Service_Passport_mode
+    entities:
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: Legal_Service_Passport_mode
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - intent: Legal_Service_Passport_age
+    entities:
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+
+- story: Legal_Service_Passport
+  steps:
+  - intent: Legal_Service_Passport_type
+    entities:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_mode: "Regular"
+  - slot_was_set:
+    - Legal_Service_Passport_type: "Renewal"
+    - Legal_Service_Passport_mode: "Regular"
+  - action: utter_Legal_Service_Passport_age
+  - intent: Legal_Service_Passport_age
+    entities:
+    - Legal_Service_Passport_age: "Minor"
+  - slot_was_set:
+    - Legal_Service_Passport_age: "Minor"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Legal_Service_Passport
+  - action: action_restart
+
+- story: Funerals_and_Memorials
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Funerals_and_Memorials
+  - action: utter_Funerals_and_Memorials
+  - intent: Funerals_and_Memorials_type
+    entities:
+    - Funerals_and_Memorials_type: "Cemeteries"
+  - slot_was_set:
+    - Funerals_and_Memorials_type: "Cemeteries"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Funerals_and_Memorials
+  - action: action_restart
+
+- story: Funerals_and_Memorials
+  steps:
+  - intent: Funerals_and_Memorials
+  - action: utter_Funerals_and_Memorials
+  - intent: Funerals_and_Memorials_type
+    entities:
+    - Funerals_and_Memorials_type: "Cemeteries"
+  - slot_was_set:
+    - Funerals_and_Memorials_type: "Cemeteries"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Funerals_and_Memorials
+  - action: action_restart
+
+
+- story: Funerals_and_Memorials
+  steps:
+  - intent: Funerals_and_Memorials_type
+    entities:
+    - Funerals_and_Memorials_type: "Cemeteries"
+  - slot_was_set:
+    - Funerals_and_Memorials_type: "Cemeteries"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Funerals_and_Memorials
+  - action: action_restart
+
+
+
+- story: Garden_and_Lawn
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Garden_and_Lawn
+  - action: utter_Garden_and_Lawn
+  - intent: Garden_and_Lawn_type
+    entities:
+    - Garden_and_Lawn_type: "Bonsai Plant Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_type: "Bonsai Plant Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn
+  - action: action_restart
+
+- story: Garden_and_Lawn
+  steps:
+  - intent: Garden_and_Lawn
+  - action: utter_Garden_and_Lawn
+  - intent: Garden_and_Lawn_type
+    entities:
+    - Garden_and_Lawn_type: "Bonsai Plant Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_type: "Bonsai Plant Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn
+  - action: action_restart
+
+
+- story: Garden_and_Lawn
+  steps:
+  - intent: Garden_and_Lawn_type
+    entities:
+    - Garden_and_Lawn_type: "Bonsai Plant Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_type: "Bonsai Plant Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn
+  - action: action_restart
+
+
+- story: Garden_and_Lawn_Garden
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Garden_and_Lawn
+  - action: utter_Garden_and_Lawn
+  - intent: Garden_and_Lawn_Garden
+    entities:
+    - Garden_and_Lawn_Garden: "Garden Services"
+  - slot_was_set:
+    - Garden_and_Lawn_Garden: "Garden Services"
+  - action: utter_Garden_and_Lawn_Garden_type
+  - intent: Garden_and_Lawn_Garden_type
+    entities:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - slot_was_set:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Garden
+  - action: action_restart
+
+- story: Garden_and_Lawn_Garden
+  steps:
+  - intent: Garden_and_Lawn
+  - action: utter_Garden_and_Lawn
+  - intent: Garden_and_Lawn_Garden
+    entities:
+    - Garden_and_Lawn_Garden: "Garden Services"
+  - slot_was_set:
+    - Garden_and_Lawn_Garden: "Garden Services"
+  - action: utter_Garden_and_Lawn_Garden_type
+  - intent: Garden_and_Lawn_Garden_type
+    entities:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - slot_was_set:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Garden
+  - action: action_restart
+
+
+- story: Garden_and_Lawn_Garden
+  steps:
+  - intent: Garden_and_Lawn_Garden
+    entities:
+    - Garden_and_Lawn_Garden: "Garden Services"
+  - slot_was_set:
+    - Garden_and_Lawn_Garden: "Garden Services"
+  - action: utter_Garden_and_Lawn_Garden_type
+  - intent: Garden_and_Lawn_Garden_type
+    entities:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - slot_was_set:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Garden
+  - action: action_restart
+
+- story: Garden_and_Lawn_Garden
+  steps:
+  - intent: Garden_and_Lawn_Garden_type
+    entities:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - slot_was_set:
+    - Garden_and_Lawn_Garden_type: "Garden designing"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Garden
+  - action: action_restart
+
+
+- story: Garden_and_Lawn_Irrigation
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: Garden_and_Lawn
+  - action: utter_Garden_and_Lawn
+  - intent: Garden_and_Lawn_Irrigation
+    entities:
+    - Garden_and_Lawn_Irrigation: "Irrigation System Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_Irrigation: "Irrigation System Dealers"
+  - action: utter_Garden_and_Lawn_Irrigation_type
+  - intent: Garden_and_Lawn_Irrigation_type
+    entities:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Irrigation
+  - action: action_restart
+
+- story: Garden_and_Lawn_Irrigation
+  steps:
+  - intent: Garden_and_Lawn
+  - action: utter_Garden_and_Lawn
+  - intent: Garden_and_Lawn_Irrigation
+    entities:
+    - Garden_and_Lawn_Irrigation: "Irrigation System Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_Irrigation: "Irrigation System Dealers"
+  - action: utter_Garden_and_Lawn_Irrigation_type
+  - intent: Garden_and_Lawn_Irrigation_type
+    entities:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Irrigation
+  - action: action_restart
+
+
+- story: Garden_and_Lawn_Irrigation
+  steps:
+  - intent: Garden_and_Lawn_Irrigation
+    entities:
+    - Garden_and_Lawn_Irrigation: "Irrigation System Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_Irrigation: "Irrigation System Dealers"
+  - action: utter_Garden_and_Lawn_Irrigation_type
+  - intent: Garden_and_Lawn_Irrigation_type
+    entities:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Irrigation
+  - action: action_restart
+
+- story: Garden_and_Lawn_Irrigation
+  steps:
+  - intent: Garden_and_Lawn_Irrigation_type
+    entities:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - slot_was_set:
+    - Garden_and_Lawn_Irrigation_type: "Drip Irrigation System Dealers"
+  - action: utter_location
+  - intent: location
+    entities:
+    - loc: "mumbai"
+  - slot_was_set:
+    - loc: "mumbai"
+  - action: action_post_Garden_and_Lawn_Irrigation
+  - action: action_restart
+
+

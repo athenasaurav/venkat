@@ -1,0 +1,1684 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - Accommodation_Services:
+      use_entities: true
+  - number:
+      use_entities: true
+  - days:
+      use_entities: true
+  - amenities:
+      use_entities: true
+  - location:
+      use_entities: true
+  - City_Attractions:
+      use_entities: true
+  - spa_service:
+      use_entities: true
+  - gender:
+      use_entities: true
+  - City_Attractions_spa:
+      use_entities: true
+  - Educational_Supplies_Dealers:
+      use_entities: true
+  - book_shop:
+      use_entities: true
+  - type_of_book_shop:
+      use_entities: true
+  - Financial_Services:
+      use_entities: true
+  - Accountant:
+      use_entities: true
+  - ATM:
+      use_entities: true
+  - Bank_Drop_Boxes:
+      use_entities: true
+  - Bank:
+      use_entities: true
+  - Brokerage_House:
+      use_entities: true
+  - Chartered_Tax:
+      use_entities: true
+  - Co_op_Housing:
+      use_entities: true
+  - Commodity:
+      use_entities: true
+  - Credit_card:
+      use_entities: true
+  - Finance_and_Taxation:
+      use_entities: true
+  - Finance_Consultant:
+      use_entities: true
+  - Four_wheeler_loans:
+      use_entities: true
+  - Income_Tax_Consultant:
+      use_entities: true
+  - Income_Tax_Department:
+      use_entities: true
+  - Auditors:
+      use_entities: true
+  - Insurance:
+      use_entities: true
+  - type_of_insurance:
+      use_entities: true
+  - Insurance_agency:
+      use_entities: true
+  - Insurance_Company:
+      use_entities: true
+  - Investment_Company:
+      use_entities: true
+  - Investment:
+      use_entities: true
+  - type_of_investment:
+      use_entities: true
+  - Loan_Office:
+      use_entities: true
+  - Loan:
+      use_entities: true
+  - type_of_Loan:
+      use_entities: true
+  - Pawnbrokers:
+      use_entities: true
+  - Real_Estate_Agency:
+      use_entities: true
+  - Real_Estate_Appraisal:
+      use_entities: true
+  - Safe_Deposit:
+      use_entities: true
+  - Sales_Tax:
+      use_entities: true
+  - Share_Brokers:
+      use_entities: true
+  - USA_Tax_Filing:
+      use_entities: true
+  - Government_Offices:
+      use_entities: true
+  - type_of_govt_office:
+      use_entities: true
+  - Nightlife:
+      use_entities: true
+  - type_of_Nightlife:
+      use_entities: true
+  - Hookah:
+      use_entities: true
+  - Schools_Retakers:
+      use_entities: true
+  - Schools:
+      use_entities: true
+  - school_class:
+      use_entities: true
+  - Games_Centers:
+      use_entities: true
+  - Food_and_Dining:
+      use_entities: true
+  - Food_and_Dining_location:
+      use_entities: true
+  - Food_and_Dining_Tobacco:
+      use_entities: true
+  - Food_and_Dining_Food_Product_Suppliers:
+      use_entities: true
+  - Food_and_Dining_Restaurant:
+      use_entities: true
+  - Food_and_Dining_Seafood:
+      use_entities: true
+  - Food_and_Dining_Sweet:
+      use_entities: true
+  - Food_and_Dining_Food_Product_Suppliers_type:
+      use_entities: true
+  - Food_and_Dining_Restaurant_type:
+      use_entities: true
+  - Food_and_Dining_Sweet_type:
+      use_entities: true
+  - Food_and_Dining_Seafood_type:
+      use_entities: true
+  - Grocery:
+      use_entities: true
+  - Clinics_and_Doctors:
+      use_entities: true
+  - Clinics_and_Doctors_type:
+      use_entities: true
+  - Clinics_and_Doctors_Chiropractors:
+      use_entities: true
+  - Clinics_and_Doctors_Chiropractors_type:
+      use_entities: true
+  - Clinics_and_Doctors_Dentists:
+      use_entities: true
+  - Clinics_and_Doctors_Dentists_type:
+      use_entities: true
+  - Clinics_and_Doctors_other:
+      use_entities: true
+  - Emergency_Services:
+      use_entities: true
+  - Emergency_Services_type:
+      use_entities: true
+  - Legal_Service:
+      use_entities: true
+  - Legal_Service_type:
+      use_entities: true
+  - Legal_Service_Advocates:
+      use_entities: true
+  - Legal_Service_Advocates_type:
+      use_entities: true
+  - Legal_Service_Immigration:
+      use_entities: true
+  - Countries:
+      use_entities: true
+  - Legal_Service_Passport:
+      use_entities: true
+  - Legal_Service_Passport_type:
+      use_entities: true
+  - Legal_Service_Passport_mode:
+      use_entities: true
+  - Legal_Service_Passport_age:
+      use_entities: true
+  - Funerals_and_Memorials:
+      use_entities: true
+  - Funerals_and_Memorials_type:
+      use_entities: true
+  - Garden_and_Lawn:
+      use_entities: true
+  - Garden_and_Lawn_type:
+      use_entities: true
+  - Garden_and_Lawn_Garden:
+      use_entities: true
+  - Garden_and_Lawn_Garden_type:
+      use_entities: true
+  - Garden_and_Lawn_Irrigation:
+      use_entities: true
+  - Garden_and_Lawn_Irrigation_type:
+      use_entities: true
+entities:
+- Accommodation_Service
+- Hoteltype
+- nos
+- day
+- amenity
+- loc
+- typeofservices
+- typeofspaservices
+- gender
+- educationalsuppliesdealers
+- book_shops
+- type_of_book_shops
+- Accountant
+- ATM
+- Bank_Drop_Box
+- Bank
+- Brokerage_House
+- Chartered_Tax_Adviser
+- Co_op_Housing_Society
+- Commodity
+- Credit_card
+- Finance_Taxation
+- Finance_Consultant
+- Four_wheeler_loans
+- Income_Tax_Consultant
+- Income_Tax_Department
+- Auditors
+- insurance
+- type_of_insurance
+- Insurance_agency
+- Insurance_Company
+- Investment_Company
+- investment
+- type_of_investment
+- Loan_Office
+- Loan
+- type_of_Loan
+- Pawnbrokers
+- Real_Estate_Agency
+- Real_Estate_Appraisal
+- Safe_Deposit_box
+- Sales_Tax
+- Share_Brokers
+- USA_Tax_Filing
+- govt
+- type_of_Nightlife
+- Hookah
+- Schools
+- Schools_Retakers
+- Schools_Retakers_class
+- Games_Centers
+- Food_and_Dining_location
+- Food_and_Dining_Tobacco
+- Food_Product_Suppliers
+- Food_and_Dining_Restaurant
+- Food_and_Dining_Seafood
+- Food_and_Dining_Sweet
+- type_Food_Product_Suppliers
+- Food_and_Dining_Restaurant_type
+- Food_and_Dining_Seafood_type
+- Food_and_Dining_Sweet_type
+- Clinics_and_Doctors_type
+- Clinics_and_Doctors_Chiropractors
+- Clinics_and_Doctors_Chiropractors_type
+- Clinics_and_Doctors_Dentists
+- Clinics_and_Doctors_Dentists_type
+- Clinics_and_Doctors_other
+- Emergency_Services
+- Legal_Service_type
+- Legal_Service_Advocates
+- Legal_Service_Advocates_type
+- Legal_Service_Immigration
+- Countries
+- Legal_Service_Passport
+- Legal_Service_Passport_type
+- Legal_Service_Passport_mode
+- Legal_Service_Passport_age
+- Funerals_and_Memorials_type
+- Garden_and_Lawn_type
+- Garden_and_Lawn_Garden
+- Garden_and_Lawn_Garden_type
+- Garden_and_Lawn_Irrigation
+- Garden_and_Lawn_Irrigation_type
+slots:
+  Accommodation_Service:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Hoteltype:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  nos:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  day:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  amenity:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  loc:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  typeofservices:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  typeofspaservices:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  gender:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  educationalsuppliesdealers:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  book_shops:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  type_of_book_shops:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Accountant:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  ATM:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Bank_Drop_Box:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Bank:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Brokerage_House:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Chartered_Tax_Adviser:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Co_op_Housing_Society:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Commodity:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Credit_card:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Finance_Taxation:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Finance_Consultant:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Four_wheeler_loans:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Income_Tax_Consultant:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Income_Tax_Department:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Auditors:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  insurance:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  type_of_insurance:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Insurance_agency:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Insurance_Company:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Investment_Company:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  investment:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  type_of_investment:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Loan_Office:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Loan:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  type_of_Loan:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Pawnbrokers:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Real_Estate_Agency:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Real_Estate_Appraisal:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Safe_Deposit_box:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Sales_Tax:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Share_Brokers:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  USA_Tax_Filing:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  govt:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  type_of_Nightlife:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Hookah:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Schools:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Schools_Retakers:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Schools_Retakers_class:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Games_Centers:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_location:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_Tobacco:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_Product_Suppliers:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_Restaurant:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_Seafood:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_Sweet:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  type_Food_Product_Suppliers:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_Restaurant_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_Sweet_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Food_and_Dining_Seafood_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Clinics_and_Doctors_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Clinics_and_Doctors_Chiropractors:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Clinics_and_Doctors_Chiropractors_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Clinics_and_Doctors_Dentists:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Clinics_and_Doctors_Dentists_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Clinics_and_Doctors_other:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Emergency_Services:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_Advocates:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_Advocates_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_Immigration:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Countries:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_Passport:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_Passport_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_Passport_mode:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Legal_Service_Passport_age:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Funerals_and_Memorials_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Garden_and_Lawn_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Garden_and_Lawn_Garden:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Garden_and_Lawn_Garden_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Garden_and_Lawn_Irrigation:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Garden_and_Lawn_Irrigation_type:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  
+responses:
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_Accommodation_Services:
+  - text: A staycation is what you deserve! Because you're single. Sad. 😃 Jokes apart, give me more details of your requirement, to see if I can help you. Please select an option below
+    buttons:
+    - payload: Accommodation Brokers
+      title: Accommodation Brokers
+    - payload: Apartment Promoters
+      title: Apartment Promoters
+    - payload: Cottages
+      title: Cottages
+    - payload: Hotels
+      title: Hotels
+    - payload: Kids Hostels
+      title: Kids Hostels
+    - payload: Lodging
+      title: Lodging
+    - payload: Mens Hostel
+      title: Mens Hostel
+    - payload: Paying Guests
+      title: Paying Guests
+    - payload: Real Estate
+      title: Real Estate
+    - payload: Real Estate Agents
+      title: Real Estate Agents
+    - payload: Real Estate Appraisers
+      title: Real Estate Appraisers
+    - payload: Real Estate Developers
+      title: Real Estate Developers
+    - payload: Real Estate Joint Ventures
+      title: Real Estate Joint Ventures
+    - payload: Rental Agencies
+      title: Rental Agencies
+    - payload: Rentals
+      title: Rentals
+    - payload: Resort Booking Offices
+      title: Resort Booking Offices
+    - payload: Resorts
+      title: Resorts
+    - payload: Womens Hostels
+      title: Womens Hostels
+    - payload: Youth Hostels
+      title: Youth Hostels
+
+  utter_hoteltype:
+  - text: What type of hotel you are looking for ?
+    buttons:
+    - payload: Budget
+      title: Budget
+    - payload: Luxury
+      title: Luxury
+
+  utter_no_of_person:
+  - text: Please Confirm - No of  person do you need rooms ?
+    buttons:
+    - payload: '1'
+      title: One
+    - payload: More than 1
+      title: More than 1
+  
+  utter_duration_stay:
+  - text: Please confirm - Expected stay of duration?
+    buttons:
+    - payload: 1 Day
+      title: 1 Day
+    - payload: More than 1 Day
+      title: More than 1 Day
+  
+  utter_amenities:
+  - text: Please Confirm Other Amenities needed?
+    buttons:
+    - payload: AC
+      title: AC
+    - payload: Fridge
+      title: Fridge
+  
+  utter_location:
+  - text: Please enter your location for services ?
+  utter_city_attraction:
+  - text: Can you take me with you so I can stop answering pedantic questions? 😃 Jokes apart, give me more details of your requirement, to see if I can help you. Choose any service.
+    buttons:
+    - payload: Shopping
+      title: Shopping Places
+    - payload: Spa
+      title: Spa Centres
+    - payload: Multiplex
+      title: Top Movie Theaters Multiplex
+    - payload: Tourism Offices
+      title: Tourism Department Offices
+    - payload: Tourist Places
+      title: Tourist Places
+  
+  utter_type_of_spa:
+  - text: Please select below type of spa you are looking for?
+    buttons:
+    - payload: Body Massage
+      title: Body Massage
+    - payload: Steam Bath
+      title: Steam Bath
+    - payload: Body Scrub
+      title: Body Scrub
+    - payload: Pain Relief
+      title: Pain Relief Treatment
+    - payload: Body Polish
+      title: Body Polish
+    - payload: Body Wraps
+      title: Body Wraps
+    - payload: Skin Care
+      title: Skin Care Treatment
+  
+  utter_gender:
+  - text: Please specify your gender?
+    buttons:
+    - payload: Male
+      title: Male
+    - payload: Female
+      title: Female
+  
+  utter_Educational_Supplies_Dealers:
+  - text: Creativity is the one  thing you humans beat us in. That and emotions. 😃 Jokes apart, give me more details of your requirement, to see if I can help you ?
+    buttons:
+    - payload: Art and Crafts Suppliers
+      title: Art and Crafts Suppliers
+    - payload: Binding and Photocopy Shops
+      title: Binding and Photocopy Shops
+    - payload: Book Shops
+      title: Book Shops
+    - payload: School Project Kits Suppliers
+      title: School Project Kits Suppliers
+    - payload: Stationery Shops
+      title: Stationery Shops
+  
+  utter_type_of_book_shop:
+  - text: Which of the following services do you need?
+    buttons:
+    - payload: College
+      title: College
+    - payload: Competitive Exams
+      title: Competitive Exams
+    - payload: School Book Shops
+      title: School Book Shops
+    - payload: General Book Shops
+      title: General Book Shops
+    - payload: Used Book Shops
+      title: Used Book Shops
+    - payload: Professional Book Shops
+      title: Professional Book Shops
+    - payload: Religious & Spiritual Book Shops
+      title: Religious & Spiritual Book Shops
+    - payload: UGC Net preparation Book Shops
+      title: UGC Net preparation Book Shops
+    - payload: eBook Online Stores
+      title: eBook Online Stores
+    - payload: Other Language Book Shops
+      title: Other Language Book Shops
+  
+  utter_Financial_Services:
+  - text: You lost a bet, didn't you?😃 Jokes apart, give me more details of your requirement, to see if I can help you.
+    buttons:
+    - payload: Accountant
+      title: Accountant
+    - payload: ATM
+      title: ATM
+    - payload: Bank Drop Box
+      title: Bank Drop Boxes
+    - payload: Bank
+      title: Bank
+    - payload: Brokerage House
+      title: Brokerage House
+    - payload: Chartered Tax Adviser
+      title: Chartered Tax Adviser
+    - payload: Coop Housing Society Billing and Accounting
+      title: Co op Housing Society
+    - payload: Commodity
+      title: Commodity
+    - payload: Credit card
+      title: Credit card
+    - payload: Finance Taxation
+      title: Finance Taxation
+    - payload: Finance Consultant
+      title: Finance Consultant
+    - payload: Four wheeler loans
+      title: Four wheeler loans
+    - payload: Income Tax Consultant
+      title: Income Tax Consultant
+    - payload: Income Tax Department
+      title: Income Tax Department
+    - payload: Auditors
+      title: Auditors
+    - payload: insurance
+      title: insurance
+    - payload: type of insurance
+      title: type of insurance
+    - payload: Insurance agency
+      title: Insurance agency
+    - payload: Insurance Company
+      title: Insurance Company
+    - payload: Investment Company
+      title: Investment Company
+    - payload: investment
+      title: investment
+    - payload: type of investment
+      title: type of investment
+    - payload: Loan Office
+      title: Loan Office
+    - payload: Loan
+      title: Loan
+    - payload: type of Loan
+      title: type of Loan
+    - payload: Pawnbrokers
+      title: Pawnbrokers
+    - payload: Real Estate Agency
+      title: Real Estate Agency
+    - payload: Real Estate Appraisal
+      title: Real Estate Appraisal
+    - payload: Safe Deposit box
+      title: Safe Deposit box
+    - payload: Sales Tax
+      title: Sales Tax
+    - payload: Share Brokers
+      title: Share Brokers
+    - payload: USA Tax Filing
+      title: USA Tax Filing
+ 
+  
+  utter_insurance:
+  - text: What services do you need?
+    buttons:
+    - payload: Vehicle Insurance
+      title: Vehicle Insurance
+    - payload: Life insurance
+      title: Life insurance
+    - payload: Health insurance
+      title: Health insurance
+    - payload: Travel insurance
+      title: Travel insurance
+    - payload: Home insurance
+      title: Home insurance
+    - payload: Corporate group insurance
+      title: Corporate group insurance
+    - payload: Mobile phone insurance
+      title: Mobile phone insurance
+  
+  utter_Investment_Consultants:
+  - text: What services do you need?
+    buttons:
+    - payload: Investment consultancy service
+      title: Investment consultancy service
+    - payload: Certified financial planners consultancy
+      title: Certified financial planners consultancy
+  
+  utter_loans:
+  - text: What services do you need?
+    buttons:
+    - payload: Home loans
+      title: Home loans
+    - payload: Personal loans
+      title: Personal loans
+    - payload: Gold loans
+      title: Gold loans
+    - payload: Vehicle loans
+      title: Vehicle loans
+    - payload: Business loans
+      title: Business loans
+    - payload: Mortgage loans
+      title: Mortgage loans
+    - payload: Unsecured loans
+      title: Unsecured loans
+    - payload: Project loans
+      title: Project loans
+    - payload: Education loans
+      title: Education loans
+    - payload: Private finance loans
+      title: Private finance loans
+    - payload: Loan against securities and cards
+      title: Loan against securities & cards
+    - payload: NRI loans
+      title: NRI loans
+    - payload: Machinery loans
+      title: Machinery loans
+    - payload: Loan against insurance policy
+      title: Loan against insurance policy
+    - payload: Silver loans
+      title: Silver loans
+    - payload: Diamond loans
+      title: Diamond loans
+
+  utter_Government_Offices:
+  - text: You forgot when you're birth was? What kind of human are you?   😃    Jokes apart, give me more details of your requirement, to see if I can help you?
+    buttons:
+    - payload: Birth and Death Registration Offices
+      title: Birth and Death Registration Offices
+    - payload: Consulates and Embassies
+      title: Consulates and Embassies
+    - payload: Employment Offices
+      title: Employment Offices
+    - payload: Government Hospitals
+      title: Government Hospitals
+    - payload: Law and Justice Offices
+      title: Law and Justice Offices
+    - payload: Vehicle Registration Offices
+      title: Vehicle Registration Offices
+
+  utter_Nightlife:
+  - text: The suit makes the man or woman, but you're hopeless.   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: Hookah Bars
+      title: Hookah Bars
+    - payload: Lounges
+      title: Lounges
+    - payload: Night Clubs
+      title: Night Clubs
+    - payload: Pubs
+      title: Pubs
+
+  utter_Schools:
+  - text: Have the British done enough to the Indians! Pathetic this question!   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: Anglo Indian Schools
+      title: Anglo Indian Schools
+    - payload: CBSE Schools
+      title: CBSE Schools
+    - payload: ICSE Schools
+      title: ICSE Schools
+    - payload: International Schools
+      title: International Schools
+    - payload: Kindergarten Schools
+      title: Kindergarten Schools
+    - payload: Madrasa Schools
+      title: Madrasa Schools
+    - payload: Matriculation Schools
+      title: Matriculation Schools
+    - payload: State Board Schools
+      title: State Board Schools
+    - payload: Play Group Equipment Dealers
+      title: Play Group Equipment Dealers
+    - payload: Playschools
+      title: Playschools
+    - payload: Residential Schools
+      title: Residential Schools
+    - payload: School Retakers
+      title: School Retakers
+  utter_School Retakers:
+  - text: What services do you need?
+    buttons:
+    - payload: class 9
+      title: Class 9
+    - payload: class 19
+      title: Class 10
+    - payload: class 11
+      title: Class 11
+    - payload: class 9
+      title: Class 12
+  utter_Games_Centers:
+  - text: Here is where you can obtain a piece of paper proving that you're indeed a real person! 😃    Jokes apart, give me more details of your requirement, to see if I can help you?
+    buttons:
+    - payload: Billiard and Snookers Games
+      title: Billiard and Snookers Games
+    - payload: Bowling Games
+      title: Bowling Games
+    - payload: Boxing Games
+      title: Boxing Games
+    - payload: Playstations
+      title: Playstations
+    - payload: Roller Skating Games
+      title: Roller Skating Games
+    - payload: Video Game Stations
+      title: Video Game Stations
+    - payload: Water Games
+      title: Water Games
+
+  utter_Food_and_Dining:
+  - text: You are so sad that you need a huge amount of food? Dang.   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: Bajji Corners
+      title: Bajji Corners
+    - payload: Bakery
+      title: Bakery
+    - payload: Cake Shop
+      title: Cake Shop
+    - payload: Chocolates and Ice Cream Parlours
+      title: Chocolates and Ice Cream Parlours
+    - payload: Dry Fruit Shop
+      title: Dry Fruit Shop
+    - payload: Food Product Suppliers
+      title: Food Product Suppliers
+    - payload: Fruit and Vegetable Shops
+      title: Fruit and Vegetable Shops
+    - payload: Fruits and Snacks Suppliers
+      title: Fruits and Snacks Suppliers
+    - payload: Meat and Poultry Shops
+      title: Meat and Poultry Shops
+    - payload: Packed Food Services
+      title: Packed Food Services
+    - payload: Restaurant
+      title: Restaurant
+    - payload: Seafood Stores
+      title: Seafood Stores
+    - payload: Spice Manufacturers
+      title: Spice Manufacturers
+    - payload: Sweet Shops
+      title: Sweet Shops
+    - payload: Tobacco Shops
+      title: Tobacco Shops
+  utter_Food_Product_Suppliers:
+  - text: What services do you need?
+    buttons:
+    - payload: Readymade Food Product Dealers
+      title: Readymade Food Product Dealers
+    - payload: Homemade Chocolate Suppliers
+      title: Homemade Chocolate Suppliers
+    - payload: Homemade Cake Dealers
+      title: Homemade Cake Dealers
+  utter_Food_and_Dining_Restaurant:
+  - text: What services do you need?
+    buttons:
+    - payload: Idli
+      title: Idli
+    - payload: Hyderabadi
+      title: Hyderabadi
+    - payload: Iranian Cuisine
+      title: Iranian Cuisine
+    - payload: Grill Cuisine
+      title: Grill Cuisine
+    - payload: Coorg Cuisine
+      title: Coorg Cuisine
+    - payload: Parsi Cuisine
+      title: Parsi Cuisine
+    - payload: Garden
+      title: Garden
+    - payload: Mexican Cuisine
+      title: Mexican Cuisine
+    - payload: Spanish Cuisine
+      title: Spanish Cuisine
+    - payload: Japanese
+      title: Japanese
+    - payload: Thai
+      title: Thai
+    - payload: Lucknowi Cuisine
+      title: Lucknowi Cuisine
+    - payload: Afghan Cuisine
+      title: Afghan Cuisine
+    - payload: Continental
+      title: Continental
+    - payload: Tibetian Cuisine
+      title: Tibetian Cuisine
+    - payload: Italian
+      title: Italian
+    - payload: Mangalorean Cuisine
+      title: Mangalorean Cuisine
+    - payload: German Cuisine
+      title: German Cuisine
+    - payload: Greek Cuisine
+      title: Greek Cuisine
+    - payload: Fusion Cuisine
+      title: Fusion Cuisine
+    - payload: Global
+      title: Global
+    - payload: Persian
+      title: Persian
+    - payload: Konkan Cuisine
+      title: Konkan Cuisine
+    - payload: Indonesian Cuisine
+      title: Indonesian Cuisine
+    - payload: Oriental Cuisine
+      title: Oriental Cuisine
+    - payload: French Cuisine
+      title: French Cuisine
+    - payload: Vietnamese Cuisine
+      title: Vietnamese Cuisine
+    - payload: Brazilian Cuisine
+      title: Brazilian Cuisine
+    - payload: Malaysian Cuisine
+      title: Malaysian Cuisine
+    - payload: European Cuisine
+      title: European Cuisine
+    - payload: Caribbean Cuisine
+      title: Caribbean Cuisine
+    - payload: Portuguese Cuisine
+      title: Portuguese Cuisine
+    - payload: Mangolian Cuisine
+      title: Mangolian Cuisine
+    - payload: Burmese Cuisine
+      title: Burmese Cuisine
+    - payload: Lebanese Cuisine
+      title: Lebanese Cuisine
+  utter_Food_and_Dining_Seafood:
+  - text: What services do you need?
+    buttons:
+    - payload: Frozen Fish Shops
+      title: Frozen Fish Shops
+    - payload: Prawn Shops
+      title: Prawn Shops
+    - payload: Crab Shops
+      title: Crab Shops
+  utter_Food_and_Dining_Sweet:
+  - text: What services do you need?
+    buttons:
+    - payload: South Indian Sweet Shops
+      title: South Indian Sweet Shops
+    - payload: Bengali Sweet Shops
+      title: Bengali Sweet Shops
+    - payload: North Indian Sweet Shops
+      title: North Indian Sweet Shops
+
+  utter_Clinics_and_Doctors_type:
+  - text: Check ups are essential for a fruitful life, buddy!   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: 24 Hour Clinics
+      title: 24 Hour Clinics
+    - payload: Abortion Clinics
+      title: Abortion Clinics
+    - payload: Acupuncture and Acupressure Doctors
+      title: Acupuncture and Acupressure Doctors
+    - payload: Allergy Specialists
+      title: Allergy Specialists
+    - payload: Anaesthetists
+      title: Anaesthetists
+    - payload: Andrologist
+      title: Andrologist
+    - payload: Asthma and Allergy
+      title: Asthma and Allergy
+    - payload: Bach Flower Treatment Centres
+      title: Bach Flower Treatment Centres
+    - payload: Bariatric Surgeons
+      title: Bariatric Surgeons
+    - payload: Breast Surgeons
+      title: Breast Surgeons
+    - payload: Cardiac Surgeons
+      title: Cardiac Surgeons
+    - payload: Cardiologists
+      title: Cardiologists
+    - payload: Chest Physicians
+      title: Chest Physicians
+    - payload: Child Specialists
+      title: Child Specialists
+    - payload: Chiropractors
+      title: Chiropractors
+    - payload: Cosmetic Surgeons
+      title: Cosmetic Surgeons
+    - payload: Dental Surgeons
+      title: Dental Surgeons
+    - payload: Dentists
+      title: Dentists
+    - payload: Diabetologists
+      title: Diabetologists
+    - payload: ENT Specialists
+      title: ENT Specialists
+    - payload: Fat Reduction Surgeons
+      title: Fat Reduction Surgeons
+    - payload: Foot Surgeons
+      title: Foot Surgeons
+    - payload: Gastroenterologists
+      title: Gastroenterologists
+    - payload: General Physicians
+      title: General Physicians
+    - payload: General Surgeons
+      title: General Surgeons
+    - payload: Gynecologists and Obstetricians
+      title: Gynecologists and Obstetricians
+    - payload: Hair Transplant Surgeons
+      title: Hair Transplant Surgeons
+    - payload: Hematologists
+      title: Hematologists
+    - payload: Hernia Surgeons
+      title: Hernia Surgeons
+    - payload: Homeopathy Doctors
+      title: Homeopathy Doctors
+    - payload: Infertility Treatment
+      title: Infertility Treatment
+    - payload: IUI Clinics
+      title: IUI Clinics
+    - payload: IVF Clinics
+      title: IVF Clinics
+    - payload: Kidney Stones Treatment
+      title: Kidney Stones Treatment
+    - payload: Laproscopic Surgeons
+      title: Laproscopic Surgeons
+    - payload: Laser and Skin Clinics
+      title: Laser and Skin Clinics
+    - payload: other doctor services
+      title: other doctor services
+
+  utter_Clinics_and_Doctors_type_more:
+  - text: Okay. We have following more services available with us. Choose any
+    buttons:
+    - payload: Lasik Surgeons
+      title: Lasik Surgeons
+    - payload: Lipoma Removal Surgeons
+      title: Lipoma Removal Surgeons
+    - payload: Marital Therapy
+      title: Marital Therapy
+    - payload: Mental Health Clinic
+      title: Mental Health Clinic
+    - payload: Natural Cure Treatment
+      title: Natural Cure Treatment
+    - payload: Naturopathic Doctors
+      title: Naturopathic Doctors
+    - payload: Neurologists
+      title: Neurologists
+    - payload: Neurosurgeons
+      title: Neurosurgeons
+    - payload: Neurotherapists
+      title: Neurotherapists
+    - payload: Non Surgical Treatment
+      title: Non Surgical Treatment
+    - payload: Nursing Homes
+      title: Nursing Homes
+    - payload: Obesity Surgery
+      title: Obesity Surgery
+    - payload: Ophthalmologists
+      title: Ophthalmologists
+    - payload: Optical Accessories
+      title: Optical Accessories
+    - payload: Oral Tissue Biopsy Surgeons
+      title: Oral Tissue Biopsy Surgeons
+    - payload: Orthodontists
+      title: Orthodontists
+    - payload: Orthopaedic Doctors
+      title: Orthopaedic Doctors
+    - payload: Pathologists
+      title: Pathologists
+    - payload: Pathology and Microbiology Labs
+      title: Pathology and Microbiology Labs
+    - payload: Physiotherapy
+      title: Physiotherapy
+    - payload: Piles Specialists
+      title: Piles Specialists
+    - payload: Plastic Surgeons
+      title: Plastic Surgeons
+    - payload: Polyclinics
+      title: Polyclinics
+    - payload: Proctology and Cryosurgery Doctors
+      title: Proctology and Cryosurgery Doctors
+    - payload: Psoriasis Treatment
+      title: Psoriasis Treatment
+    - payload: Psychiatrists
+      title: Psychiatrists
+    - payload: Psychologists
+      title: Psychologists
+    - payload: Radiologists
+      title: Radiologists
+    - payload: Rheumatologists
+      title: Rheumatologists
+    - payload: Sexual Medicine Doctors
+      title: Sexual Medicine Doctors
+    - payload: Siddha Doctors
+      title: Siddha Doctors
+    - payload: Silicone Breast Implant Surgeons
+      title: Silicone Breast Implant Surgeons
+    - payload: Silicone Breast Prosthesis Suppliers
+      title: Silicone Breast Prosthesis Suppliers
+    - payload: Sinus Doctors
+      title: Sinus Doctors
+    - payload: Small Bowel Resection Surgeons
+      title: Small Bowel Resection Surgeons
+    - payload: Somnologists
+      title: Somnologists
+    - payload: Sonologist
+      title: Sonologist
+    - payload: Sperm Banks
+      title: Sperm Banks
+    - payload: Spine and Disc Replacement Surgeons
+      title: Spine and Disc Replacement Surgeons
+    - payload: Spine Surgeons
+      title: Spine Surgeons
+    - payload: Spleen Removal Surgeons
+      title: Spleen Removal Surgeons
+    - payload: Stomach Cancer Surgeons
+      title: Stomach Cancer Surgeons
+    - payload: Surrogacy Clinics
+      title: Surrogacy Clinics
+    - payload: Surrogate Motherhood Centres
+      title: Surrogate Motherhood Centres
+    - payload: Testicular Surgeons
+      title: Testicular Surgeons
+    - payload: Thyroid Gland Surgeons
+      title: Thyroid Gland Surgeons
+    - payload: Thyroid Specialists
+      title: Thyroid Specialists
+    - payload: Tracheostomy Surgeons
+      title: Tracheostomy Surgeons
+    - payload: Unani Doctors
+      title: Unani Doctors
+    - payload: Urologists and Nephrologists
+      title: Urologists and Nephrologists
+    - payload: Vagotomy Surgeons
+      title: Vagotomy Surgeons
+    - payload: Varicocele Removal Surgeons
+      title: Varicocele Removal Surgeons
+    - payload: Varicose veins Treatment
+      title: Varicose veins Treatment
+    - payload: Vasectomy Surgeons
+      title: Vasectomy Surgeons
+    - payload: Veterinary Doctors
+      title: Veterinary Doctors
+    - payload: Vitiligo Surgery
+      title: Vitiligo Surgery
+
+  utter_Clinics_and_Doctors_Dentists_type:
+  - text: What services do you need?
+    buttons:
+    - payload: General checkup
+      title: General checkup
+    - payload: Dental implants
+      title: Dental implants
+    - payload: Root canal treatment
+      title: Root canal treatment
+    - payload: Teeth cleaning Scaling
+      title: Hyderabadi
+    - payload: Veneers
+      title: Veneers
+    - payload: Extractions
+      title: Extractions
+    - payload: Tooth alignment issues
+      title: Tooth alignment issues
+    - payload: Tooth decay
+      title: Tooth decay
+    - payload: Toothaches
+      title: Toothaches
+    - payload: Braces treatment
+      title: Braces treatment
+    - payload: Laminates
+      title: Laminates
+    - payload: Tooth sensitivity issues
+      title: Tooth sensitivity issues
+    - payload: Gum bleeding
+      title: Gum bleeding
+    - payload: Bad breath
+      title: Bad breath
+    - payload: Hyderabadi
+      title: Hyderabadi
+    - payload: Mouth sores
+      title: Mouth sores
+    - payload: Crown and braces
+      title: Crown and braces
+
+  utter_Clinics_and_Doctors_Chiropractors_type:
+  - text: What services do you need?
+    buttons:
+    - payload: Scoliosis
+      title: Scoliosis
+    - payload: Spondylitis
+      title: Spondylitis
+    - payload: Headache
+      title: Headache
+    - payload: Migraine
+      title: Migraine
+  utter_Emergency_Services:
+  - text: Don't you mean, ambulance?   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: Ambulance and Paramedics Services
+      title: Ambulance and Paramedics Services
+    - payload: Enquiry Numbers
+      title: Enquiry Numbers
+    - payload: Fire Services
+      title: Fire Services
+    - payload: Fund Raising Organizations
+      title: Fund Raising Organizations
+    - payload: Police Stations
+      title: Police Stations
+  utter_Legal_Service:
+  - text: The government know what you do, so behave! Or don't, I do not care for you.   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: Aadhar Card Agents
+      title: Aadhar Card Agents
+    - payload: Advocates and Lawyers
+      title: Advocates and Lawyers
+    - payload: Arbitration Services
+      title: Arbitration Services
+    - payload: Civil Registration
+      title: Civil Registration
+    - payload: Fbr Office
+      title: Fbr Office
+    - payload: Immigration Consultancy
+      title: Immigration Consultancy
+    - payload: Law Office
+      title: Law Office
+    - payload: Legal Document Writers
+      title: Legal Document Writers
+    - payload: Notaries
+      title: Notaries
+    - payload: PAN Card Consultants
+      title: PAN Card Consultants
+    - payload: Passport Agency
+      title: Passport Agency
+    - payload: Registration Consultancy
+      title: Registration Consultancy
+
+  utter_Legal_Service_Advocates_type:
+  - text: What services do you need?
+    buttons:
+    - payload: Divorce and family lawyers
+      title: Divorce and family lawyers
+    - payload: Court marriage lawyers
+      title: Court marriage lawyers
+    - payload: Real estate and property disputes lawyers
+      title: Real estate & property disputes lawyers
+    - payload: Civil lawyers
+      title: Civil lawyers
+    - payload: Criminal lawyers
+      title: Criminal lawyers
+    - payload: Corporate Trade and industrial disputes lawyers
+      title: Corporate Trade and industrial disputes lawyers
+    - payload: Consumer protection and dispute lawyers
+      title: Consumer protection and dispute lawyers
+    - payload: Cyber lawyers
+      title: Cyber lawyers
+    - payload: Armed forces tribunal lawyers
+      title: Armed forces tribunal lawyers
+
+  utter_Countries:
+  - text: List of countries
+    buttons:
+    - payload: Canada
+      title: Canada
+    - payload: Europe
+      title: Europe
+    - payload: UK
+      title: UK
+    - payload: Australia and south pacific
+      title: Australia and south pacific
+    - payload: America
+      title: America
+    - payload: UAE
+      title: UAE
+    - payload: New zealand
+      title: New zealand
+    - payload: Middle east
+      title: Middle east
+    - payload: Asia
+      title: Asia
+    - payload: Africa
+      title: Africa
+    - payload: Far east
+      title: Far east
+
+  utter_Legal_Service_Passport_type:
+  - text: What Services do you need?
+    buttons:
+    - payload: New Passport
+      title: New Passport
+    - payload: Renewal
+      title: Renewal of Passport
+  utter_Legal_Service_Passport_mode:
+  - text: Which mode of application do you prefer?
+    buttons:
+    - payload: Regular
+      title: Regular
+    - payload: Tatkal
+      title: Tatkal
+  utter_Legal_Service_Passport_age:
+  - text: Which mode of application do you prefer?
+    buttons:
+    - payload: Minor
+      title: Minor
+    - payload: Adult
+      title: Adult
+    - payload: Senior citizen
+      title: Senior citizen
+  utter_Funerals_and_Memorials:
+  - text: I am so sorry, I hope you get better.   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: Caskets and Coffins Dealers
+      title: Caskets and Coffins Dealers
+    - payload: Cemeteries
+      title: Cemeteries
+    - payload: Cremation Services
+      title: Cremation Services
+    - payload: Freezer Box Rentals
+      title: Freezer Box Rentals
+    - payload: Funeral Services
+      title: Funeral Services
+    - payload: Mobile Mortuary Services
+      title: Mobile Mortuary Services
+    - payload: Pandit
+      title: Pandit
+  utter_Garden_and_Lawn:
+  - text: Plants are just as important as human lives. Good on you!   😃    Jokes apart, give me more details of your requirement, to see if I can help you 
+    buttons:
+    - payload: Bonsai Plant Dealers
+      title: Bonsai Plant Dealers
+    - payload: Fertilisers and Soil Conditioner Dealers
+      title: Fertilisers and Soil Conditioner Dealers
+    - payload: Garden Product Suppliers
+      title: Garden Product Suppliers
+    - payload: Garden Services
+      title: Garden Services
+    - payload: Indoor Plant Rentals
+      title: Indoor Plant Rentals
+    - payload: Indoor Plants Dealers
+      title: Indoor Plants Dealers
+    - payload: Irrigation System Dealers
+      title: Irrigation System Dealers
+    - payload: Plant Nurseries
+      title: Plant Nurseries
+    - payload: Water Fountain Dealers
+      title: Water Fountain Dealers
+
+  utter_Garden_and_Lawn_Garden_type:
+  - text: What Services do you need?
+    buttons:
+    - payload: Garden maintenance
+      title: Garden maintenance
+    - payload: Garden designing
+      title: Garden designing
+
+  utter_Garden_and_Lawn_Irrigation_type:
+  - text: What Services do you need?
+    buttons:
+    - payload: Drip Irrigation System Dealers
+      title: Drip Irrigation System Dealers
+    - payload: Sprinkler Irrigation System Dealers
+      title: Sprinkler Irrigation System Dealers
+actions:
+- action_restart
+- action_greet
+- action_post_Accommodation_Services_Hotel
+- action_post_city_attraction_spa
+- action_post_city_attraction_multiplex
+- action_post_city_attraction_Shopping
+- action_post_city_attraction_Tourism_Offices
+- action_post_city_attraction_Tourism_Places
+- action_post_Educational_Supplies_Dealers_book_shop
+- action_post_Educational_Supplies_Dealers
+- action_post_Accountant
+- action_post_ATM
+- action_post_Bank_Drop_Boxes
+- action_post_Bank
+- action_post_Brokerage_House
+- action_post_Chartered_Tax
+- action_post_Co_op_Housing
+- action_post_Commodity
+- action_post_Credit_card
+- action_post_Finance_and_Taxation
+- action_post_Finance_Consultant
+- action_post_Four_wheeler_loans
+- action_post_Income_Tax_Consultant
+- action_post_Income_Tax_Department
+- action_post_Auditors
+- action_post_Insurance
+- action_post_Insurance_agency
+- action_post_Insurance_Company
+- action_post_Investment_Company
+- action_post_Investment
+- action_post_Loan_Office
+- action_post_Loan
+- action_post_Pawnbrokers
+- action_post_Real_Estate_Agency
+- action_post_Real_Estate_Appraisal
+- action_post_Safe_Deposit
+- action_post_Sales_Tax
+- action_post_Share_Brokers
+- action_post_USA_Tax_Filing
+- action_post_Government_Offices
+- action_post_Nightlife
+- action_post_Nightlife_Hookah
+- action_post_Schools
+- action_post_Schools_Retakers
+- action_post_Games_Centers
+- action_post_Food_and_Dining_location
+- action_post_Food_and_Dining_Tobacco
+- action_post_Food_and_Dining_Food_Product_Suppliers
+- action_post_Food_and_Dining_Restaurant
+- action_post_Food_and_Dining_Seafood
+- action_post_Food_and_Dining_Sweet
+- action_post_Grocery
+- action_post_Clinics_and_Doctors_type
+- action_post_Clinics_and_Doctors_type_Chiropractors
+- action_post_Clinics_and_Doctors_type_Dentists
+- action_post_Emergency_Services
+- action_post_Legal_Service
+- action_post_Legal_Service_Advocates
+- action_post_Legal_Service_Immigration
+- action_post_Legal_Service_Passport
+- action_post_Funerals_and_Memorials
+- action_post_Garden_and_Lawn
+- action_post_Garden_and_Lawn_Garden
+- action_post_Garden_and_Lawn_Irrigation
+forms: {}
+e2e_actions: []
